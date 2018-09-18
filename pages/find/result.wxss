@@ -1,0 +1,41 @@
+/* pages/find/result.wxss */
+page{
+  background-color: #fff;
+}
+
+.topimgx {
+  text-align: center;
+  width: 100%;
+}
+
+.topimg {
+  width: 482rpx;
+  height: 302rpx;
+  margin: 122rpx auto 34rpx auto;
+}
+
+.resulttxt {
+  text-align: center;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.tipcss {
+  margin: 142rpx auto 82rpx auto;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.okbtn {
+  width: 68%;
+  height: 94rpx;
+  background: rgba(18, 188, 248, 1);
+  border-radius: 47rpx;
+  text-align: center;
+  line-height: 94rpx;
+  color: #fff;
+  font-size: 36rpx;
+  margin: 0 16%;
+}

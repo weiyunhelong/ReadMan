@@ -1,0 +1,48 @@
+<!--pages/jifen/index.wxml-->
+
+<!--我的积分-->
+<view class='jifenv'>
+  <view class='jifentxt'>我的积分</view>
+  <view class='jifennum'>
+    <view class='jifennumtxt'>{{jifen}}</view>
+    <view class='jifennumtip'>分</view>
+  </view>
+  <view class='payforv' bindtap='gorecharge'>
+    <image src='/resources/mall/payfor.png' class='payforicon'></image>
+    <view class='payfortxt'>充值</view>
+  </view>
+</view>
+
+<!--积分tab-->
+<view class='tabv'>
+  <view class="{{chktab==0?'tabmenuh':'tabmenu'}}" data-id='0' bindtap='chktabopt'>
+    <view class="{{chktab==0?'tabmenuh':'tabmenu'}}">积分规则</view>
+  </view>
+  <view class="{{chktab==1?'tabmenuh':'tabmenu'}}" data-id='1' bindtap='chktabopt'>
+    <view class="{{chktab==1?'tabmenuh':'tabmenu'}}">积分明细</view>
+  </view>
+</view>
+
+<!--积分规则部分-->
+<view class='rulev' wx:if="{{chktab==0}}" style='height:{{contenth}}px;'>
+  <!--富文本文件-->
+  <view class='introv'>
+    <rich-text nodes="{{intro}}"></rich-text>
+  </view>
+</view>
+
+<!--积分明细部分-->
+<view class='recordv' wx:if="{{chktab==1}}" style='height:{{recordh}}px;'>
+  <block wx:for="{{recordlsit}}" wx:key="item">
+    <view class='recorditem'>
+      <view class='recordleftv'>
+        <view class='recordname'>{{item.name}}</view>
+        <view class='recordtime'>{{item.time}}</view>
+      </view>
+      <view class='recordrightv'>
+        <view class='rnumtxth' wx:if="{{item.jifen>0}}">+{{item.jifen}}</view>
+        <view class='rnumtxt' wx:else>{{item.jifen}}</view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,47 @@
+/* pages/userinfo/edit.wxss */
+
+.geduanv {
+  width: 100%;
+  height: 20rpx;
+  background-color: #e4edf7;
+}
+
+.hangv {
+  width: 94%;
+  padding: 56rpx 3%;
+  display: flex;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.hangtitlev {
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 6rpx;
+}
+
+.txtcss {
+  font-size: 32rpx;
+  color: #333;
+  margin-left: 30rpx;
+}
+
+.tipcss {
+  font-size: 32rpx;
+  color: #999;
+}
+
+/*操作按钮*/
+
+.savebtn {
+  width: 60%;
+  height: 94rpx;
+  position: fixed;
+  bottom: 66rpx;
+  left: 20%;
+  background: #12bcf8;
+  border-radius: 48rpx;
+  text-align: center;
+  line-height: 94rpx;
+  color: #fff;
+  font-size: 36rpx;
+}

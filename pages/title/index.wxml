@@ -1,0 +1,42 @@
+<!--pages/title/index.wxml-->
+
+<view class='bodyv' style='height:{{winheight}}px;'>
+
+  <!--顶部部分-->
+  <view class='topv'>
+    <image src='/resources/title/lefticon.png' class='topicon'></image>
+    <view class='toptxtv'>
+      <view class='toptxt'>我的标签</view>
+      <view class='topnum'>32</view>
+    </view>
+    <image src='/resources/title/righticon.png' class='topicon'></image>
+  </view>
+
+  <!--标签部分-->
+  <view class='titlelistv'>
+    <view class='titlev'>
+      <image src='/resources/title/title3.png' class='titleicon'></image>
+      <view class='titletxtv'>时间管理专家</view>
+    </view>
+    <view class='titlev'>
+      <image src='/resources/title/title2.png' class='titleicon'></image>
+      <view class='titletxtv'>有时自信，有时有很多疑问</view>
+    </view>
+    <view class='titlev'>
+      <image src='/resources/title/title9.png' class='titleicon'></image>
+      <view class='titletxtv'>成长中的说服力专家</view>
+    </view>
+    <view class='titlev'>
+      <image src='/resources/title/title3.png' class='titleicon'></image>
+      <view class='titletxtv'>时间管理专家</view>
+    </view>
+    <view class='titlev'>
+      <image src='/resources/title/title2.png' class='titleicon'></image>
+      <view class='titletxtv'>有时自信，有时有很多疑问</view>
+    </view>
+    <view class='titlev'>
+      <image src='/resources/title/title9.png' class='titleicon'></image>
+      <view class='titletxtv'>成长中的说服力专家</view>
+    </view>
+  </view>
+</view>

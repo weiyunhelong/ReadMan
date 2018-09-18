@@ -1,0 +1,60 @@
+<!--pages/refund/index.wxml-->
+
+<!--购买的商品列表-->
+<view class='goodslistv'>
+  <block wx:for="{{goodslist}}" wx:key="item">
+    <view class='glistitemv'>
+      <!--图片部分-->
+      <view class='listtuv'>
+        <image src='{{item.imgpath}}' class='listtu'></image>
+      </view>
+      <!--文字介绍-->
+      <view class='listinfov'>
+        <view class='listtitle'>{{item.title}}</view>
+        <view class='listinfo'>颜色:{{item.color}}</view>
+        <view class='numv'>
+          <view class='jifennum'>{{item.jifen}}积分</view>
+          <view class='buynumv'>X{{item.buynum}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<!--操作按钮-->
+<view class='btnoptv'>
+  <view class="{{chkbtn==0?'btnopth':'btnopt'}}" data-id='0' bindtap='chktypeopt'>退货</view>
+  <view class="{{chkbtn==1?'btnopth':'btnopt'}}" data-id='1' bindtap='chktypeopt'>仅退款</view>
+</view>
+
+<!--退款数量和积分-->
+<view class='refundnumv'>
+  <view class='numtitle'>申请退货数量</view>
+  <view class='numoptv'>
+    <view class='numjifenv'>可退款{{jifen}}积分</view>
+    <view class='optnumv'>
+      <view class='reducebtn' bindtap='reduceopt'>-</view>
+      <view class='optnumtxt'>{{buynum}}</view>
+      <view class='addbtn' bindtap='addopt'>+</view>
+    </view>
+  </view>
+</view>
+
+<!--申请退款理由-->
+<view class='reasonv'>
+  <view class='reasontitle'>申请退货原因</view>
+  <view class='reasontxtv'>
+    <textarea placeholder='请输入退货原因' placeholder-class='reasontip' class='reasontxt' value='{{reason}}' bindinput='getreason' maxlength='-1'></textarea>
+  </view>
+  <view class='reasonimgv'>
+    <block wx:for="{{imglist}}" wx:key="item" wx:for-index="x">
+      <image src='{{item}}' class='reasonimg' bindtap='changeimgopt' data-index='{{x}}'></image>
+    </block>
+    <view class='chooseimg' bindtap='chooseimgopt'>+</view>
+  </view>
+  <view class='imagetipv'>
+    上传图片大小不超过5M，最多5张
+  </view>
+</view>
+
+<!--申请退款按钮-->
+<view class='refundbtn' bindtap='refundopt'>申请退款按钮</view>

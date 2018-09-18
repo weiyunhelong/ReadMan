@@ -1,0 +1,70 @@
+/* pages/title/index.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+.bodyv {
+  width: 94%;
+  height: 90%;
+  margin: 23rpx 3%;
+  background-color: #fff;
+  border-radius: 12rpx;
+}
+
+.topv {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+  margin: 0 3%;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 23rpx;
+}
+
+.topicon {
+  width: 124rpx;
+  height: 129rpx;
+  margin-top: 36rpx;
+}
+
+.toptxtv {
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+.toptxt {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.topnum {
+  margin-top: 38rpx;
+  font-size: 48rpx;
+  color: #f33;
+  font-weight: bold;
+}
+
+/*标签列表*/
+
+.titlelistv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.titlev {
+  width: 26%;
+  text-align: center;
+  margin-top: 86rpx;
+}
+
+.titleicon {
+  width: 110rpx;
+  height: 75rpx;
+}
+
+.titletxtv{
+  font-size: 24rpx;
+  color:#333; 
+}

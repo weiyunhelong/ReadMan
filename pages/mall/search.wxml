@@ -1,0 +1,28 @@
+<!--pages/mall/search.wxml-->
+
+<!--搜索行-->
+<view class='searchv'>
+  <view class='searchleftv'>
+    <icon size='13' type='search' color='#8E8E93' class='searchicon'></icon>
+    <input type='text' placeholder='搜索商品名称' placeholder-class='searchtip' class='searchtxt' value='{{searchval}}' bindconfirm='getsearchval' bindblur='getsearchval'></input>
+  </view>
+  <view class='searchrightv' bindtap='goback'>取消</view>
+</view>
+
+
+<view class='geduanv'></view>
+
+<!--搜索的结果-->
+<view class='goodsv'>
+
+  <block wx:for="{{goodslist}}" wx:key="item">
+    <view class='goodsitem' bindtap='gogoodsopt' data-id='{{item.id}}'>
+      <view class='goodsimgv'>
+        <image src='{{item.imgpath}}' class='goodsimg'></image>
+        <view class='goodsnamev'>{{item.name}}</view>
+        <view class='goodsfenv'>{{item.jifen}}积分</view>
+      </view>
+    </view>
+  </block>
+
+</view>

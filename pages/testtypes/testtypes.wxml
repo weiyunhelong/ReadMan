@@ -1,0 +1,36 @@
+<view class="container">
+  <image class='testlist_img' src="{{payimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="class_list">
+    <view class="item">
+      <view class="top">
+        <text class="test_status status_1">已答题</text>
+        测试题目名称测试题目名称测试题目名称测试题目名称测试题目名称测试题目名称
+      </view>
+      <view class="mid"> 
+        <text class="left">所属课程《课程名称xx》</text>
+        <text class="right">我的课程</text>
+      </view>
+      <view class="btn_list">
+        <view class="btn_item btn_1">重新答题</view>
+        <view class="btn_item btn_2">查看结果</view>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="top">
+        <text class="test_status status_2">未答题</text>
+        测试题目名称测试题目名称测试题目名称测试题目名称测试题目名称测试题目名称
+      </view>
+      <view class="mid"> 
+        <text class="left">所属课程《课程名称xx》</text>
+        <!-- <text class="right">我的课程</text> -->
+      </view>
+      <view class="btn_list">
+        <view class="btn_item btn_1">开始答题</view>
+        <!-- <view class="btn_item btn_2">查看结果</view> -->
+      </view>
+    </view>
+
+  </view>
+</view>

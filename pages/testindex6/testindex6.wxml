@@ -1,0 +1,52 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">让你增强自信心</text>
+    <text class="text_2">测一测，发现自己的优势与弱势</text>
+    <text class="context">自我分析测试的步骤：
+      1.对每句话做出快速的判断并给出回答
+      一行一行地阅读，每行四句话的总分为
+      。。。题目全部展示</text>
+
+    <view class="options_list">
+      <view class="item">
+        <text class="label">第一栏总和:</text>
+        <view class="num_choose">
+          <view class='opera_btn'>-</view>
+          <text class="nummber">1</text>
+          <view class='opera_btn'>+</view>
+        </view>
+      </view>
+
+      <view class="item">
+        <text class="label">第二栏总和:</text>
+        <view class="num_choose">
+          <view class='opera_btn'>-</view>
+          <text class="nummber">1</text>
+          <view class='opera_btn'>+</view>
+        </view>
+      </view>
+
+      <view class="item">
+        <text class="label">第三栏总和:</text>
+        <view class="num_choose">
+          <view class='opera_btn'>-</view>
+          <text class="nummber">1</text>
+          <view class='opera_btn'>+</view>
+        </view>
+      </view>
+
+      <view class="item">
+        <text class="label">第四栏总和:</text>
+        <view class="num_choose">
+          <view class='opera_btn'>-</view>
+          <text class="nummber">1</text>
+          <view class='opera_btn'>+</view>
+        </view>
+      </view>
+    </view>
+
+    <view catchtap='goto_testresult' class="check_btn">确认提交</view>
+  </view>
+</view>

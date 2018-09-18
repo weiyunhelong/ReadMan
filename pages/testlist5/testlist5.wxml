@@ -1,0 +1,39 @@
+<view class="container">
+
+  <view class="subject_content">
+    <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+   
+    <view class="subject_index">
+      <text class='index_num'>2 / 12</text>
+      <text class="subject_title">在家里或者朋友聚会中，如果遇到讨论出现意见分歧或者争执时。</text>
+      <view class="bottom_line">
+        <view class="left"></view>
+        <view class="mid"></view>
+        <view class="right"></view>
+      </view>
+    </view>
+
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio selected">
+        <radio value="0" checked=""/>
+        <view class='radio_index'>A</view>
+        <text class='radio_context'>我都能为自己的想法找出充分的论据，并且无论其他人之前如何举棋不定或者有其他意见，我最后都能把他们说服。</text>
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>
+        <view class='radio_index'>B</view>
+        <text class="radio_context">我通常会参与讨论，但往往缺乏足够的论据，所以最终我的想法并没有引起关注。</text>
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>
+        <view class='radio_index'>C</view>
+        <text class="radio_context">我往往置身事外。</text>
+      </label>
+    </radio-group>
+  </view>
+</view>
+
+<view class="btn_list">
+  <view class="prev_subject">上一题</view>
+  <view catchtap='goto_result' class='submit_btn'>确认提交</view>
+</view>

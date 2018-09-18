@@ -1,0 +1,24 @@
+<!--pages/address/index.wxml-->
+<block wx:for="{{addresslist}}" wx:key="item">
+  <view class='addressv' bindtap='chkaddress' data-id='{{item.id}}'>
+    <view class='userinfo'>
+      <view class='username'>收货人：{{item.username}}</view>
+      <view class='userphone'>{{item.phone}}</view>
+    </view>
+    <view class='addresstxt'>收货地址：{{item.address}}</view>
+    <view class='addressoptv'>
+      <view class='defaultv' bindtap='chkdefault' data-id='{{item.id}}'>
+        <icon type='success' size='20' color='#0A7EC8' class='iconcss' wx:if="{{item.isdefault}}"></icon>
+        <icon type='circle' size='20' color='#E5E5E5' class='iconcss' wx:if="{{!item.isdefault}}"></icon>
+        <view class='defaulttxt'>设为默认</view>
+      </view>
+      <view class='btnoptv'>
+        <view class='editv' bindtap='editopt' data-id='{{item.id}}'>编辑</view>
+        <view class='delv' bindtap='delopt' data-id='{{item.id}}'>删除</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!--新增地址-->
+<view class='addopt' bindtap='addopt'>新增地址</view>

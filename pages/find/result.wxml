@@ -1,0 +1,11 @@
+<!--pages/find/result.wxml-->
+
+
+<view class='topimgx'>
+  <image src='{{backimg}}' class='topimg'></image>
+</view>
+<view class='resulttxt'>报名成功</view>
+
+<view class='tipcss'>工作人员将尽快与您联系确认</view>
+
+<view class='okbtn' bindtap='okopt'>确定</view>

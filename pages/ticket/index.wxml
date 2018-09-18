@@ -1,0 +1,40 @@
+<!--pages/ticket/index.wxml-->
+
+<!--TAB部分-->
+<view class='tabv'>
+  <view class="{{chktab==1?'tabitemh':'tabitem'}}" bindtap='chktabopt' data-id='1'>未使用</view>
+  <view class="{{chktab==2?'tabitemh':'tabitem'}}" bindtap='chktabopt' data-id='2'>已使用</view>
+  <view class="{{chktab==3?'tabitemh':'tabitem'}}" bindtap='chktabopt' data-id='3'>已过期</view>
+</view>
+
+<!--券信息-->
+<view class='ticketlistv'>
+  <block wx:for="{{quanlist}}" wx:key="item">
+    <!--券信息-->
+    <view class="{{chktab==1?'ticketvone':chktab==2?'ticketvtwo':'ticketvthree'}}">
+      <!--券基本信息-->
+      <view class='ticketleftv'>
+        <view class='tlnamev'>
+          <view class='tlnametxt'>{{item.jifen}}</view>
+          <view class='tltypev'>
+            <view class='tltypetxt'>积分</view>
+            <view class='tltypetxt'>抵扣券</view>
+          </view>
+        </view>
+        <view class='tltimev'>有效期：{{item.startdate}} 至{{item.enddate}}</view>
+      </view>
+      <!--分割线-->
+      <view class='ticketlinev'></view>
+      <!--状态-->
+      <view class='ticketrightv' wx:if="{{chktab==1}}">
+        未使用
+      </view>
+      <view class='ticketrightv' wx:if="{{chktab==2}}">
+        已使用
+      </view>
+      <view class='ticketrightv' wx:if="{{chktab==3}}">
+        已过期
+      </view>
+    </view>
+  </block>
+</view>

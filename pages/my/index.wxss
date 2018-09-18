@@ -1,0 +1,222 @@
+/* pages/my/index.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+/*顶部个人信息*/
+
+.myinfov {
+  width: 100%;
+  height: 231rpx;
+  background-size: cover;
+  display: flex;
+}
+
+/*信息内容部分*/
+
+.myinfovv {
+  width: 80%;
+  height: 231rpx;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+
+.mytx {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 55rpx 25rpx;
+  border-radius: 64rpx;
+}
+
+/*姓名星*/
+
+.mynamev {
+  display: flex;
+  margin-top: 66rpx;
+}
+
+.namev {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.xingv {
+  display: flex;
+  margin-left: 16rpx;
+}
+
+.xingicon {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 8rpx;
+}
+
+.phonev {
+  font-size: 26rpx;
+  color: #fff;
+  margin-top: 13rpx;
+}
+
+/*右侧的白箭头*/
+
+.toprightv {
+  line-height: 231rpx;
+  text-align: center;
+  width: 10%;
+}
+
+.righticon {
+  width: 16rpx;
+  height: 28rpx;
+}
+
+/*第二部分*/
+
+.secondv {
+  display: flex;
+  justify-content: center;
+}
+
+.sitemv {
+  width: 214rpx;
+  height: 214rpx;
+  text-align: center;
+  margin: 15rpx auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.sicon {
+  width: 74rpx;
+  height: 74rpx;
+  margin-top: 15rpx;
+}
+
+.sitemtxt {
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 7rpx;
+}
+
+.sitemnum {
+  color: #f33;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+
+/*订单部分*/
+
+.threev {
+  background-color: #fff;
+  margin-top: 15rpx;
+}
+
+.threetopv {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px;
+}
+
+.myordertxt {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.myallorder {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/*订单类型*/
+
+.ordertypev {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ordertypeitem {
+  text-align: center;
+  margin-top: 54rpx;
+}
+
+.ordertypeicon {
+  width: 52rpx;
+  height: 40rpx;
+}
+
+.ordertypetxt {
+  font-size: 28rpx;
+  margin: 13rpx auto 24rpx auto;
+}
+
+.ordertypenum {
+  position: relative;
+  top: -135rpx;
+  left: 50rpx;
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 14rpx;
+  background: #f33;
+  color: #fff;
+  font-size: 20rpx;
+}
+
+/*第四部分*/
+
+.fourv {
+  background-color: #fff;
+  margin: 22rpx 0;
+}
+
+.tabv {
+  height: 94rpx;
+  line-height: 94rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  box-shadow:0px 5rpx 16rpx 0px rgba(71,129,248,0.26);
+}
+
+.tableftv {
+  display: flex;
+}
+
+.tabuicon {
+  width: 44rpx;
+  height: 44rpx;
+  margin: 26rpx 20rpx 26rpx 0;
+}
+
+.tabtxt {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabright {
+  width: 16rpx;
+  height: 28rpx;
+  margin-top: 34rpx;
+}
+
+/*第五部分*/
+
+.fivev {
+  background-color: #fff;
+  margin: 22rpx 0;
+}
+
+/*退出登录*/
+.loginoutbtn {
+  width: 92%;
+  height: 88rpx;
+  background-color: #fff;
+  margin: 40rpx 4%;
+  text-align: center;
+  line-height: 88rpx;
+  color: #b3b3b3;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+}

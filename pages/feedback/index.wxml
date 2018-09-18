@@ -1,0 +1,9 @@
+<!--pages/feedback/index.wxml-->
+
+<!--内容部分-->
+<view class='bodyv' style='height:{{winh}}px;'>
+ <textarea class='txtcss' placeholder='请填写您对我们的意见及建议' placeholder-class='tipcss' value='{{feedback}}' bindinput='getfeedback' maxlength='-1'></textarea>
+</view>
+
+<!--保存按钮-->
+<view class='savebtb' bindtap='saveopt'>确认提交</view>

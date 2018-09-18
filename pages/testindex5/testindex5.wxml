@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">成为说服他人得专家</text>
+    <text class="text_2">测一测，我已经是一名“具有说服力得专家” 了吗？</text>
+    <text class="context">下面得小测试能帮你了解自己到底多有说服力。请在每一个和你最符合得答案前面画勾</text>
+
+    <image src="{{infoimg}}" mode="widthFix" binderror="" bindload=""></image>
+    <text class="text_3">准备好了吗？</text>
+    <view catchtap='goto_testlist' class="check_btn">开始测试</view>
+  </view>
+</view>

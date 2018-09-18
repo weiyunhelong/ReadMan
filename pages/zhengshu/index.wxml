@@ -1,0 +1,22 @@
+<!--pages/zhengshu/index.wxml-->
+<view class='titlev' bindtap='godetail'>{{sumbox}}个宝箱，共开启{{openbox}}个</view>
+<image src='{{backimgurl}}' class='backimg'></image>
+
+<view class='contenv'>
+
+  <block wx:for="{{boxdata}}" wx:key="item" wx:for-index="x">
+    <view class='box{{x+1}}' wx:if="{{x%3==0}}">
+      <image src='/resources/certificate/boxh.png' class='boxiconh' wx:if="{{item.isopen}}"></image>
+      <image src='/resources/certificate/box.png' class='boxicon' wx:if="{{!item.isopen}}"></image>
+    </view>
+    <view class='box{{x+1}}' wx:if="{{x%3==1}}">
+      <image src='/resources/certificate/boxh.png' class='boxiconh' wx:if="{{item.isopen}}"></image>
+      <image src='/resources/certificate/box.png' class='boxicon' wx:if="{{!item.isopen}}"></image>
+    </view>
+    <view class='box{{x+1}}' wx:if="{{x%3==2}}">
+      <image src='/resources/certificate/boxh.png' class='boxiconh' wx:if="{{item.isopen}}"></image>
+      <image src='/resources/certificate/box.png' class='boxicon' wx:if="{{!item.isopen}}"></image>
+    </view>
+  </block>
+
+</view>

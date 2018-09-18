@@ -1,0 +1,58 @@
+<view class="flex box box-tb box-align-center">
+  <view class="calendar pink-color box box-tb">
+    <!--顶部的年月-->
+    <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+      <view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">
+        <view class="prev-handle box box-lr box-align-center box-pack-center">
+          <image src='/resources/userinfo/left.png' class='lefticon'></image>
+        </view>
+      </view>
+      <view bindtap="chooseYearAndMonth" class="date-area box box-lr box-align-center box-pack-center">{{curYear || "--"}} 年 {{curMonth || "--"}} 月</view>
+      <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
+        <view class="next-handle box box-lr box-align-center box-pack-center">
+          <image src='/resources/userinfo/right.png' class='lefticon'></image>
+        </view>
+      </view>
+    </view>
+    <view class='riliv'>
+      <!--星期部分-->
+      <view class="weeks box box-lr box-pack-center box-align-center">
+        <view class="flex week fs28" wx:for="{{weeksCh}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+      </view>
+      <!--天数部分-->
+      <view class="days box box-lr box-wrap">
+        <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+        </view>
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
+        <!--<view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}">-->
+          <view class="day {{item.choosed ? 'pink-bg' : ''}} box box-align-center box-pack-center">
+            <view class="{{item.day==Today&&curMonth==Month&&curYear==Year?'daytxt':''}}">{{item.day}}</view>
+
+            <view class='todayv' wx:if="{{item.day==Today&&curMonth==Month&&curYear==Year}}"></view>
+          </view>
+        </view>
+      </view>
+      <!--日历部分-->
+    </view>
+  </view>
+</view>
+
+<!--备注部分-->
+<view class='iconv'>
+  <view class='iconitemv'>
+    <view class='iconb'></view>
+    <view class='icontxt'>已签到</view>
+  </view>
+  <view class='iconitemv'>
+    <view class='iconh'></view>
+    <view class='icontxt'>未签到</view>
+  </view>
+  <view class='iconitemv'>
+    <view class='icont'></view>
+    <view class='icontxt'>今日</view>
+  </view>
+</view>
+
+<view class='sumdaystxt'>已经连续签到2天</view>
+<view class='signbtn' bindtap='signbtn'>立即签到</view>
+

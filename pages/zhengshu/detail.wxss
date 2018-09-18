@@ -1,0 +1,78 @@
+/* pages/zhengshu/detail.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+.bodyv {
+  width: 94%;
+  height: 80%;
+  margin: 50rpx 3%;
+  background-color: #fff;
+  border-radius: 12rpx;
+  box-shadow: 9rpx 0px 16rpx #54b3f0;
+}
+
+.topimg {
+  width: 100%;
+}
+
+.titletxt {
+  font-size: 36rpx;
+  color: #333;
+  text-align: center;
+  margin-top: 81rpx;
+}
+
+.username {
+  margin: 38rpx 70rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.titleinfo {
+  margin: 0 70rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.zhengtuv {
+  text-align: right;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 43rpx;
+}
+
+.zhengshutu {
+  width: 256rpx;
+  height: 256rpx;
+  margin-top: 48rpx;
+  margin-right: 60rpx;
+}
+
+.groupname {
+  margin-top: -117rpx;
+  margin-bottom: 65rpx;
+  font-size: 36rpx;
+  margin-right: 75rpx;
+}
+
+/*底部的操作*/
+.bottomv{
+  display: flex;
+  justify-content: center;
+}
+.greydot{
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 9rpx;
+  background-color: #ccc;
+  margin-right: 52rpx;
+}
+.bluedot{
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 9rpx;
+  background-color: #12BCF8;
+  margin-right: 52rpx;
+}

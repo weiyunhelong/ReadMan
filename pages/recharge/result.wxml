@@ -1,0 +1,15 @@
+<!--pages/recharge/result.wxml-->
+
+<!--结果图片-->
+<view class='imgresultv'>
+  <image src='{{imgback}}' lazy-load='true' class='imgv'></image>
+</view>
+
+
+<view class='resulttxt'>充值成功</view>
+
+<view class='myjifen'>我的积分</view>
+
+<view class='jifennum'>{{sumjifen}}</view>
+
+<view class='okbtn' bindtap='gomall'>确定</view>

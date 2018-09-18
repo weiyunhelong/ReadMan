@@ -1,0 +1,50 @@
+<!--pages/recharge/index.wxml-->
+
+<view class='contentv'>
+
+  <!--充值选项-->
+  <view class='chkoptv'>
+    <block wx:for="{{chargelist}}" wx:key="item">
+      <!--选中的状态-->
+      <view class='chkoptitemvh' wx:if="{{item.ischk}}">
+        <view class='chkoptitemtxth'>{{item.name}}</view>
+        <view class='chkoptitempriceh'>￥{{item.price}} </view>
+      </view>
+      <!--未选中的状态-->
+      <view class='chkoptitemv' bindtap='chkcharge' data-id='{{item.id}}' wx:else>
+        <view class='chkoptitemtxt'>{{item.name}}</view>
+        <view class='chkoptitemprice'>￥{{item.price}}</view>
+      </view>
+    </block>
+  </view>
+
+  <!--其他未选中部分-->
+  <view class='otherv' wx:if="{{!isother}}" bindtap='chkotheropt'>其他</view>
+  
+  <view class='othervalv' wx:if="{{!isother}}">
+    <view class='optbtn'>-</view>
+    <view class='otherval'></view>
+    <view class='optbtn'>+</view>
+  </view>
+
+
+   <!--其他选中部分-->
+  <view class='othervh' wx:if="{{isother}}">其他</view>
+  
+  <view class='othervalvh'  wx:if="{{isother}}">
+    <view class='optbtnh' bindtap='reduceopt'>-</view>
+    <view class='othervalh'>
+     <input type='number' value='{{price}}' class='othervaltxt' bindblur='getothernum' bindconfirm='getothernum'></input>
+    </view>
+    <view class='optbtnh' bindtap='addopt'>+</view>
+  </view>
+
+  <!--图片部分-->
+  <view class='imgtipv'>
+    <image src='/resources/mall/chargeicon.png' class='imgv'></image>
+    <view class='tiptxt'>快去充值吧</view>
+  </view>
+
+  <!--充值按钮-->
+  <view class='chargebtn' bindtap='chargeopt'>微信充值</view>
+</view>

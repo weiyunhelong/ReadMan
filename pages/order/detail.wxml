@@ -1,0 +1,133 @@
+<!--pages/order/detail.wxml-->
+
+<!--收货信息部分-->
+<view class='addressv' bindtap='goaddress'>
+  <view class='cheiconv'>
+    <image src='/resources/mall/wuliu.png' class='cheicon'></image>
+  </view>
+  <view class='addressinfov'>
+    <view class='userinfov'>
+      <view class='username'>收货人：{{address.username}}</view>
+      <view class='userphone'>{{address.userphone}}</view>
+    </view>
+    <view class='useraddr'>收货地址：{{address.addresstxt}}</view>
+  </view>
+  <view class='rightv'>></view>
+</view>
+
+<view class='orderv' bindtap='godetail' data-id='{{order.orderid}}'>
+  <!--订单号和状态-->
+  <view class='ordertopv'>
+    <view class='orderno'>订单号：{{order.orderno}}</view>
+    <view class='orderstatus' wx:if="{{orderstatus==1}}">待付款</view>
+    <view class='orderstatus' wx:if="{{orderstatus==2}}">已完成</view>
+    <view class='orderstatus' wx:if="{{orderstatus==3}}">待收款</view>
+    <view class='orderstatus' wx:if="{{orderstatus==4}}">待发货</view>
+    <view class='orderstatus' wx:if="{{orderstatus==5}}">已取消</view>
+  </view>
+  <!--购买的东西-->
+  <view class='ordergoodsv'>
+    <block wx:for="{{order.goods}}" wx:key="gitem" wx:for-item="gitem">
+      <!--商品信息-->
+      <view class='goodsv'>
+        <!--商品图片-->
+        <view class='goodstuv'>
+          <image src='{{gitem.imgpath}}' class='goodstu'></image>
+        </view>
+        <!--商品名称数据-->
+        <view class='goodsinfov'>
+          <view class='goodsname'>{{gitem.name}}</view>
+          <view class='goodsattr'>{{gitem.attr}}</view>
+          <view class='goodsnumv'>
+            <view class='goodsjifenv'>{{gitem.jifen}}积分</view>
+            <view class='buynumtxt'>X{{gitem.buynum}}</view>
+            <view class='refundbtn' bindtap='gorefund' wx:if="{{orderstatus==2}}">申请退款</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!--价格汇总-->
+  <view class='sumpricev'>
+    <view class='sumleftv'>商品总价：{{order.sumprice}}</view>
+    <view class='sumrightv'>积分券：{{order.ticket}}积分</view>
+  </view>
+  <!--实付款-->
+  <view class='pricev'>
+    实付款：
+    <text style='color:#f33;'>{{order.payfor}}积分</text>
+  </view>
+
+</view>
+
+<!--订单时间操作部分-->
+<view class='ordertimev'>
+  <view class='timev'>
+    <image src='/resources/order/time.png' class='timeicon'></image>
+  </view>
+  <view class='timeoptv'>
+    <view class='timeopttxt'>创建时间:{{createtime}}</view>
+    <view class='timeopttxt'>支付时间:{{payfortime}}</view>
+    <view class='timeopttxt'>发货时间:{{sentime}}</view>
+    <view class='timeopttxt'>完成时间:{{finishtime}}</view>
+  </view>
+</view>
+
+<!--物流部分-->
+<view class='wuliuv' wx:if="{{orderstatus==3||orderstatus==2}}">
+  <view class='wuliucompv'>
+    <view class='wuliucompiconv'>
+      <image src='/resources/order/wuliu.png' class='wuliucompicon'></image>
+    </view>
+    <view class='wuliucompinfov'>
+      <view class='wlinfotxt'>配送方式:{{wuliu.sendtype}}</view>
+      <view class='wlinfotxt'>支付方式:{{wuliu.paytype}}</view>
+      <view class='wlinfotxt'>运单编号:{{wuliu.sendno}}</view>
+    </view>
+  </view>
+  <view class='wuliutip'>物流追踪：</view>
+  <view class='wuliurecordv'>
+    <block wx:for="{{wuliu.record}}" wx:key="item" wx:for-index="x">
+      <view class="{{x==0?'wuliurecorditemvh':'wuliurecorditemv'}}">
+        <view class='wlrleftv'>
+          <view class="{{x==0?'wlrleftdoth':'wlrleftdot'}}" style="margin-left:{{x!=wuliu.record.length-1?0:15}}rpx;"></view>
+          <view class='wlrleftline' wx:if="{{x!=wuliu.record.length-1}}"></view>
+        </view>
+        <view class='wlrrightv'>
+          <view class='wlrtxt'>{{item.address}}</view>
+          <view class='wlrtime'>{{item.time}}</view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>
+
+<!--操作按钮部分-->
+<view class='btnoptv'>
+  <view class='huangbtn' wx:if="{{orderstatus==1}}" catchtap='payforopt'>立即支付</view>
+  <view class='huangbtn' wx:if="{{orderstatus==3}}" catchtap='signopt'>确认收货</view>  
+  <view class='lanbtn' wx:if="{{orderstatus==3}}" catchtap='viewwuliuopt'>查看物流</view>
+  <view class='huibtn' catchtap='cancelopt' wx:if="{{orderstatus==1||orderstatus==2||orderstatus==4}}">取消订单</view>
+</view>
+
+<!--弹窗部分-->
+<view class="drawer_screen" wx:if="{{showModalStatus}}"></view>
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+  <!--图片层-->
+  <view class='txtopv'>
+    <image src='/resources/order/confirm.png' class='confirmimg'></image>
+  </view>
+
+  <!--提示层-->
+  <view class='confirmtip'>提示</view>
+  <view class='confirmtxt'>是否取消订单？</view>
+
+  <!--操作按钮-->
+  <view class="btnv">
+    <view class='cancelbtn' bindtap="powerDrawer" data-statu="close">取消</view>
+    <view class='okbtn' bindtap="okopt">确定</view>
+  </view>
+</view>

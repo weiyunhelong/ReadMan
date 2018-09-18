@@ -1,0 +1,128 @@
+/* pages/jifen/index.wxss */
+
+page {
+  background: #e4edf7;
+}
+
+/*积分层*/
+
+.jifenv {
+  width: 100%;
+  height: 120rpx;
+  background: #12bcf8;
+  line-height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.jifentxt {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.jifennum {
+  display: flex;
+}
+
+.jifennumtxt {
+  font-size: 50rpx;
+}
+
+.jifennumtip {
+  font-size: 30rpx;
+  line-height: 130rpx;
+}
+
+.payforv {
+  display: flex;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.payforicon {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 25px 5px;
+}
+
+/*TAB部分*/
+
+.tabv {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  box-shadow: 9rpx 0px 16rpx rgba(84, 179, 240, 0.17);
+  display: flex;
+  justify-content: space-around;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  margin-top: 23rpx;
+}
+
+.tabmenuh {
+  border-bottom: 2rpx solid #06c;
+  color: #06c;
+  font-size: 30rpx;
+}
+
+.tabmenu {
+  color: #999;
+  font-size: 30rpx;
+}
+
+/*规格部分*/
+
+.rulev {
+  background-color: #fff;
+  padding: 58rpx 3%;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+
+/*明细部分*/
+
+.recordv {
+  background-color: #fff;
+  padding:0rpx 3%;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+
+.recorditem {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 33rpx;
+  padding-top:40rpx;
+}
+
+.recordleftv{
+  width: 80%;
+}
+.recordname{
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;  
+}
+.recordtime{
+  font-size: 24rpx;
+  color: #999;
+}
+.recordrightv{
+  width: 20%;
+  text-align: right;  
+}
+.rnumtxth{
+  font-size: 36rpx;
+  color: #f33;
+}
+.rnumtxt{
+  font-size: 36rpx;
+  color: #259308;
+}

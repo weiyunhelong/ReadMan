@@ -1,0 +1,53 @@
+/* pages/recharge/result.wxss */
+
+page {
+  background-color: #fff;
+}
+
+/*结果图片*/
+
+.imgresultv {
+  text-align: center;
+  margin: 118rpx auto 48rpx auto;
+}
+
+.imgv {
+  width: 482rpx;
+  height: 427rpx;
+}
+
+/*充值成功*/
+.resulttxt {
+  text-align: center;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+/*我的积分*/
+.myjifen{
+  font-size: 24rpx;
+  text-align: center;
+  color: #333;
+  margin: 57rpx auto 26rpx auto;
+}
+/*积分的值*/
+.jifennum{  
+  font-size:60rpx;
+  text-align: center;
+  color: #f33;
+  font-weight: bold;
+}
+/*操作按钮*/
+.okbtn{
+  width: 66%;
+  height: 94rpx;
+  text-align: center;
+  line-height:94rpx;
+  background-color: #12BCF8;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 54rpx 17% 0 17%; 
+  border-radius: 47rpx;
+}

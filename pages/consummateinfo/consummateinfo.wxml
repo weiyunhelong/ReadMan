@@ -1,0 +1,167 @@
+<view class="container">
+  <!--顶部的tabbar部分-->
+  <view class="tabbar">
+    <view class="item {{show_nav==0?'active':''}}" bindtap='chktabopt' data-id='0'>
+      <image wx:if="{{show_nav==0}}" src="../../resources/userinfo/childh.png" mode="widthFix"></image>
+      <image wx:else src="../../resources/userinfo/child.png" mode="widthFix"></image>
+      <text>孩子信息</text>
+    </view>
+    <view class="item {{show_nav==1?'active':''}}" bindtap='chktabopt' data-id='1'>
+      <image wx:if="{{show_nav==1}}" src="../../resources/userinfo/parenth.png" mode="widthFix"></image>
+      <image wx:else src="../../resources/userinfo/parent.png" mode="widthFix"></image>
+      <text>家长信息</text>
+    </view>
+  </view>
+
+  <!--**孩子信息**-->
+  <view wx:if="{{show_nav==0}}" class="info_box">
+    <!-- 姓名 -->
+    <view class="item ">
+      <view class="left ">
+        <image src="../../resources/userinfo/name.png" mode="widthFix"></image>
+        <text>姓名</text>
+      </view>
+      <view class="right">
+        <input type="text" bindinput="editStuName" value="{{stu_name}}" placeholder="请输入姓名" />
+      </view>
+    </view>
+
+    <!-- 性别 -->
+    <view class="item">
+      <view class="left">
+        <image src="../../resources/userinfo/sex.png" mode="widthFix"></image>
+        <text>性别</text>
+      </view>
+      <view class="right ">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio ">
+            <image src="../../resources/userinfo/male.png" mode="widthFix"></image>
+            <radio value="1" checked="{{true}}" />
+            <text>男</text>
+          </label>
+          <label class="radio">
+            <image src="../../resources/userinfo/female.png" mode="widthFix"></image>
+            <radio value="0 " checked="{{false}} " />
+            <text>女</text>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+    <!-- 出生年月 -->
+    <view class="item">
+      <view class="left">
+        <image src="../../resources/userinfo/date.png" mode="widthFix"></image>
+        <text>出生年月</text>
+      </view>
+      <view class="right right_arrow">
+        <picker mode="date " value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker ">
+            {{stu_birth}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 地区 -->
+    <view class="item">
+      <view class="left">
+        <image src="../../resources/userinfo/area.png" mode="widthFix"></image>
+        <text>地区</text>
+      </view>
+      <view class="right right_arrow">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{stu_area[0]}}，{{stu_area[1]}}，{{stu_area[2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 培训机构 -->
+    <view class="item">
+      <view class="left">
+        <image src="../../resources/userinfo/group.png" mode="widthFix"></image>
+        <text>培训机构</text>
+      </view>
+      <view class="right">
+        <input value="{{stu_group}} " bindinput="editStuGroup " type="text" placeholder="天河区培训机构 " />
+      </view>
+    </view>
+  </view>
+
+  <!--**家长信息**-->
+  <view wx:else class="info_box">
+    <!-- 姓名 -->
+    <view class="item">
+      <view class="left ">
+        <image src="../../resources/userinfo/name.png" mode="widthFix"></image>
+        <text>姓名</text>
+      </view>
+      <view class="right">
+        <input type="text" bindinput="editParentName" value="{{parent_name}}" placeholder="请输入姓名" />
+      </view>
+    </view>
+
+    <!-- 手机号 -->
+    <view class="item">
+      <view class="left ">
+        <image src="../../resources/userinfo/phone.png" mode="widthFix"></image>
+        <text>手机号</text>
+      </view>
+      <view class="right">
+        <input type="number" bindinput="editParentTel" value="{{parent_tel}}" placeholder="请输入电话号码" />
+      </view>
+    </view>
+
+    <!-- 出生年月 -->
+    <view class="item">
+      <view class="left">
+        <image src="../../resources/userinfo/date.png" mode="widthFix"></image>
+        <text>报名日期</text>
+      </view>
+      <view class="right right_arrow">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            {{apply_date}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 报名课程 -->
+    <view class="item">
+      <view class="left">
+        <image src="../../resources/userinfo/class.png" mode="widthFix"></image>
+        <text>报名课程</text>
+      </view>
+      <view class="right right_arrow">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{course_array}}">
+          <view class="picker ">
+            {{course_array[index]}}
+            <text style='color:#ccc;font-size:40rpx;'>></text>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 报名费用 -->
+    <view class="item">
+      <view class="left">
+        <image src="../../resources/userinfo/money.png" mode="widthFix"></image>
+        <text>报名费用</text>
+      </view>
+      <view class="right ">
+        <input value="{{stu_group}}" bindinput="editStuGroup" type="text" placeholder="0" />
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{show_nav==0}}" bindtap="nextStep" class="next_step_btn">
+    下一步
+  </view>
+
+  <view wx:else bindtap="goBookClass" class="next_step_btn">
+    下一步
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="top_bar"> 
+    <text class="title">标题名称不超过40字标题名称不超过40字标题名称不超过40字题名称不超过40字</text>
+
+    <view class="bottom">
+      <view class="left">
+        <image src="{{eyeimg}}" mode="widthFix" binderror="" bindload=""></image>
+        <text>2344</text>
+      </view>
+      <view class="right">2018-06-28</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <text>
+      图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包
+    </text>
+    <image src="{{bannerimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+    <text>
+      图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包
+    </text>
+    <image src="{{bannerimg}}" mode="widthFix" binderror="" bindload=""></image>
+ 
+  </view>
+</view>

@@ -1,0 +1,61 @@
+/* pages/refund/result.wxss */
+
+page {
+  background: rgba(18, 188, 248, 1);
+  box-shadow: 9rpx 0rpx 16rpx rgba(84, 179, 240, 0.17);
+}
+
+.refundimgv {
+  margin-top: 138rpx;
+  text-align: center;
+}
+
+.refundimg {
+  width: 411rpx;
+  height: 511rpx;
+}
+
+/*提示部分*/
+
+.imgtipv {
+  text-align: center;
+}
+
+.imgtip {
+  width: 530rpx;
+  height: 107rpx;
+}
+
+.imgtiptxt {
+  color: #fff;
+  font-size: 28rpx;
+  margin-top: -78rpx;
+}
+
+/*查看详情按钮*/
+
+.detailbtn {
+  width: 60%;
+  height: 94rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 47rpx;
+  box-shadow: 0px 5rpx 5rpx 0px rgba(218, 211, 98, 0.59);
+  color: #999;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 94rpx;
+  margin: 54rpx 20% 30rpx 20%;
+}
+
+.backbtn {
+  width: 60%;
+  height: 94rpx;
+  background: rgba(22, 113, 179, 1);
+  border-radius: 47px;
+  box-shadow: 0px 5rpx 5rpx 0px rgba(218, 211, 98, 0.59);
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 94rpx;
+  margin: 0 20%;
+}

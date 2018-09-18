@@ -1,0 +1,30 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">学会战胜压力</text>
+    <text class="text_2">测一测，你是那种压力类型的人？</text>
+    <text class="context">当老师宣布了下一次课堂作业的题目之后，你觉得这个题目很难，而你只有两天的准备时间了，可是你又急需在这次课堂作业中获得一个较好的成绩。
+
+1.此时你感觉你的身体发生了哪些反应呢？（数一数吧）
+2.在接下来的几个小时之内，你的脑子里想了些什么呢？（有多少与你的课堂作业有关？）
+3.你的行为会发生什么变化？（你是否有独特的应激行为？）
+~6分，完全符合</text>
+
+    <text class="tips">这3个问题都是测试你对压力的反应。哪个问题你觉得最容易回答？你觉得最容易回答的问题代表了你所属的压力类型，现在就来看看你属于哪种类型吧？</text>
+
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio selected">
+        <radio value="0" checked=""/>1
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>2
+      </label>
+      <label class="radio">
+        <radio value="2" checked=""/>3
+      </label>
+    </radio-group>
+
+    <view class="submit_btn">确认提交</view>
+  </view>
+</view>

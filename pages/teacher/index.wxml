@@ -1,0 +1,24 @@
+<!--pages/teacher/index.wxml-->
+
+<image src='/resources/mycenter/teachertop.png' class='topimg'  mode='widthFix' class='topimgv'></image>
+<view class='mythink'>我认为</view>
+<view class='goodteacher'>在你心里Ta一定是位好老师</view>
+
+<view class='geduanvv'></view>
+<!--老师姓名-->
+<view class='inputv'>
+  <image src='/resources/mycenter/username.png' class='inputiconh'></image>
+  <input type='text' placeholder='请输入老师姓名' placeholder-class='tipcss' class='txtcss' bindinput='getname' value='{{username}}'></input>
+</view>
+<!--证书号-->
+<view class='inputv'>
+  <image src='/resources/mycenter/tzhengshu.png' class='inputicon'></image>
+  <input type='text' placeholder='请输入证书号' placeholder-class='tipcss' class='txtcss' bindinput='getnum' value='{{teachernum}}'></input>
+</view>
+
+<!--底部部分-->
+<view class='bottomv'>
+  <view class='bottomtip'>查询方式：输入老师姓名或证书号即可查询</view>
+
+  <view class='searchbtn' bindtap='searchopt'>查询</view>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/find/detail.wxml-->
+<view class='activityv'>
+
+  <view class='actimgv' style='background-image:url({{cover}});background-size:cover;'></view>
+
+
+  <view class='actnamev'>
+    {{title}}
+  </view>
+  <view class='hangv'>
+    <image src='/resources/find/time.png' class='hangicon'></image>
+    <view class='hangtxt'>{{datetime}}</view>
+  </view>
+  <view class='hangv'>
+    <image src='/resources/find/address.png' class='hangicon'></image>
+    <view class='hangtxt'>{{address}}</view>
+  </view>
+  <view class='hangv'>
+    <image src='/resources/find/people.png' class='hangicon'></image>
+    <view class='hangtxt'>报名人数:{{booknum}}人</view>
+  </view>
+  <view class='hangv'>
+    <image src='/resources/find/condition.png' class='hangicon'></image>
+    <view class='hangtxt'>报名条件:{{filter}}</view>
+  </view>
+  <!--操作按钮-->
+  <view class='btnblue' wx:if="{{status==1}}">立即报名</view>
+  <view class='btngrey' wx:if="{{status==2}}">名额已满</view>
+  <view class='btngrey' wx:if="{{status==3}}">已报名</view>
+  <view class='btngrey' wx:if="{{status==4}}">已结束</view>
+  <view class='btnblue' wx:if="{{status==5}}">报名中</view>
+</view>
+
+<!--介绍部分-->
+<view class='introv'>
+  <rich-text nodes="{{intro}}"></rich-text>
+</view>
+
+<!--底部的按钮-->
+<view style='width:100%;height:200rpx;'></view>
+<view class='bottomv'>
+  <button class='kefuv' open-type="contact">咨询</button>
+  <view class='optbtno' bindtap='bookopt' wx:if="{{status==1}}">立即报名</view>
+  <view class='optbtnoh' wx:if="{{status==2}}">名额已满</view>
+  <view class='optbtnoh' wx:if="{{status==3}}">已报名</view>
+  <view class='optbtnoh' wx:if="{{status==4}}">已结束</view>
+  <view class='optbtnoh' wx:if="{{status==5}}">报名中</view>
+</view>

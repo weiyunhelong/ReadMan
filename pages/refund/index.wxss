@@ -1,0 +1,255 @@
+/* pages/refund/index.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+/*商品部分*/
+
+.goodslistv {
+  margin: 20rpx 0;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.glistitemv {
+  display: flex;
+  margin: 0 25rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+/*产品图*/
+
+.listtuv {
+}
+
+.listtu {
+  width: 170rpx;
+  height: 170rpx;
+  margin: 31rpx 0rpx;
+}
+
+/*产品内容部分*/
+
+.listinfov {
+  width: 76%;
+}
+
+.listtitle {
+  margin-top: 30rpx;
+  margin-left: 18rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.listinfo {
+  font-size: 24rpx;
+  color: #999;
+  margin: 16rpx 0 24rpx 18rpx;
+}
+
+/*积分购买数量*/
+
+.numv {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 18rpx;
+  margin-right: 21rpx;
+  margin-top: -20rpx;
+}
+
+.jifennum {
+  height: 28rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #f33;
+  line-height: 70rpx;
+}
+
+.buynumv {
+  font-size: 30rpx;
+  color: #999;
+  line-height: 70rpx;
+}
+
+/*操作按钮*/
+
+.btnoptv {
+  width: 100%;
+  background: #fff;
+  margin-top: -19rpx;
+  display: flex;
+}
+
+.btnopt {
+  width: 200rpx;
+  height: 80rpx;
+  border: 1rpx solid rgba(229, 229, 229, 1);
+  border-radius: 40rpx;
+  color: #999;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  box-sizing: content-box;
+  margin: 26rpx 20rpx 30rpx 24rpx;
+}
+
+.btnopth {
+  width: 200rpx;
+  height: 80rpx;
+  background: rgba(18, 188, 248, 1);
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 30rpx;
+  margin: 26rpx 20rpx 30rpx 24rpx;
+}
+
+/*申请退货数量*/
+
+.refundnumv {
+  width: 100%;
+  height: 222rpx;
+  background: #fff;
+  margin: 20rpx 0;
+  box-shadow: 0px 5rpx 16rpx 0px rgba(71, 129, 248, 0.26);
+}
+
+.numtitle {
+  padding: 28rpx 34rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.numoptv {
+  display: flex;
+  justify-content: space-between;
+  margin: 46rpx 34rpx;
+}
+
+.numjifenv {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.optnumv {
+  display: flex;
+}
+
+.reducebtn {
+  width: 50rpx;
+  height: 50rpx;
+  border: 1rpx solid rgba(220, 220, 220, 1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+
+.optnumtxt {
+  font-size: 30rpx;
+  color: #333;
+  margin: 10rpx 26rpx;
+}
+
+.addbtn {
+  width: 50rpx;
+  height: 50rpx;
+  border: 1rpx solid rgba(220, 220, 220, 1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+
+/*退款原因*/
+
+.reasonv {
+  margin: 20rpx 0;
+  height: 597rpx;
+  background: #fff;
+  box-shadow: 0px 5rpx 16rpx 0px rgba(71, 129, 248, 0.26);
+}
+
+.reasontitle {
+  padding: 27rpx 28rpx 34rpx 28rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.reasontxtv {
+  width: 94%;
+  height: 200rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1rpx solid rgba(229, 229, 229, 1);
+  margin: 0 3%;
+}
+
+.reasontip {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.reasontxt {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 50rpx;
+  padding: 28rpx 23rpx;
+  height: 144rpx;
+  width: 95%;
+}
+
+/*选取图片*/
+
+.reasonimgv {
+  width: 94%;
+  margin: 24rpx 3% 31rpx 3%;
+  display: flex;
+}
+
+.chooseimg {
+  width: 166rpx;
+  height: 166rpx;
+  border: 1rpx dotted rgba(201, 201, 201, 1);
+  text-align: center;
+  line-height: 166rpx;
+  font-size: 30rpx;
+  color: #c9c9c9;
+  box-sizing: content-box;
+}
+
+.reasonimg {
+  width: 166rpx;
+  height: 166rpx;
+  margin-right: 16rpx;
+}
+
+.imagetipv {
+  margin-left: 3%;
+  font-size: 30rpx;
+  color: #999;
+}
+
+/*申请退款按钮*/
+.refundbtn {
+  width: 60%;
+  height: 94rpx;
+  background: rgba(18, 188, 248, 1);
+  border-radius: 47rpx;
+  margin: 45rpx 20% 25rpx 20%;
+  text-align: center;
+  line-height: 94rpx;
+  font-size: 30rpx;
+  color: #fff;
+}

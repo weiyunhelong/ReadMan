@@ -1,0 +1,278 @@
+/* pages/payfor/index.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+/*地址行*/
+
+.addressv {
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  display: flex;
+}
+
+.cheicon {
+  width: 40rpx;
+  height: 37rpx;
+  margin: 56rpx 25rpx;
+}
+
+.addressinfov {
+  width: 75%;
+  height: 150rpx;
+}
+
+.userinfov {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.username {
+  width: 70%;
+  font-size: 30rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.userphone {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.useraddr {
+  font-size: 30rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 16rpx;
+}
+
+.rightv {
+  width: 13%;
+  height: 150rpx;
+  line-height: 150rpx;
+  text-align: center;
+  color: #999;
+}
+
+/*商品部分*/
+
+.goodslistv {
+  margin: 20rpx 0;
+  width: 100%;
+  height: auto;
+}
+
+.glistitemv {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 5rpx 16rpx 0px #4781f8;
+}
+
+/*产品图*/
+
+.listtuv {
+}
+
+.listtu {
+  width: 170rpx;
+  height: 170rpx;
+  margin: 31rpx 25rpx;
+}
+
+/*产品内容部分*/
+
+.listinfov {
+  width: 66%;
+}
+
+.listtitle {
+  margin-top: 30rpx;
+  margin-left: 18rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.listinfo {
+  font-size: 24rpx;
+  color: #999;
+  margin: 16rpx 0 24rpx 18rpx;
+}
+
+/*积分购买数量*/
+
+.numv {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 18rpx;
+  margin-right: 21rpx;
+  margin-top: -20rpx;
+}
+
+.jifennum {
+  height: 28rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #f33;
+  line-height: 70rpx;
+}
+
+.buynumv {
+  font-size: 30rpx;
+  color: #999;
+  line-height: 70rpx;
+}
+
+/*折扣券*/
+
+.ticketv {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  line-height: 100rpx;
+}
+
+.tickettip {
+  margin-left: 35rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.picker {
+  margin-right: 30rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  color: #999;
+}
+
+/*底部的操作按钮部分*/
+
+.bottomvv {
+  width: 100%;
+  height: 117rpx;
+}
+
+.bottomv {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 117rpx;
+  background: #fff;
+  box-shadow: 0px -2rpx 24rpx 0rpx rgba(0, 153, 204, 0.12);
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottomleftv {
+  display: flex;
+  line-height: 117rpx;
+}
+
+.sumpricev {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.sumpricetxt {
+  font-size: 30rpx;
+  color: #f33;
+  font-weight: bold;
+  margin-left: 15rpx;
+}
+
+.sumpricetv {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.bottomrightv {
+  width: 200rpx;
+  height: 80rpx;
+  background: #ffcc41;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 18.5rpx 0;
+}
+
+/*弹窗样式部分*/
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #fafafa;
+}
+
+/*顶部的行*/
+
+.txtopv {
+  display: flex;
+  justify-content: space-between;
+  margin: 50rpx 22rpx;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1rpx solid #eee;
+  padding-bottom: 44rpx;
+}
+
+.myjifen {
+  margin: 60rpx auto 45rpx auto;
+  font-size: 36rpx;
+  color: #333;
+  text-align: center;
+}
+
+.jifennumval {
+  font-size: 81rpx;
+  color: #f33;
+  text-align: center;
+}
+
+/*确定按钮*/
+
+.btn_ok {
+  width: 60%;
+  height: 94rpx;
+  background: #12bcf8;
+  border-radius: 47rpx;
+  margin: 93rpx 20% 41rpx 20%;
+  line-height: 94rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+}

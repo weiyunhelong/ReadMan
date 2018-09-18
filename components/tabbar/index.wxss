@@ -1,0 +1,60 @@
+/* components/tabbar/index.wxss */
+
+bottom-ceng {
+  width: 100%;
+  height: 98rpx;
+}
+
+.bottom-bar {
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: #12bcf8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 8rpx 0px 12rpx rgba(255, 204, 178, 1);
+}
+
+.nav-box {
+  width: 25%;
+  height: 98rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-boxh {
+  width: 25%;
+  height: 98rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a7ec8;
+}
+
+.icon-square {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.text {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.reddot {
+  position: fixed;
+  z-index: 999;
+  bottom: 40px;
+  width: 18rpx;
+  height: 18rpx;
+  background: #f33;
+  border-radius: 20rpx;
+  left: 40%;
+  box-shadow: 2rpx 0px 5rpx rgba(229, 160, 172, 1);
+}

@@ -1,0 +1,137 @@
+/* pages/goods/index.wxss */
+
+page {
+  background-color: #e1ecf7;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+
+/*顶部的MENU部分*/
+
+.tab-h {
+  height: 80rpx;
+  width: 100%;
+  overflow: hidden;
+  font-size: 30rpx;
+  white-space: nowrap;
+  background-color: #fff;
+  line-height: 80rpx;
+}
+
+/*菜单*/
+
+.tabitem {
+  width: 135rpx;
+  text-align: center;
+  height: 80rpx;
+  margin: 0rpx 2rpx;
+  display: inline-block;
+  line-height: 80rpx;
+}
+
+/*选中的菜单*/
+
+.chktabitem {
+  text-align: center;
+  height: 75rpx;
+  color: #06c;
+  display: inline-block;
+  border-bottom: 10rpx solid #0a7ec8;
+  box-sizing: content-box;
+  font-size: 30rpx;
+}
+
+/*未选中的菜单*/
+
+.nochktabitem {
+  text-align: center;
+  height: 80rpx;
+  color: #999;
+  display: inline-block;
+  font-size: 30rpx;
+}
+
+/*商品列表部分*/
+
+.goodscontent {
+  background-color: #fff;
+  width: 96%;
+  height: auto;
+  padding-bottom: 20rpx;
+  margin: 14rpx 2%;
+  border-radius: 20rpx;
+}
+
+.goodslistv {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goodsitem {
+  border: 1rpx solid #e6e6e6;
+  width: 45%;
+  height: 325rpx;
+  margin: 24rpx 16rpx 0 16rpx;
+  text-align: center;
+}
+
+.goodsimg {
+  width: 92%;
+  height: 168rpx;
+  margin: 10rpx 12rpx;
+}
+
+.goodsnamev {
+  text-align: left;
+  padding: 0 15rpx;
+  font-size: 30rpx;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goodsfenv {
+  text-align: right;
+  font-size: 24rpx;
+  color: #f33;
+  margin-right: 33rpx;
+}
+
+/*购物车部分*/
+
+.shopcartv {
+  position: fixed;
+  left: 78.5%;
+  bottom: 50rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.shopcart {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.shopcartnum {
+  position: relative;
+  top: -150rpx;
+  left: 100rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #f33;
+  border-radius: 20rpx;
+  color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  font-size:24rpx; 
+}

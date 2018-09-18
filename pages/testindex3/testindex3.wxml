@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">让你增强自信心</text>
+    <text class="text_2">测一测，你有多自信？</text>
+    <text class="context">你的自信心如同一组拼图游戏，由许多小部分组成，而自我形象是其中一部分。那么你是如何评价自己的呢</text>
+
+    <image src="{{infoimg}}" mode="widthFix" binderror="" bindload=""></image>
+    <text class="text_3">准备好了吗？</text>
+    <view catchtap='goto_testlist' class="check_btn">开始测试</view>
+  </view>
+</view>

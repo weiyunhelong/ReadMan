@@ -1,0 +1,125 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 轮播图 -->
+  <swiper class="swiper-box" indicator-dots="{{true}}" indicator-active-color="{{dots_color}}" autoplay="{{true}}" interval="{{5000}}" duration="{{2000}}">
+    <block wx:for="{{bannerimglist}}" wx:key="item">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <!-- 课程列表 -->
+  <view class="class_list">
+    <view class='item' bindtap='goto_classintroduce'>
+      <image src="{{tabicon1}}" mode="widthFix"></image>
+      <text>课程介绍</text>
+    </view>
+    <view class='item' bindtap='goto_classtest'>
+      <image src="{{tabicon2}}" mode="widthFix"></image>
+      <text>课程测试</text>
+    </view>
+    <view class='item' bindtap='goto_graduatetest'>
+      <image src="{{tabicon3}}" mode="widthFix"></image>
+      <text>结业考试</text>
+    </view>
+  </view>
+
+
+  <!-- 动态列表 -->
+  <view class="dynamic_list">
+    <text class="title">最新动态</text>
+
+    <block wx:for="{{trendlist}}" wx:key="item">
+      <view class='item' catchtap='goto_dynamicdetail' data-id='{{item.id}}'>
+        <view class="left">
+          <image src="{{item.imgpath}}" mode="widthFix"></image>
+        </view>
+        <view class="right">
+          <view class="top">{{item.title}}</view>
+          <view class="bottom">
+            <text class="left_time">剩余{{item.leasttime}}</text>
+            <view class="views_count">
+              <image src="{{eyeimg}}" mode="widthFix"></image>
+              <text>{{item.viewnum}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    
+  </view>
+  <view style='width:100%;height:80rpx;'></view>
+  <!--底部的菜单部分-->
+  <tabbar receiveData="0" />
+
+  <!-- 客服 -->
+  <image bindtap='showService' class="service_btn" src="{{kefuimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <!-- 签到 -->
+  <view class="qiandao mask" wx:if="{{show_qiandao}}">
+    <view wx:if="{{show_qiandao_cotent}}" class="content">
+      <image src="{{qiandaobg}}" class="bg_img" mode="widthFix" binderror="" bindload=""></image>
+      <view class="step_list">
+        <view class="item">
+          <image src="{{flagaimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <text>周一</text>
+        </view>
+        <view class="item left_line right_line">
+          <image src="{{flagaimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <text>周二</text>
+        </view>
+        <view class="item vertical_line">
+          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <text>周三</text>
+        </view>
+        <view class="item vertical_line">
+          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <text>周六</text>
+        </view>
+        <view class="item left_line right_line">
+          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <text>周五</text>
+        </view>
+        <view class="item">
+          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <text>周四</text>
+        </view>
+        <view class="item left_line">
+          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <text>周日</text>
+        </view>
+      </view>
+      <view class="jifen_btn">
+        签到获取积分
+      </view>
+
+      <image catchtap='closeQiandao' src="{{closeimg}}" class='close_btn' mode="widthFix" binderror="" bindload=""></image>
+    </view>
+
+    <view wx:if="{{show_qiaodao_jifen}}" class="show_qiaodao_jifen">
+      <image class="tiger" src="{{tigerimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+      <view class="tuoyuan_box"></view>
+      <text class="title">获得500积分</text>
+      <text class="contact">成为机构的新用户获得500积分 可在商城兑换物品</text>
+
+      <view class="check_btn">确定</view>
+    </view>
+  </view>
+
+  <!-- 客服 -->
+  <view class="service_boxs mask" wx:if="{{show_service}}">
+    <view class="show_qiaodao_jifen">
+      <image class="tiger" src="{{serviceimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+      <view class="tuoyuan_box"></view>
+      <text class="title">客户服务</text>
+      <text class="contact">服务时间：08:00-17:00</text>
+
+      <view catchtap='call_service' class="check_btn">拨打：020-928272</view>
+    </view>
+  </view>
+</view>

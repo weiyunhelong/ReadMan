@@ -1,0 +1,39 @@
+<view class="container">
+
+  <view class="subject_content">
+    <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+   
+    <view class="subject_index">
+      <text class='index_num'>2 / 12</text>
+      <text class="subject_title">我喜欢新的挑战。</text>
+      <view class="bottom_line">
+        <view class="left"></view>
+        <view class="mid"></view>
+        <view class="right"></view>
+      </view>
+    </view>
+
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio selected">
+        <radio value="0" checked=""/>完全符合
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>比较符合
+      </label>
+      <label class="radio">
+        <radio value="2" checked=""/>基本符合
+      </label>
+      <label class="radio">
+        <radio value="3" checked=""/>比较不符合
+      </label>
+      <label class="radio">
+        <radio value="4" checked=""/>完全不符合
+      </label>
+    </radio-group>
+  </view>
+</view>
+
+<view class="btn_list">
+  <view class="prev_subject">上一题</view>
+  <view catchtap='goto_result' class='submit_btn'>确认提交</view>
+</view>

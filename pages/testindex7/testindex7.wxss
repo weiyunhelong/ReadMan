@@ -1,0 +1,56 @@
+page {
+  height: 100%;
+  background-color: #FFCC33; }
+
+.container {
+  width: 100%;
+  display: block;
+  background-color: #FFCC33; }
+  .container .top_img {
+    width: 100%; }
+  .container .content {
+    width: 702rpx;
+    height: 936rpx;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 12rpx;
+    text-align: center;
+    padding-top: 56rpx; }
+    .container .content .text_1 {
+      color: #333;
+      font-size: 32rpx;
+      display: block; }
+    .container .content .text_2 {
+      color: #333;
+      font-size: 30rpx;
+      margin: 24rpx auto 0;
+      width: 582rpx;
+      display: block; }
+    .container .content .context {
+      display: block;
+      font-size: 24rpx;
+      color: #999;
+      width: 582rpx;
+      margin: 30rpx auto 0;
+      text-align: left;
+      line-height: 42rpx; }
+    .container .content > image {
+      width: 254rpx;
+      margin-top: 12rpx; }
+    .container .content .text_3 {
+      font-size: 30rpx;
+      color: #999;
+      display: block;
+      margin-top: 18rpx; }
+    .container .content .check_btn {
+      width: 460rpx;
+      height: 88rpx;
+      line-height: 88rpx;
+      text-align: center;
+      color: #fff;
+      font-size: 36rpx;
+      background-color: #12BCF8;
+      border-radius: 44rpx;
+      margin: 26rpx auto; }
+
+/*# sourceMappingURL=testindex7.wxss.map */

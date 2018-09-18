@@ -1,0 +1,31 @@
+<!--pages/goods/index.wxml-->
+
+<!--菜单部分-->
+<scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" scroll-with-animation="true">
+  <block wx:for="{{menulist}}" wx:key="item" wx:for-index="x">
+    <view class="tabitem" data-current="{{x}}" data-id="{{item.id}}" bindtap="swichNav">
+      <view class="{{currentTab==x?'chktabitem':'nochktabitem'}}" data-current="{{x}}" data-id="{{item.id}}" bindtap="swichNav">{{item.name}}</view>
+    </view>
+  </block>
+</scroll-view>
+
+<!--商品部分-->
+<view class='goodscontent'>
+  <view class='goodslistv'>
+    <block wx:for="{{goodslist}}" wx:key="item">
+      <view class='goodsitem' bindtap='gogoods' data-id='{{item.id}}'>
+        <view class='goodsimgv'>
+          <image src='{{item.imgpath}}' class='goodsimg'></image>
+          <view class='goodsnamev'>{{item.name}}</view>
+          <view class='goodsfenv'>{{item.jifen}}积分</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!--购物车-->
+<view class='shopcartv' bindtap='gocart'>
+  <image src='/resources/mall/shopcart.png' class='shopcart'></image>
+  <view class='shopcartnum' wx:if="{{chkgoodsnum>0}}">{{chkgoodsnum}}</view>
+</view>

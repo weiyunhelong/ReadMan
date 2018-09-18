@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="class_item" bindtap='goto_detail'>
+    <image src="{{banner}}" mode="scaleToFill" binderror="" bindload=""></image>
+    <view class="context">
+      <text class="title">标题不超过两行发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯</text>
+      <text class="desc">简介内容显示2排，发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯，塑造良好的行为习惯简介内容显示2排，发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯，塑造良好的行为习惯...</text>
+    </view>
+  </view>
+
+  <view class="class_item" bindtap='goto_detail'>
+    <image src="{{banner}}" mode="scaleToFill" binderror="" bindload=""></image>
+    <view class="context">
+      <text class="title">标题不超过两行发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯</text>
+      <text class="desc">简介内容显示2排，发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯，塑造良好的行为习惯简介内容显示2排，发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯，塑造良好的行为习惯...</text>
+    </view>
+  </view>
+
+  <view class="class_item" bindtap='goto_detail'>
+    <image src="{{banner}}" mode="scaleToFill" binderror="" bindload=""></image>
+    <view class="context">
+      <text class="title">标题不超过两行发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯</text>
+      <text class="desc">简介内容显示2排，发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯，塑造良好的行为习惯简介内容显示2排，发现你的创造力，开拓你的思维潜力，塑造良好的行为习惯，塑造良好的行为习惯...</text>
+    </view>
+  </view>
+</view>

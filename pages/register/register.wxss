@@ -1,0 +1,68 @@
+.container {
+  width: 100%; }
+  .container .header_img {
+    width: 430rpx;
+    margin-top: 134rpx; }
+  .container .input_group {
+    margin-top: 110rpx; }
+    .container .input_group .input_item {
+      border-radius: 45rpx;
+      background-color: #fff;
+      border: 1rpx solid #eee;
+      padding: 0 30rpx;
+      height: 90rpx;
+      width: 560rpx;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: relative;
+      margin-bottom: 36rpx; }
+      .container .input_group .input_item .icon_img {
+        width: 45rpx; }
+      .container .input_group .input_item input {
+        border-left: 1rpx solid #eee;
+        margin-left: 30rpx;
+        padding-left: 30rpx;
+        font-size: 32rpx; }
+      .container .input_group .input_item .close_btn {
+        width: 30rpx;
+        position: absolute;
+        right: 30rpx;
+        top: 50%;
+        transform: translateY(-50%); }
+    .container .input_group .vertify_input {
+      border-radius: 45rpx;
+      background-color: #fff;
+      border: 1rpx solid #eee;
+      padding: 0 30rpx;
+      height: 90rpx;
+      width: 560rpx;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: relative;
+      margin-bottom: 36rpx; }
+      .container .input_group .vertify_input input {
+        font-size: 32rpx; }
+      .container .input_group .vertify_input .get_vertify_btn {
+        position: absolute;
+        font-size: 32rpx;
+        right: 30rpx;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #12BCF8; }
+  .container .submit_btn {
+    margin-top: 44rpx;
+    width: 494rpx;
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    background-color: #12BCF8;
+    border-radius: 44rpx;
+    color: #fff;
+    box-shadow: 1rpx 1rpx 2rpx #B2B2B2;
+    margin-bottom: 44rpx; }
+
+/*# sourceMappingURL=register.wxss.map */

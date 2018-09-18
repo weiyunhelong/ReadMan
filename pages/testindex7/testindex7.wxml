@@ -1,0 +1,14 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">学会与异性正确交往</text>
+    <text class="text_2">测一测，在与异性的交流中，你是哪种类型？</text>
+    <text class="context">要想成功，你必须在交往过程中充分展现自己的优势——这是一门艺术。而在与异性交往时你有哪些强项呢？下面的测试能够帮你找出答案。</text>
+    <text class="context">当说法最符合你的情况时给4分，较符合时给3分，其次给2分，对最不符合的说法只给1分。勾出每个答案相应的分数，最后分别算出a、 b、 c、 d的总分，它们分别对应着鲁莽型、内向型、浪漫型与健谈型4种人格类型。现在就开始吧——注意实事求是！仔细思考你的实际情况，而不要填写你想象的状况。</text>
+
+    <image src="{{infoimg}}" mode="widthFix" binderror="" bindload=""></image>
+    <text class="text_3">准备好了吗？</text>
+    <view catchtap='goto_testlist' class="check_btn">开始测试</view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">学会保持健康  </text>
+    <text class="text_2">健康小测试</text>
+    <text class="context">通过这个健康小测试能让你对自己的健康状况有一个初步的了解。请回答下列问题，选择最接近自己的选项。</text>
+
+    <image src="{{infoimg}}" mode="widthFix" binderror="" bindload=""></image>
+    <text class="text_3">准备好了吗？</text>
+    <view catchtap='goto_testlist' class="check_btn">开始测试</view>
+  </view>
+</view>

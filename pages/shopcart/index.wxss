@@ -1,0 +1,206 @@
+/* pages/shopcart/index.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+/*购物车列表*/
+
+.donghuav {
+  display: flex;
+  width: 122%;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+  transform: translate(-90px, 0px);
+  transition-delay: 0.05s;
+  transition-duration: 1s;
+  margin: 16rpx 0 0 0;
+}
+
+.goodsv {
+  margin: 0;
+  display: flex;
+}
+
+.glistitemv {
+  display: flex;
+  margin: 16rpx 0 0 0;
+  background-color: #fff;
+}
+
+/*多选按钮*/
+
+.chkoptv {
+  width: 8%;
+  height: 232rpx;
+  line-height: 232rpx;
+  text-align: center;
+}
+
+/*产品图*/
+
+.listtuv {
+}
+
+.listtu {
+  width: 170rpx;
+  height: 170rpx;
+  margin: 31rpx 0rpx;
+}
+
+/*产品内容部分*/
+
+.listinfov {
+  width: 66%;
+}
+
+.listtitle {
+  margin-top: 30rpx;
+  margin-left: 18rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.listinfo {
+  font-size: 24rpx;
+  color: #999;
+  margin: 16rpx 0 24rpx 18rpx;
+}
+
+/*积分购买数量*/
+
+.numv {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 18rpx;
+  margin-right: 21rpx;
+  margin-top: -20rpx;
+}
+
+.jifennum {
+  height: 28rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #f33;
+  line-height: 70rpx;
+}
+
+/*操作按钮部分*/
+
+.buynumv {
+  display: flex;
+}
+
+.reducev {
+  width: 50rpx;
+  height: 50rpx;
+  border: 1rpx solid #dcdcdc;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #999;
+  box-sizing: content-box;
+  margin-right: 27rpx;
+}
+.buynumtxt{
+  font-size: 30rpx;
+  color: #333;
+  line-height:58rpx; 
+}
+.addv {
+  width: 50rpx;
+  height: 50rpx;
+  border: 1rpx solid #dcdcdc;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #999;
+  box-sizing: content-box;
+  margin-left: 27rpx;
+}
+
+/*删除按钮*/
+
+.ndel {
+  background-color: #f33;
+  width: 232rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 240rpx;
+  margin-top: 15rpx;
+}
+
+/*底部的操作按钮部分*/
+
+.bottomvv {
+  width: 100%;
+  height: 117rpx;
+}
+
+.bottomv {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 117rpx;
+  background: #fff;
+  box-shadow: 0px -2rpx 24rpx 0rpx rgba(0, 153, 204, 0.12);
+  display: flex;
+  justify-content: space-around;
+}
+
+/*全选*/
+
+.allchkv {
+  display: flex;
+  line-height: 117rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.bluedot {
+  width: 26rpx;
+  height: 26rpx;
+  background: #0a7ec8;
+  border-radius: 13rpx;
+  margin: 45.5rpx 17rpx;
+}
+
+/*总价*/
+
+.sumpricev {
+  display: flex;
+  line-height: 117rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.sumpriceval {
+  color: #f33;
+  font-size: 36rpx;
+}
+
+/*去兑换*/
+
+.chargebtn {
+  width: 30%;
+  height: 80rpx;
+  background: #FFCC41;
+  border-radius: 40rpx;
+  font-size:30rpx;
+  color: #fff;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 18.5rpx;
+}

@@ -1,0 +1,24 @@
+<view class='cantainer'>
+  <view class="share_card">
+    <image class="top_img" src="{{banner}}" mode="scaleToFill" binderror="" bindload=""></image>
+    <view class="bottom">
+      <view class="left">
+        <image src="../../resources/testshare/code.png" mode="widthFix" binderror="" bindload=""></image>
+        <text>姓名</text>
+      </view>
+      <view class="right">
+        <image src="../../resources/testshare/code.png" mode="widthFix" binderror="" bindload=""></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="share_btns">
+    <view class="share_btn">
+      <image class="share_icon" src="../../resources/testshare/share.png" mode="widthFix" binderror="" bindload=""></image>
+      <text>分享给好友</text>
+    </view>
+    <view class="make_pic">
+      生成图片分享至朋友圈
+    </view>
+  </view>
+</view>

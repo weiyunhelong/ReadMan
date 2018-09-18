@@ -1,0 +1,55 @@
+<view class="container">
+
+  <view class="subject_content">
+    <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+   
+    <view class="subject_index">
+      <text class='index_num'>2 / 12</text>
+      <text class="subject_title">当我眼前出现一位非常有吸引力的异性时，</text>
+      <view class="bottom_line">
+        <view class="left"></view>
+        <view class="mid"></view>
+        <view class="right"></view>
+      </view>
+    </view>
+
+    <text class="sub_title">A.我立即展开攻势，与他/她搭讪。</text>
+
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio selected">
+        <radio value="0" checked=""/>最符合
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>比较符合
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>一般符合
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>不符合
+      </label>
+    </radio-group>
+
+    <text class="sub_title">B.我立即展开攻势，与他/她搭讪。</text>
+
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio selected">
+        <radio value="0" checked=""/>最符合
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>比较符合
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>一般符合
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>不符合
+      </label>
+    </radio-group>
+  </view>
+</view>
+
+<view class="btn_list">
+  <view class="prev_subject">上一题</view>
+  <view catchtap='goto_result' class='submit_btn'>确认提交</view>
+</view>

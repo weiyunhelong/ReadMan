@@ -1,0 +1,25 @@
+<!--pages/zhengshu/detail.wxml-->
+
+<view class='bodyv'>
+  <image src='{{zhengshuobj.logopath}}' mode='widthFix' class='topimg'></image>
+
+  <view class='titletxt'>《{{zhengshuobj.classname}}》结业证书</view>
+  <view class='username'>{{zhengshuobj.username}}同学：</view>
+  <view class='titleinfo'>
+    <text decode='true'>    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;恭喜你在{{zhengshuobj.groupname}}完成了《{{zhengshuobj.classname}}》的学习计划，特颁发此证。
+    </text>
+  </view>
+  <view class='zhengtuv'>
+    <image src='{{zhengshuobj.zhangpath}}' class='zhengshutu'></image>
+    <view class='groupname'>{{zhengshuobj.groupname}}</view>
+  </view>
+</view>
+
+<!--底部的按钮部分-->
+<view class='bottomv'>
+  <block wx:for="{{zhengshulist}}" wx:key="item"  wx:for-index="x">
+    <view class='greydot' wx:if="{{chkindex!=x}}" bindtap='gochkidnex' data-index='{{x}}'></view>
+    <view class='bluedot' wx:if="{{chkindex==x}}" ></view>
+  </block>
+</view>

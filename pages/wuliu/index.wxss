@@ -1,0 +1,110 @@
+/* pages/wuliu/index.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+/*物流信息*/
+
+.wuliuv {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+/*物流公司*/
+
+.wuliucompv {
+  display: flex;
+  margin: 18rpx 25rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.wuliucompiconv {
+  width: 16%;
+  text-align: center;
+}
+
+.wuliucompicon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 58rpx;
+}
+
+.wuliucompinfov {
+  margin: 18rpx 0;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #333;
+}
+
+.wuliutip {
+  margin: 25rpx 26rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+/*物流追踪部分*/
+
+.wuliurecordv {
+  padding-bottom: 84rpx;
+}
+
+.wuliurecorditemv {
+  margin: 0rpx 18rpx;
+  display: flex;
+}
+
+.wuliurecorditemvh {
+  margin: 60rpx 18rpx 0 18rpx;
+  display: flex;
+}
+
+.wlrleftv {
+  width: 16%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wlrleftdoth {
+  width: 30rpx;
+  height: 30rpx;
+  background: #12bcf8;
+  border-radius: 15rpx;
+}
+
+.wlrleftdot {
+  width: 30rpx;
+  height: 30rpx;
+  background: #e5e5e5;
+  border-radius: 15rpx;
+}
+
+.wlrleftline {
+  height: 110rpx;
+  background: #e5e5e5;
+  width: 2rpx;
+  margin-left: -15rpx;
+  margin-top: 30rpx;
+}
+
+.wlrrightv {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-spacing: normal;
+  width: 70%;
+  margin-top: -20rpx;
+}
+
+.wlrtxt {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.wlrtime {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}

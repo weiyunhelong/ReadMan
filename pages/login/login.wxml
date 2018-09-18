@@ -1,0 +1,27 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <image class='header_img' src="{{headerimg}}" mode="widthFix"></image>
+
+
+  <view class="input_group">
+    <view class="input_item">
+      <image class="icon_img" src="../../resources/login/phone.png" mode="widthFix"></image>
+      <input type="number" placeholder="请输入手机号码" maxlength='11' bindinput='getphone' value='{{phone}}'/>
+      <image class="close_btn" src="../../resources/login/close.png" mode="widthFix"></image>
+    </view>
+
+    <view class="input_item">
+      <image class="icon_img" src="../../resources/login/pwd.png" mode="widthFix"></image>
+      <input type="password" placeholder="请输入6-16位密码" minlength='6' maxlength='16' bindinput='getpwd' value='{{pwd}}'/>
+    </view>
+  </view>
+
+  <view class="submit_btn" bindtap='go_login'>
+    登录
+  </view>
+  <!--忘记密码和注册-->
+  <view class='btnoptv'>
+    <text bindtap='goRemindPwd' class="go_login">忘记密码?</text>
+    <text bindtap='goRegister' class="go_login">新用户注册</text>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">快速提高口头表达能力</text>
+    <text class="text_2">口头发言测试</text>
+    <text class="context">为什么在课堂上参与口头表达对你来说是件难事？从以下测试题中你将找出和自己情况相符的答案，自然就能明白其中的原因了。</text>
+
+    <image src="{{infoimg}}" mode="widthFix" binderror="" bindload=""></image>
+    <text class="text_3">准备好了吗？</text>
+    <view catchtap='goto_testlist' class="check_btn">开始测试</view>
+  </view>
+</view>

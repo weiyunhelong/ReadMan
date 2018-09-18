@@ -1,0 +1,182 @@
+/* pages/zhengshu/index.wxss */
+
+.titlev {
+  width: 100%;
+  height: 93rpx;
+  background: #12bcf8;
+  box-shadow: 9rpx 0px 16rpx #54b3f0;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 93rpx;
+}
+
+.backimg {
+  width: 100%;
+  height: 3514rpx;
+}
+
+.contenv {
+  width: 100%;
+  height: 100%;
+}
+
+.boxiconh {
+  width: 186rpx;
+  height: 174rpx;
+}
+
+.boxicon {
+  width: 186rpx;
+  height: 159rpx;
+}
+
+.box1 {
+  position: absolute;
+  top: 22%;
+  left: 10%;
+}
+
+.box2 {
+  position: absolute;
+  top: 23%;
+  left: 64%;
+}
+
+.box3 {
+  position: absolute;
+  left: 41%;
+  top: 38%;
+}
+
+.box4 {
+  position: absolute;
+  left: 15%;
+  top: 49%;
+}
+
+.box5 {
+  position: absolute;
+  right: 12%;
+  top: 54%;
+}
+
+.box6 {
+  position: absolute;
+  right: 36%;
+  top: 66%;
+}
+
+.box7 {
+  position: absolute;
+  left: 2%;
+  top: 74%;
+}
+
+.box8 {
+  position: absolute;
+  right: 15%;
+  top: 84%;
+}
+
+.box9 {
+  position: absolute;
+  left: 20%;
+  top: 96%;
+}
+
+.box10 {
+  position: absolute;
+  right: 8%;
+  top: 106%;
+}
+
+.box11 {
+  position: absolute;
+  top: 117%;
+  left: 9%;
+}
+
+.box12 {
+  position: absolute;
+  top: 122%;
+  left: 42%;
+}
+
+.box13 {
+  position: absolute;
+  left: 8%;
+  top: 140%;
+}
+
+.box14 {
+  position: absolute;
+  right: 5%;
+  top: 135%;
+}
+
+.box15 {
+  position: absolute;
+  left: 43%;
+  top: 150%;
+}
+
+.box16 {
+  position: absolute;
+  left: 50%;
+  top: 167%;
+}
+
+.box17 {
+  position: absolute;
+  left: 15%;
+  top: 175%;
+}
+
+.box18 {
+  position: absolute;
+  right: 1%;
+  top: 180%;
+}
+
+.box19 {
+  position: absolute;
+  left: 39%;
+  top: 195%;
+}
+
+.box20 {
+  position: absolute;
+  left: 8%;
+  top: 203%;
+}
+
+.box21 {
+  position: absolute;
+  left: 22%;
+  top: 222%;
+}
+
+.box22 {
+  position: absolute;
+  left: 57%;
+  top: 222%;
+}
+
+.box23 {
+  position: absolute;
+  right: 5%;
+  top: 250%;
+}
+
+.box24 {
+  position: absolute;
+  left: 3%;
+  top: 253%;
+}
+
+.box25 {
+  position: absolute;
+  left: 32%;
+  top: 276%;
+}

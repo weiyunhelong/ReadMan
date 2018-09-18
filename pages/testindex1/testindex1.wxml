@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="content">
+    <text class="text_1">学会管理时间</text>
+    <text class="text_2">测一测，你是否是一个“时间专家”？</text>
+    <text class="context">通过这个测试你能够知道自己是否已经是一个“时间专家”。下面的说法是否与你的个人情况相符？根据相符的不同程度打1~6分，完全符合</text>
+
+    <image src="{{infoimg}}" mode="widthFix" binderror="" bindload=""></image>
+    <text class="text_3">准备好了吗？</text>
+    <view catchtap='goto_testlist' class="check_btn">开始测试</view>
+  </view>
+</view>

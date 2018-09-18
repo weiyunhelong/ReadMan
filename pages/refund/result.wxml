@@ -1,0 +1,13 @@
+<!--pages/refund/result.wxml-->
+
+<view class='refundimgv'>
+  <image src='/resources/order/refund.png' class='refundimg'></image>
+</view>
+
+<view class='imgtipv'>
+  <image src='/resources/order/refundicon.png' class='imgtip'></image>
+  <view class='imgtiptxt'>可在退款订单中查看进度</view>
+</view>
+
+<view class='detailbtn' bindtap='detailopt'>查看详情</view>
+<view class='backbtn' bindtap='backopt'>返回订单</view>

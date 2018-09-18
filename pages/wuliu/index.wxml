@@ -1,0 +1,32 @@
+<!--pages/wuliu/index.wxml-->
+
+<!--物流部分-->
+<view class='wuliuv'>
+  <view class='wuliucompv'>
+    <view class='wuliucompiconv'>
+      <image src='/resources/order/wuliu.png' class='wuliucompicon'></image>
+    </view>
+    <view class='wuliucompinfov'>
+      <view class='wlinfotxt'>配送方式:{{wuliu.sendtype}}</view>
+      <view class='wlinfotxt'>支付方式:{{wuliu.paytype}}</view>
+      <view class='wlinfotxt'>运单编号:{{wuliu.sendno}}</view>
+    </view>
+  </view>
+  <view class='wuliutip'>物流追踪：</view>
+  <view class='wuliurecordv'>
+    <block wx:for="{{wuliu.record}}" wx:key="item" wx:for-index="x">
+      <view class="{{x==0?'wuliurecorditemvh':'wuliurecorditemv'}}">
+        <view class='wlrleftv'>
+          <view class="{{x==0?'wlrleftdoth':'wlrleftdot'}}"  style="margin-left:{{x!=wuliu.record.length-1?0:15}}rpx;"></view>
+          <view class='wlrleftline' wx:if="{{x!=wuliu.record.length-1}}"></view>
+        </view>
+        <view class='wlrrightv'>
+          <view class='wlrtxt'>{{item.address}}</view>
+          <view class='wlrtime'>{{item.time}}</view>
+        </view>
+      </view>
+    </block>
+    
+  </view>
+  
+</view>

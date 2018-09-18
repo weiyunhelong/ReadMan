@@ -1,0 +1,189 @@
+/* pages/goods/detail.wxss */
+page{
+  background-color: #fff;
+}
+/*顶部商品封面*/
+
+.goodsimgv {
+  text-align: center;
+}
+
+.goodsimg {
+  width: 702rpx;
+  height: 264rpx;
+  margin: 21rpx auto;
+}
+
+/*商品简介*/
+
+.goodsinfov {
+  width: 94%;
+  margin: 0 3%;
+  color: #333;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/*商品标签*/
+
+.notelist {
+  width: 94%;
+  margin: 24rpx 3%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.notev {
+  background: #e5e5e5;
+  border-radius: 8rpx;
+  padding: 11rpx 30rpx;
+  margin-right: 20rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+/*积分行*/
+
+.goodsprice {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+  margin: 50rpx 3%;
+}
+
+.jifenv {
+  font-size: 36rpx;
+  color: #f33;
+}
+
+.salenumv {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 50rpx;
+}
+
+/*分隔线*/
+
+.xianv {
+  width: 94%;
+  height: 1rpx;
+  background: rgba(140, 140, 140, 1);
+  margin: 50rpx 3%;
+}
+
+/*富文本内容，图文内容简介*/
+
+.goodsintrov {
+  width: 94%;
+  margin: 0 3%;
+  height: auto;
+}
+
+/*底部的隔断*/
+
+.bottomoptv {
+  width: 100%;
+  height: 130rpx;
+}
+
+/*底部操作行*/
+
+.bottomv {
+  width: 100%;
+  height: 130rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0px -2rpx 24rpx 0rpx rgba(0, 153, 204, 0.12);
+  display: flex;
+}
+
+/*购物车*/
+
+.shopcartv {
+  width: 15%;
+  height: 130rpx;
+  text-align: center;
+}
+
+.carticon {
+  width: 56rpx;
+  height: 51rpx;
+  margin-top: 28rpx;
+}
+
+.kefuicon {
+  width: 71rpx;
+  height: 54rpx;
+}
+
+.bottomtxt {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.shopcartnum {
+  position: absolute;
+  top: 15rpx;
+  left: 10%;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 16rpx;
+  background-color: #f33;
+  color: #fff;
+  font-size: 22rpx;
+}
+
+/*咨询*/
+
+.kefuv {
+  width: 15%;
+  height: 130rpx;
+  text-align: center;
+  background: none !important;
+  color: #fff !important;
+}
+
+.kefuv::after {
+  border: 0;
+  opacity: 0;
+  background: none !important;
+  color: #fff !important;
+}
+
+.kefuicon {
+  width: 71rpx;
+  height: 54rpx;
+  margin-top: 25rpx;
+}
+
+/*加入购物车*/
+
+.addcart {
+  width: 30%;
+  height: 80rpx;
+  background-color: #12bcf8;
+  margin: 25rpx 2%;
+  border-radius: 40rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.buyopt{  
+  width: 30%;
+  height: 80rpx;
+  background-color: #FFCC41;
+  margin: 25rpx 2%;
+  border-radius: 40rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}

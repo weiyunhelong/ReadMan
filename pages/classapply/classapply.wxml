@@ -1,0 +1,39 @@
+<view class="container">
+  <image class='top_img' src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class="org_list">
+    <view bindtap='goto_apply' class="item">
+      <text class="item_name">机构名称xxx</text>
+      <text class="item_addr">地址：广东省广州市天河区珠江新城233号</text>
+
+      <image class="right_icon" src="../../resources/userinfo/right.png" mode="widthFix" binderror="" bindload=""></image>
+    </view>
+
+    <view bindtap='goto_apply' class="item">
+      <text class="item_name">机构名称xxx</text>
+      <text class="item_addr">地址：广东省广州市天河区珠江新城233号</text>
+
+      <image class="right_icon" src="../../resources/userinfo/right.png" mode="widthFix" binderror="" bindload=""></image>
+    </view>
+
+    <view bindtap='goto_apply' class="item">
+      <text class="item_name">机构名称xxx</text>
+      <text class="item_addr">地址：广东省广州市天河区珠江新城233号</text>
+
+      <image class="right_icon" src="../../resources/userinfo/right.png" mode="widthFix" binderror="" bindload=""></image>
+    </view>
+  </view>
+
+  <!-- 客服 -->
+  <view class="service_boxs mask" wx:if="{{show_service}}">
+    <view class="show_qiaodao_jifen">
+      <image class="tiger" src="{{kefuimg}}" mode="widthFix" binderror="" bindload=""></image>
+
+      <view class="tuoyuan_box"></view>
+      <text class="title">我要报名</text>
+      <text class="contact">拨打电话:020-928272</text>
+
+      <view catchtap='call_service' class="check_btn">立即咨询</view>
+    </view>
+  </view>
+</view>

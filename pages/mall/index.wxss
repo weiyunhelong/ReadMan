@@ -1,0 +1,185 @@
+/* pages/mall/index.wxss */
+
+page {
+  background: #e4edf7;
+}
+
+/*积分层*/
+
+.jifenv {
+  width: 100%;
+  height: 120rpx;
+  background: #12bcf8;
+  line-height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.jifentxt {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.jifennum {
+  display: flex;
+}
+
+.jifennumtxt {
+  font-size: 50rpx;
+}
+
+.jifennumtip {
+  font-size: 30rpx;
+  line-height: 130rpx;
+}
+
+.payforv {
+  display: flex;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.payforicon {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 25px 5px;
+}
+
+/*搜索层*/
+
+.searchv {
+  width: 100%;
+  height: 58rpx;
+  background-color: #dcdcdc;
+  text-align: center;
+  padding: 16rpx 0;
+}
+
+.searchtxtv {
+  width: 94%;
+  height: 58rpx;
+  border-radius: 12rpx;
+  margin: 0 3%;
+  background-color: #fff;
+}
+
+.searchtxttip {
+  font-size: 24rpx;
+  color: #dcdcdc;
+}
+
+.searchtxt {
+  width: 100%;
+  height: 58rpx;
+  color: #333;
+}
+
+/*菜单部分*/
+
+.menuv {
+  display: flex;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.menuicon {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.menuitxt {
+  font-size: 32rpx;
+}
+
+/*热门商品部分*/
+
+.kindv {
+  width: 94%;
+  background: #fff;
+  margin: 54rpx 3% 120rpx 3%;
+  border-radius: 12rpx;
+}
+
+.kindtitle {
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+.goodslistv {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goodsitem {
+  border: 1rpx solid #e6e6e6;
+  width: 45%;
+  height: 325rpx;
+  margin: 24rpx 16rpx 0 16rpx;
+  text-align: center;
+}
+
+.goodsimg {
+  width: 92%;
+  height: 168rpx;
+  margin: 10rpx 12rpx;
+}
+
+.goodsnamev {
+  text-align: left;
+  padding: 0 15rpx;
+  font-size: 30rpx;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goodsfenv {
+  text-align: right;
+  font-size: 24rpx;
+  color: #f33;
+  margin-right: 33rpx;
+}
+
+.chkmore {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 24rpx;
+  line-height: 150rpx;
+  color: #999;
+}
+
+/*购物车部分*/
+
+.shopcartv {
+  position: fixed;
+  left: 78.5%;
+  bottom: 100rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.shopcart {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.shopcartnum {
+  position: relative;
+  top: -150rpx;
+  left: 100rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #f33;
+  border-radius: 20rpx;
+  color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  font-size:24rpx; 
+}

@@ -1,0 +1,43 @@
+page {
+  background-color: #fff; }
+
+.container {
+  padding: 22rpx 24rpx 180rpx; }
+  .container image {
+    width: 100%;
+    margin-top: 22rpx; }
+  .container .title {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color: #333;
+    font-weight: bold; }
+  .container .context {
+    margin-top: 30rpx;
+    font-size: 28rpx;
+    color: #333; }
+  .container .line {
+    width: 100%;
+    display: block;
+    height: 2rpx;
+    background-color: #8c8c8c;
+    margin-top: 28rpx; }
+  .container .btn_box {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 160rpx;
+    line-height: 160rpx;
+    width: 100%;
+    background-color: #fff; }
+    .container .btn_box .apply_btn {
+      margin: 40rpx auto;
+      border-radius: 48rpx;
+      height: 94rpx;
+      line-height: 94rpx;
+      width: 504rpx;
+      color: #fff;
+      font-size: 36rpx;
+      text-align: center;
+      background-color: #12BCF8; }
+
+/*# sourceMappingURL=classdetail.wxss.map */

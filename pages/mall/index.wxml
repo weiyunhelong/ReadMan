@@ -1,0 +1,60 @@
+<!--pages/mall/index.wxml-->
+
+<!--我的积分-->
+<view class='jifenv'>
+  <view class='jifentxt'>我的积分</view>
+  <view class='jifennum'>
+    <view class='jifennumtxt'>{{jifen}}</view>
+    <view class='jifennumtip'>分</view>
+  </view>
+  <view class='payforv' bindtap='gorecharge'>
+    <image src='/resources/mall/payfor.png' class='payforicon'></image>
+    <view class='payfortxt'>充值</view>
+  </view>
+</view>
+
+<!--搜索框-->
+<view class='searchv'>
+  <view class='searchtxtv'>
+    <input placeholder='搜索' placeholder-class='searchtxttip' class='searchtxt' disabled='true' bindtap='gosearch'></input>
+  </view>
+</view>
+
+<!--菜单部分-->
+<view class='menuv'>
+  <block wx:for="{{tablist}}" wx:key="item">
+    <view class='menuitemv' bindtap='chkmenu' data-id='{{item.id}}'>
+      <image src='{{item.icon}}' class='menuicon'></image>
+      <view class='menuitxt'>{{item.title}}</view>
+    </view>
+  </block>
+</view>
+
+
+<!--商品行-->
+<view class='kindv'>
+  <view class='kindtitle'>热门商品</view>
+  <view class='goodslistv'>
+    <block wx:for="{{goodslist}}" wx:key="item">
+      <view class='goodsitem' bindtap='gogoods' data-id='{{item.id}}'>
+        <view class='goodsimgv'>
+          <image src='{{item.imgpath}}' class='goodsimg'></image>
+          <view class='goodsnamev'>{{item.name}}</view>
+          <view class='goodsfenv'>{{item.jifen}}积分</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='chkmore' bindtap='gomoreopt'>查看更多</view>
+</view>
+<view style='width:100%;height:20rpx;'></view>
+<!--底部的菜单部分-->
+<tabbar receiveData="2" />
+
+<!--购物车-->
+<view class='shopcartv' bindtap='gocartopt'>
+ <image src='/resources/mall/shopcart.png' class='shopcart'></image>
+ <view class='shopcartnum' wx:if="{{chkgoodsnum>0}}">{{chkgoodsnum}}</view>
+</view>
+

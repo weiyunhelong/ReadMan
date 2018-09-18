@@ -1,0 +1,75 @@
+<!--pages/payfor/index.wxml-->
+
+<!--收货信息部分-->
+<view class='addressv' bindtap='goaddress'>
+  <view class='cheiconv'>
+    <image src='/resources/mall/wuliu.png' class='cheicon'></image>
+  </view>
+  <view class='addressinfov'>
+    <view class='userinfov'>
+      <view class='username'>收货人：{{address.username}}</view>
+      <view class='userphone'>{{address.userphone}}</view>
+    </view>
+    <view class='useraddr'>收货地址：{{address.addresstxt}}</view>
+  </view>
+  <view class='rightv'>></view>
+</view>
+
+<!--购买的商品列表-->
+<view class='goodslistv'>
+  <block wx:for="{{goodslist}}" wx:key="item">
+    <view class='glistitemv'>
+      <!--图片部分-->
+      <view class='listtuv'>
+        <image src='{{item.imgpath}}' class='listtu'></image>
+      </view>
+      <!--文字介绍-->
+      <view class='listinfov'>
+        <view class='listtitle'>{{item.title}}</view>
+        <view class='listinfo'>颜色:{{item.color}}</view>
+        <view class='numv'>
+          <view class='jifennum'>{{item.jifen}}积分</view>
+          <view class='buynumv'>X{{item.buynum}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!--积分优惠券-->
+<view class='ticketv'>
+  <view class='tickettip'>积分抵扣券</view>
+  <picker range="{{ticketlist}}" bindchange="bindPickerChange" value="{{tindex}}" range-key="{{'name'}}">
+    <view class="picker">
+      {{ticketlist[tindex].name}} >
+    </view>
+  </picker>
+</view>
+
+<!--合计按钮-->
+<view class='bottomv'>
+  <view class='bottomleftv'>
+    <view class='sumpricev'>合计:</view>
+    <view class='sumpricetxt'>{{payfor}}积分</view>
+    <view class='sumpricetv'>（抵扣券{{ticketfen}}积分）</view>
+  </view>
+  <view class='bottomrightv' bindtap='powerDrawer' data-statu="open">确定订单</view>
+</view>
+
+<!--弹窗部分-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  
+  <!--第一行-->
+  <view class='txtopv'>
+    <view class='ordereduv'>订单额度:158积分</view>
+    <view class='ticketdikouv'>积分券抵扣23分</view>
+  </view>
+
+  <!--我的积分-->
+  <view class='myjifen'>我的积分</view> 
+  <view class='jifennumval'>79767</view>
+  
+  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确认支付</view>
+</view>

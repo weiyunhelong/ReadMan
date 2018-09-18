@@ -1,0 +1,87 @@
+/* pages/refund/list.wxss */
+page{
+  background-color: #e4edf7;
+}
+/*订单记录部分*/
+
+.orderv {
+  margin: 20rpx 0;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 25rpx;
+  background-color: #fff;
+}
+
+.ordertopv {
+  display: flex;
+  justify-content: space-between;
+  padding: 21rpx;
+  font-size: 26rpx;
+}
+
+.orderstatusr {
+  color: #f33;
+}
+.orderstatush {
+  color: #999;
+}
+.orderstatusb {
+  color: #09f;
+}
+.ordergoodsv {
+  background: #f6f4f4;
+}
+
+.goodsv {
+  display: flex;
+  margin: 0 20rpx;
+}
+
+.goodstu {
+  width: 170rpx;
+  height: 170rpx;
+  margin: 30rpx 10rpx;
+}
+
+.goodsinfov {
+  margin-top: 36rpx;
+  margin-left: 17rpx;
+}
+
+.goodsname {
+  font-size: 30rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goodsattr {
+  color: #999;
+  font-size: 24rpx;
+  margin: 16rpx 0;
+}
+
+.goodsnumv {
+  margin-top: 17rpx;
+  display: flex;
+}
+
+.goodsjifenv {
+  font-size: 30rpx;
+  color: #f33;
+}
+
+.buynumtxt {
+  margin-left: 63rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+
+.pricev {
+  text-align: right;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+  margin-top: 30rpx;
+}

@@ -1,0 +1,167 @@
+<!--pages/userinfo/index.wxml-->
+<view class='geduanv'></view>
+
+<!--tab部分-->
+<view class='tabv'>
+  <view class="{{chktab==0?'tabitemvh':'tabitemv'}}" bindtap='chktabopt' data-id='0'>
+    <image src='/resources/userinfo/childh.png' class='tabicon' wx:if="{{chktab==0}}"></image>
+    <image src='/resources/userinfo/child.png' class='tabicon' wx:if="{{chktab==1}}"></image>
+    <view class='tabtxt'>孩子信息</view>
+  </view>
+  <view class="{{chktab==1?'tabitemvh':'tabitemv'}}" bindtap='chktabopt' data-id='1'>
+    <image src='/resources/userinfo/parent.png' class='tabicon' wx:if="{{chktab==0}}"></image>
+    <image src='/resources/userinfo/parenth.png' class='tabicon' wx:if="{{chktab==1}}"></image>
+    <view class='tabtxt'>家长信息</view>
+  </view>
+</view>
+
+<!--孩子信息-->
+<view class='childv' wx:if="{{chktab==0}}">
+  <!--头像-->
+  <view class='hangv' data-id='1'  bindtap='goedit' data-params='http://s2.sinaimg.cn/mw690/001t9U6Czy6LCmGZvGNd1&690'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/touxiang.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>头&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <image src='http://s2.sinaimg.cn/mw690/001t9U6Czy6LCmGZvGNd1&690' class='txiconcss'></image>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--姓名-->
+  <view class='hangv' data-id='2'  bindtap='goedit' data-params='王晓明'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/name.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>王晓明</view>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--性别-->
+  <view class='hangv' data-id='3'  bindtap='goedit' data-params='男生'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/sex.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>男生</view>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--出生日期-->
+  <view class='hangv' data-id='4'  bindtap='goedit' data-params='2001年12月12日'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/date.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>出生日期：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>2001年12月12日</view>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--地区-->
+  <view class='hangv' data-id='5'  bindtap='goedit' data-params='广东  广州  天河区'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/area.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>广东  广州  天河区</view>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--培训机构-->
+  <view class='hangv' >
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/group.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>培训机构：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>天河培训结构</view>
+    </view>
+  </view>
+
+</view>
+
+
+<!--家长信息-->
+<view class='parentv' wx:if="{{chktab==1}}">
+  <!--姓名-->
+  <view class='hangv' bindtap='goedit' data-id='1' data-params='王晓钢'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/name.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>王晓钢</view>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--手机号-->
+  <view class='hangv' bindtap='goedit' data-id='1' data-params='13454344555'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/sex.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>手&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;&nbsp;号：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>13454344555</view>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--报名日期-->
+  <view class='hangv' bindtap='goedit' data-id='1' data-params='2001年12月12日'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/date.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>报名日期：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>2001年12月12日</view>
+    </view>
+  </view>
+  <!--报名课程-->
+  <view class='hangv' bindtap='goedit' data-id='1' data-params='23门课程'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/area.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>报名课程：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>23门课程</view>
+      <image src='/resources/userinfo/back.png' class='hangricon'></image>
+    </view>
+  </view>
+  <!--报名费用-->
+  <view class='hangv'>
+    <view class='hangleftv'>
+      <image src='/resources/userinfo/money.png' class='hangicon'></image>
+      <view class='hangtxt'>
+        <text decode='true'>报名费用：</text>
+      </view>
+    </view>
+    <view class='hangrightv'>
+      <view class='hangrtxt'>￥667</view>
+    </view>
+  </view>
+
+</view>

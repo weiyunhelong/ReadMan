@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class="content">
+    <image class="top_img" src="../../resources/graduate/fail.png" mode="widthFix" binderror="" bindload=""></image>
+    <text class="text_1">你的得分</text>
+    <text class="text_2">70</text>
+    <text class="text_3">很遗憾~  总结一下重新再来</text>
+
+    <view class="retry_test">重新考试</view>
+    <view class="quit_test">下次再考</view>
+  </view>
+</view>

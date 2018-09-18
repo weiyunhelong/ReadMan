@@ -1,0 +1,96 @@
+/* pages/userinfo/index.wxss */
+page{
+  background-color: #fff;
+}
+
+.geduanv {
+  width: 100%;
+  height: 20rpx;
+  background-color: #e4edf7;
+}
+
+/*TAB部分*/
+
+.tabv {
+  display: flex;
+  justify-content: center;
+}
+
+.tabitemvh {
+  display: flex;
+  font-size: 30rpx;
+  margin: 75rpx 57rpx;
+  color: #0a7ec8;
+  border-bottom: 1rpx solid #0a7ec8;
+  padding-bottom: 10rpx;
+}
+
+.tabitemv {
+  display: flex;
+  font-size: 30rpx;
+  margin: 75rpx 57rpx;
+  color: #333;
+  padding-bottom: 10rpx;
+}
+
+.tabicon {
+  width: 37rpx;
+  height: 31rpx;
+  margin-right: 10rpx;
+  margin-top: 5rpx;
+}
+
+/*孩子信息部分*/
+
+.childv {
+  width: 100%;
+  height: auto;
+}
+
+.hangv {
+  display: flex;
+  width: 94%;
+  margin: 0 3%;
+  justify-content:space-between;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.hangleftv{
+  display:flex;
+}
+.hangicon {
+  width: 37rpx;
+  height: 38rpx;
+  margin: 65rpx 20rpx 50rpx 0;
+}
+
+.hangtxt {
+  color: #999;
+  font-size: 32rpx;
+  margin-top: 65rpx;
+}
+
+/*右侧部分*/
+.hangrightv{
+  display: flex;
+}
+.txiconcss {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  margin-top: 35rpx;
+  margin-right: 20rpx;
+  border: 1rpx solid #E5E5E5;
+}
+
+.hangricon {
+  width: 16rpx;
+  height: 28rpx;
+  margin-top: 62rpx;
+}
+
+.hangrtxt{
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 55rpx;
+  margin-right: 15rpx;
+}

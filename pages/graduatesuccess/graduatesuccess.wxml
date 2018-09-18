@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="top_image">
+    <image src="../../resources/graduate/top_img.png" mode="widthFix"></image>
+    <view class="score_box">
+      <view class='top'>你的得分</view>
+      <view class="content">80<text>分</text></view>
+      <view class='bottom'>获得积分:100</view>
+    </view>
+  </view>
+  <view class="sub_top" bindtap='gozhengshu'>
+    <view class="left">
+      <image src="../../resources/graduate/prize.png" mode="widthFix"></image>
+      <text>开启一个宝箱</text>
+    </view>
+    <view class="right">
+      GO>>
+    </view>
+  </view>
+  <view class="subject_list">
+    <view class="item">
+      <text class="title">1.你周末喜欢做什么</text>
+      <view class="options_list">
+        <text class="options right_choice">A.休息</text>
+        <text class="options wrong_choice">B.看书</text>
+        <text class="options">C.休息</text>
+      </view>
+      <image class="status_img" src="../../resources/graduate/wrong.png" mode="widthFix"></image>
+    </view>
+
+    <view class="item">
+      <text class="title">1.你周末喜欢做什么</text>
+      <view class="options_list">
+        <text class="options right_choice">A.休息</text>
+        <text class="options">B.看书</text>
+        <text class="options">C.休息</text>
+      </view>
+      <image class="status_img" src="../../resources/graduate/check.png" mode="widthFix"></image>
+    </view>
+
+    <view class="item">
+      <text class="title">1.你周末喜欢做什么</text>
+      <text class="your_answer">你的答案【打游戏】</text>
+      <text class="right_answer">【正确答案：游戏】</text>
+      <image class="status_img" src="../../resources/graduate/wrong.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>

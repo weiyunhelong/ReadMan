@@ -1,0 +1,102 @@
+/* pages/ticket/index.wxss */
+
+page {
+  background-color: #e4edf7;
+}
+
+.tabv {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 9rpx 0px 16rpx rgba(84, 179, 240, 0.17);
+}
+
+.tabitemh {
+  color: #06c;
+  border-bottom: 5rpx solid #06c;
+  box-sizing: content-box;
+  font-size: 30rpx;
+}
+
+.tabitem {
+  color: #999;
+  font-size: 30rpx;
+}
+
+/*未使用优惠券*/
+
+.ticketvone {
+  width: 94%;
+  height: 183rpx;
+  margin: 20rpx 3% 0 3%;
+  display: flex;
+  background: linear-gradient(0deg, rgba(147, 225, 252, 1), rgba(35, 162, 239, 1));
+  border-radius: 12rpx;
+  box-shadow: 9rpx 0px 16rpx rgba(84, 179, 240, 0.17);
+}
+
+.ticketvtwo {
+  width: 94%;
+  height: 183rpx;
+  margin: 20rpx 3% 0 3%;
+  display: flex;
+  background: linear-gradient(0deg, rgba(255, 86, 86, 1), rgba(250, 141, 93, 1));
+  border-radius: 12rpx;
+  box-shadow: 9rpx 0px 16rpx rgba(236, 97, 69, 0.17);
+}
+
+.ticketvthree {
+  width: 94%;
+  height: 183rpx;
+  margin: 20rpx 3% 0 3%;
+  display: flex;
+  background: rgba(255, 214, 35, 1);
+  border-radius: 12rpx;
+  box-shadow: 9rpx 0px 16rpx rgba(0, 102, 204, 0.17);
+}
+
+.ticketleftv {
+  width: 80%;
+  height: 183rpx;
+}
+
+.tlnamev {
+  display: flex;
+  margin: 10rpx 0 0 43rpx;
+}
+
+.tlnametxt {
+  color: #fff;
+  font-size: 101rpx;
+}
+
+.tltypev {
+  color: #fff;
+  font-size: 40rpx;
+  margin-left: 13rpx;
+}
+
+.tltimev {
+  margin: -10rpx 54rpx 0 54rpx;
+  color: #fff;
+  font-size: 24rpx;  
+}
+
+.ticketlinev {
+  width: 1%;
+  height: 183rpx;
+  border-right: 10rpx dotted #fff;
+  box-sizing: content-box;
+}
+
+.ticketrightv {
+  width: 19%;
+  height: 183rpx;
+  text-align: center;
+  line-height: 183rpx;
+  color: #fff;
+  font-size: 24rpx;
+}

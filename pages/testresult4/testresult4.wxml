@@ -1,0 +1,151 @@
+<view class="container">
+  <view class="top_img">
+    <image class="top_imt" src="../../resources/testresult/result_top_img.png" mode="widthFix" binderror="" bindload=""></image>
+    <view class="context">
+      <text>成为运算高手</text>
+      <text>测一测，你是运算高手吗</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <text class="title">测试结果</text>
+    <text class="fenshu">我的答案</text>
+    <view class="result_box">
+      <view class="item">
+        <view class="subject_index">题1</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题2</view>
+        <view class="subject_answer no">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题3</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题4</view>
+        <view class="subject_answer no">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题5</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题6</view>
+        <view class="subject_answer no">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题7</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题8</view>
+        <view class="subject_answer no">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题9</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题10</view>
+        <view class="subject_answer no">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题11</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题12</view>
+        <view class="subject_answer no">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题13</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题14</view>
+        <view class="subject_answer no">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题15</view>
+        <view class="subject_answer yes">是</view>
+      </view>
+      <view class="item">
+        <view class="subject_index">题16</view>
+        <view class="subject_answer no">是</view>
+      </view>
+
+    </view>
+    
+    <view class="bottom_line">
+      <view class="left"></view>
+      <view class="mid"></view>
+      <view class="right"></view>
+    </view>
+
+    <text class="fenshu">
+      分析
+    </text>
+    <view class="subject_detail">
+      <view class="item">
+        <text class="title">问题1～5</text>
+        <text class="detail">假如这5个问题你多数回答“是”，那么你需要改变一下自己的态度。这样的负面情绪会让你堵住自己前进的道路。</text>
+      </view>
+      <view class="item">
+        <text class="title">问题6～10</text>
+        <text class="detail">多数回答“否”吗？那你已经为学习快速而准确的计算创造了良好的外部条件。如果你大多数还是以“是”来回答，并且觉得在计算时难以集中注意力，那么你必须改变一下自己的学习环境。</text>
+      </view>
+    </view>
+    <view class="bottom_line">
+      <view class="left"></view>
+      <view class="mid"></view>
+      <view class="right"></view>
+    </view>
+    <text class="get_tags">获得标签</text>
+    <view class="tags_list">
+      <view class="item">
+        <image src="../../resources/testresult/calculate_tag_1.png" mode="widthFix" binderror="" bindload=""></image>
+        <text>需要改变对运算的态度</text>
+      </view>
+      <view class="item">
+        <image src="../../resources/testresult/calculate_tag_2.png" mode="widthFix" binderror="" bindload=""></image>
+        <text>有快速运算的外部条件</text>
+      </view>
+      <view class="item">
+        <image src="../../resources/testresult/calculate_tag_3.png" mode="widthFix" binderror="" bindload=""></image>
+        <text>需要改变学习环境</text>
+      </view>
+      <view class="item">
+        <image src="../../resources/testresult/calculate_tag_4.png" mode="widthFix" binderror="" bindload=""></image>
+        <text>需要特殊的算术训练</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="btns_lits">
+    <view class="retry_btn">重新测试</view>
+    <view catchtap='gotoShare' class="share_btn">分享好友，获取优惠券</view>
+  </view>
+
+  <!-- 缴费查看结果分析 -->
+  <view class="explain_box mask" wx:if="{{show_pay_box}}">
+    <view class="content" wx:if="{{show_pay_content}}">
+      <view class="top_bar">
+        <text>缴费查看结果分析</text>
+      </view>
+      <text class='money'>¥899</text>
+      <text class="tips">不是机构的学员均需要付费查看</text>
+      <view class="pay_btn" catchtap='gotoPay'>确认支付</view>
+      <image class="close_btn" catchtap='closePay' src="../../resources/index/close.png" mode="widthFix" binderror="" bindload=""></image>
+    </view>
+
+    <view class="pay_opera" wx:if="{{show_pay_opera}}">
+      <image src="{{payimg}}" mode="widthFix" binderror="" bindload=""></image>
+      <text>定金金额</text>
+      <text>¥67</text>
+      <view class="pay_btn">立即支付</view>
+    </view>
+  </view>
+
+</view>

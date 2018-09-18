@@ -1,0 +1,5 @@
+<view class="container">
+  缺少测试题型4原型
+
+  <view bindtap='goto_result'>跳转测试题型4的结果</view>
+</view>

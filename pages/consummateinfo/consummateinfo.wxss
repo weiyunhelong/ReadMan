@@ -1,0 +1,137 @@
+page{
+  background-color: #fff;
+}
+
+.container .tabbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 70rpx;
+}
+
+.container .tabbar .item {
+  padding-bottom: 10rpx;
+}
+
+.container .tabbar .item:nth-of-type(1) {
+  margin-right: 116rpx;
+}
+
+.container .tabbar .item image {
+  width: 38rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.container .tabbar .item text {
+  font-size: 30rpx;
+  vertical-align: middle;
+  color: #ccc;
+}
+
+.container .tabbar .active {
+  border-bottom: 3rpx solid #0a7ec8;
+}
+
+.container .tabbar .active text {
+  color: #0a7ec8;
+}
+
+.container .info_box {
+  width: 100%;
+  padding: 22rpx;
+  box-sizing: border-box;
+  margin-top: 90rpx;
+}
+
+.container .info_box .item {
+  padding-bottom: 40rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 36rpx;
+}
+
+.container .info_box .item .left {
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+
+.container .info_box .item .left image {
+  width: 40rpx;
+  margin-right: 18rpx;
+}
+
+.container .info_box .item .left text {
+  color: #999;
+  font-size: 32rpx;
+  display: inline-block;
+  width: 128rpx;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  text-align-last: justify;
+}
+
+.container .info_box .item .left::after {
+  content: ":";
+  color: #999;
+}
+
+.container .info_box .item .right input {
+  font-size: 32rpx;
+  text-align: right;
+  color: #999;
+}
+
+.container .info_box .item .right .radio-group .radio:nth-of-type(1) {
+  margin-right: 92rpx;
+}
+
+.container .info_box .item .right .radio-group .radio image {
+  width: 48rpx;
+  vertical-align: middle;
+  margin-right: 22rpx;
+}
+
+.container .info_box .item .right .radio-group .radio radio {
+  opacity: 0;
+  width: 0rpx;
+}
+
+.container .info_box .item .right .radio-group .radio text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.container .info_box .item .right picker {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.container .info_box .item .right_arrow {
+  display: inline-block;
+  position: relative;
+}
+
+.container .info_box .item .right_arrow::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 16rpx;
+  height: 29rpx;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.container .next_step_btn {
+  background-color: #12bcf8;
+  margin-top: 160rpx;
+  width: 664rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 44rpx;
+}

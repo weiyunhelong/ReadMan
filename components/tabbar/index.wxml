@@ -1,0 +1,12 @@
+<!--components/tabbar/index.wxml-->
+<view class='bottom-ceng'></view>
+<view class='bottom-bar'>
+  <block wx:for="{{menulist}}" wx:key="item">
+    <view class="{{chktab==item.id?'nav-boxh':'nav-box'}}" catchtap='navTo' data-oj='{{item}}'>
+      <image class="icon-square" src="{{item.iconUrl}}" mode='scaleToFill' data-oj='{{item}}'></image>
+      <text class="text" data-oj='{{item}}'>{{item.text}}</text>
+    </view>
+  </block>
+</view>
+
+<view class='reddot' wx:if="{{isreddot}}"></view>

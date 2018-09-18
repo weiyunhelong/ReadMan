@@ -1,0 +1,36 @@
+<!--pages/activity/index.wxml-->
+<!--活动列表-->
+<block wx:for="{{actlist}}" wx:key="item">
+  <view class='activityv' bindtap='godetail' data-id='{{item.id}}' data-status='{{item.status}}'>
+
+    <view class='actimgv' style='background-image:url({{item.cover}});background-size:cover;'></view>
+
+    <view class='leasttimev'>
+      <image src='/resources/find/filter.png' class='filtericon'></image>
+      <view class='leasttimetxt' wx:if="{{item.status==4||item.status==5}}">{{item.leasttime}}</view>
+      <view class='leasttimetxth' wx:else>剩余{{item.leasttime}}</view>
+    </view>
+
+    <view class='actnamev'>
+      {{item.title}}
+    </view>
+    <view class='hangv'>
+      <image src='/resources/find/time.png' class='hangicon'></image>
+      <view class='hangtxt'>{{item.datetime}}</view>
+    </view>
+    <view class='hangv'>
+      <image src='/resources/find/address.png' class='hangicon'></image>
+      <view class='hangtxt'>{{item.address}}</view>
+    </view>
+    <view class='hangv'>
+      <image src='/resources/find/people.png' class='hangicon'></image>
+      <view class='hangtxt'>报名人数:{{item.booknum}}人</view>
+    </view>
+    <!--操作按钮-->
+    <view class='btnblue' wx:if="{{item.status==1}}" catchtap='gobookact' data-id='{{item.id}}'>立即报名</view>
+    <view class='btngrey' wx:if="{{item.status==2}}">名额已满</view>
+    <view class='btngrey' wx:if="{{item.status==3}}">已报名</view>
+    <view class='btngrey' wx:if="{{item.status==4}}">已结束</view>
+    <view class='btngrey' wx:if="{{item.status==5}}">进行中</view>
+  </view>
+</block>

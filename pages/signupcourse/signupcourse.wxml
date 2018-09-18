@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="top_img" src="../../resources/bookclass/bookclass.png" mode="widthFix"></image>
+
+  <view class="class_list">
+
+    <block wx:for="{{classlist}}" wx:key="item" wx:for-index="x">
+      <view class="item" bindtap='gobookopt' data-id='{{item.id}}'>
+        {{x+1}}.{{item.name}}
+      </view>
+    </block>
+  </view>
+
+</view>

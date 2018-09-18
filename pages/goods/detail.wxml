@@ -1,0 +1,50 @@
+<!--pages/goods/detail.wxml-->
+
+<!--顶部商品的图片-->
+<view class='goodsimgv'>
+  <image src='{{goodscover}}' class='goodsimg'></image>
+</view>
+
+<!--商品简介-->
+<view class='goodsinfov'>
+  {{goodsbrief}}
+</view>
+
+<!--便签行-->
+<view class='notelist'>
+  <view class='notev'>便签一</view>
+  <view class='notev'>便签二</view>
+  <view class='notev'>便签三</view>
+</view>
+
+<!--积分销量行-->
+<view class='goodsprice'>
+  <view class='jifenv'>10积分</view>
+  <view class='salenumv'>销量：78987</view>
+</view>
+
+<view class='xianv'></view>
+<!--富文本文件-->
+<view class='goodsintrov'>
+  <rich-text nodes="{{goodsintro}}"></rich-text>
+</view>
+
+<!--底部的操作按钮-->
+<view class='bottomoptv'></view>
+
+<view class='bottomv'>
+  <view class='shopcartv' bindtap='gocart'>
+    <image src='/resources/mall/cart.png' class='carticon'></image>
+    <view class='bottomtxt'>购物车</view>
+    <view class='shopcartnum' wx:if="{{cartnum>0}}">{{cartnum}}</view>
+  </view>
+
+  <button open-type="contact" class='kefuv'>
+    <image src='/resources/mall/kefu.png' class='kefuicon'></image>
+    <view class='bottomtxt' style='margin-top:-32rpx;'>咨询</view>
+  </button>
+
+  <!--购买和购买-->
+  <view class='addcart' bindtap='addcartopt'>加入购物车</view>
+  <view class='buyopt' bindtap='buyopt'>立即购买</view>
+</view>

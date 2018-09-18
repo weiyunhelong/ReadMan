@@ -1,0 +1,40 @@
+<view class="container">
+
+  <view class="subject_content">
+    <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+   
+    <view class="subject_index">
+      <text class='index_num'>2 / 12</text>
+      <text class="subject_title">你的休闲时间大部分是如何度过的？</text>
+      <view class="bottom_line">
+        <view class="left"></view>
+        <view class="mid"></view>
+        <view class="right"></view>
+      </view>
+    </view>
+
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio selected">
+        <radio value="0" checked=""/>
+        <view class='radio_index'>A</view>
+        <text class='radio_context'>当然是运动</text>
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>
+        <view class='radio_index'>B</view>
+        <text class="radio_context">和朋友一起玩</text>
+      </label>
+      <label class="radio">
+        <radio value="1" checked=""/>
+        <view class='radio_index'>C</view>
+        <text class="radio_context">呆在电视机和电脑前</text>
+      </label>
+    </radio-group>
+  </view>
+</view>
+
+<view class="btn_list">
+  <view class="prev_subject">上一题</view>
+  <view bindtap='gotoNextSubject' class="next_subject">下一题</view>
+  <!-- <view catchtap='goto_result' class='submit_btn'>确认提交</view> -->
+</view>

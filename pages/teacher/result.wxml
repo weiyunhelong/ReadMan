@@ -1,0 +1,9 @@
+<!--pages/teacher/result.wxml-->
+<view class='teacherv'>
+ <view class='namev'>教师姓名：{{teacherobj.name}}</view>
+ <view class='numv'>证书号：{{teacherobj.numval}}</view>
+</view>
+
+<view class='imgv'>
+  <image src='{{teacherobj.imgpath}}' class='imgcss' lazy-load='true'></image>
+</view>

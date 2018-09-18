@@ -1,0 +1,51 @@
+<!--pages/shopcart/index.wxml-->
+<block wx:for="{{shopcartlist}}" wx:key="item" wx:for-index="index">
+  <view class="{{item.isTouchMove?'donghuav':'goodsv'}}" data-index="{{index}}" data-id="{{item.id}}" bindtouchstart="ntouchstart" bindtouchmove="ntouchmove">
+    <!--内容部分列表-->
+    <view class='glistitemv'>
+      <view class='chkoptv'>
+        <icon size='20' type='circle' color='#E5E5E5' wx:if="{{!item.ischk}}" bindtap='chkiconopt' data-id='{{item.id}}'> </icon>
+        <icon size='20' type='success' color='green' wx:if="{{item.ischk}}"   bindtap='chkiconopt' data-id='{{item.id}}'> </icon>
+      </view>
+      <!--图片部分-->
+      <view class='listtuv'>
+        <image src='{{item.imgpath}}' class='listtu'></image>
+      </view>
+      <!--文字介绍-->
+      <view class='listinfov'>
+        <view class='listtitle'>{{item.title}}</view>
+        <view class='listinfo'>颜色:{{item.color}}</view>
+        <view class='numv'>
+          <view class='jifennum'>{{item.jifen}}积分</view>
+          <view class='buynumv'>
+            <view class='reducev' data-id='{{item.id}}' bindtap='reduceopt'>-</view>
+            <view class='buynumtxt'>{{item.buynum}}</view>
+            <view class='addv' data-id='{{item.id}}' bindtap='addopt'>+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--删除按钮-->
+    <view class="ndel" catchtap="ndel" data-index="{{index}}" data-id="{{id}}" wx:if="{{item.isTouchMove}}">删除</view>
+  </view>
+</block>
+
+
+<!--底部操作按钮部分-->
+<view class='bottomvv'></view>
+<view class='bottomv'>
+  <!--全选-->
+  <view class='allchkv' bindtap='allchkopt'>
+    <view class='bluedot'></view>
+    <view class='allchk'>全选</view>
+  </view>
+
+  <!--合计-->
+  <view class='sumpricev'>
+    <view class='sumpricetxt'>合计：</view>
+    <view class='sumpriceval'>899元</view>
+  </view>
+
+  <!--兑换按钮-->
+  <view class='chargebtn' bindtap='chargeopt'>去兑换</view>
+</view>

@@ -1,0 +1,161 @@
+<!--pages/my/index.wxml-->
+
+<view class='myinfov' style="background-image:url('{{topbackimg}}');" bindtap='goeditmy'>
+
+  <!--头像部分-->
+  <view class='mytxv'>
+    <image src='{{usertx}}' class='mytx'></image>
+  </view>
+
+  <!--信息部分-->
+  <view class='myinfovv'>
+    <view class='mynamev'>
+      <view class='namev'>{{username}}</view>
+      <view class='xingv'>
+        <block wx:for="{{xinglist}}" wx:key="item" wx:for-index="x">
+        <image src='/resources/mycenter/xing.png' class='xingicon' wx:if="{{xing>=x}}"></image>
+        </block>
+      </view>
+    </view>
+    <view class='phonev'>{{userphone}}</view>
+  </view>
+
+  <!--箭头部分-->
+  <view class='toprightv'>
+    <image src='/resources/mycenter/right.png' class='righticon'></image>
+  </view>
+</view>
+
+<!--便签部分-->
+<view class='secondv'>
+
+  <view class='sitemv' bindtap='gozhengshu'>
+    <image src='/resources/mycenter/zhengshu.png' class='sicon'></image>
+    <view class='sitemtxt'>证书墙</view>
+    <view class='sitemnum'>{{zhengnum}}</view>
+  </view>
+
+  <view class='sitemv' bindtap='gotitle'>
+    <image src='/resources/mycenter/biaoqian.png' class='sicon'></image>
+    <view class='sitemtxt'>我的标签</view>
+    <view class='sitemnum'>{{titlenum}}</view>
+  </view>
+
+  <view class='sitemv' bindtap='gojifen'>
+    <image src='/resources/mycenter/jifen.png' class='sicon'></image>
+    <view class='sitemtxt'>我的积分</view>
+    <view class='sitemnum'>{{jifennum}}</view>
+  </view>
+
+</view>
+
+<!--订单部分-->
+<view class='threev'>
+  <!--所有订单-->
+  <view class='threetopv' bindtap='goallorder'>
+    <view class='myordertxt'>我的订单</view>
+    <view class='myallorder'>全部订单</view>
+  </view>
+  <!--订单状态-->
+  <view class='ordertypev'>
+    <!--待付款-->
+    <view class='ordertypeitem' bindtap='goorder' data-id='1'>
+      <image src='/resources/mycenter/daifukuan.png' class='ordertypeicon'></image>
+      <view class='ordertypetxt'>待付款</view>
+      <view class='ordertypenum' wx:if="{{payfornum>0}}">{{payfornum}}</view>
+    </view>
+
+    <!--待发货-->
+    <view class='ordertypeitem' bindtap='goorder' data-id='2'>
+      <image src='/resources/mycenter/daifahuo.png' class='ordertypeicon'></image>
+      <view class='ordertypetxt'>待发货</view>
+      <view class='ordertypenum' wx:if="{{sendnum>0}}">{{sendnum}}</view>
+    </view>
+    <!--待收货-->
+    <view class='ordertypeitem' bindtap='goorder' data-id='3'>
+      <image src='/resources/mycenter/daishouhuo.png' class='ordertypeicon'></image>
+      <view class='ordertypetxt'>待收货</view>
+      <view class='ordertypenum' wx:if="{{signnum>0}}">{{signnum}}</view>
+    </view>
+    <!--退款后-->
+    <view class='ordertypeitem' bindtap='gorefund'>
+      <image src='/resources/mycenter/daifukuan.png' class='ordertypeicon'></image>
+      <view class='ordertypetxt'>退款后</view>
+      <view class='ordertypenum' wx:if="{{refundnum>0}}">{{refundnum}}</view>
+    </view>
+
+  </view>
+
+</view>
+
+<!--第四部分-->
+<view class='fourv'>
+  <!--我的活动-->
+  <view class='tabv'  bindtap='goactivity'>
+   <view class='tableftv'>
+    <image src='/resources/mycenter/myact.png' class='tabuicon'></image>
+    <view class='tabtxt'>我的活动</view>
+   </view>
+   <image src='/resources/mycenter/hright.png' class='tabright'></image>
+  </view>
+  
+  <!--购物车-->
+  <view class='tabv'  bindtap='goshopcart'>
+   <view class='tableftv'>
+    <image src='/resources/mycenter/shopcart.png' class='tabuicon'></image>
+    <view class='tabtxt'>购物车</view>
+   </view>
+   <image src='/resources/mycenter/hright.png' class='tabright'></image>
+  </view>
+  
+  <!--积分券-->
+  <view class='tabv' bindtap='goquan'>
+   <view class='tableftv' >
+    <image src='/resources/mycenter/jifenquan.png' class='tabuicon'></image>
+    <view class='tabtxt'>积分券</view>
+   </view>
+   <image src='/resources/mycenter/hright.png' class='tabright'></image>
+  </view>
+
+</view>
+
+
+<!--第五部分-->
+<view class='fivev'>
+  <!--教师资格查询-->
+  <view class='tabv'  bindtap='goteacher'>
+   <view class='tableftv'>
+    <image src='/resources/mycenter/teacher.png' class='tabuicon'></image>
+    <view class='tabtxt'>教师资格查询</view>
+   </view>
+   <image src='/resources/mycenter/hright.png' class='tabright'></image>
+  </view>
+  
+  <!--签到记录-->
+  <view class='tabv' bindtap='gorecord'>
+   <view class='tableftv' >
+    <image src='/resources/mycenter/qiandao.png' class='tabuicon'></image>
+    <view class='tabtxt'>签到记录</view>
+   </view>
+   <image src='/resources/mycenter/hright.png' class='tabright'></image>
+  </view>
+  
+</view>
+
+<!--第六部分-->
+<view class='fivev'>
+  <!--意见反馈-->
+  <view class='tabv'  bindtap='gofeedback'>
+   <view class='tableftv'>
+    <image src='/resources/mycenter/feedback.png' class='tabuicon'></image>
+    <view class='tabtxt'>意见反馈</view>
+   </view>
+   <image src='/resources/mycenter/hright.png' class='tabright'></image>
+  </view>
+</view>
+
+<!--退出登录-->
+<view class='loginoutbtn' bindtap='loginout'>退出登录</view>
+<view style='width:100%;height:100rpx;'></view>
+<!--底部的tabbar-->
+<tabbar receiveData="3" />

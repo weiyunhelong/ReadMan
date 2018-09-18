@@ -1,0 +1,196 @@
+/* pages/recharge/index.wxss */
+page {
+  background-color: #e4edf7;
+}
+
+.contentv {
+  width: 93.6%;
+  height: 1154rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 12rpx;
+  box-shadow: 0rpx 5rpx 16rpx 0rpx rgba(71, 129, 248, 0.26);
+  margin: 27rpx 24rpx;
+}
+
+/*充值选项部分*/
+
+.chkoptv {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.chkoptitemv {
+  width: 42.5%;
+  background: #fff;
+  border: 1rpx solid #12bcf8;
+  border-radius: 12rpx;
+  margin: 26rpx 24rpx 0 24rpx;
+  text-align: center;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.chkoptitemvh {
+  width: 42.5%;
+  background: rgba(18, 188, 248, 1);
+  border-radius: 12rpx;
+  margin: 26rpx 24rpx 0 24rpx;
+  box-shadow: 0px 5rpx 16rpx 0px #4781f8;
+  text-align: center;
+  color: #fff;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.chkoptitemtxt {
+  font-size: 30rpx;
+  color: #0cf;
+}
+
+.chkoptitemtxth {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.chkoptitemprice {
+  padding-top: 30rpx;
+  color: #f33;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.chkoptitempriceh {
+  padding-top: 30rpx;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+/*其他未选中部分*/
+
+.otherv {
+  width: 92%;
+  height: 88rpx;
+  border: 1rpx solid #e5e5e5;
+  border-radius: 44rpx;
+  margin-left: 4%;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #999;
+  margin-top: 74rpx;
+}
+
+.othervalv {
+  width: 92%;
+  height: 68rpx;
+  margin-top: 48rpx;
+  margin-left: 4%;
+  display: flex;
+}
+
+.optbtn {
+  width: 68rpx;
+  height: 68rpx;
+  background: #e5e5e5;
+  border-radius: 34rpx;
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 68rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.otherval {
+  width: 70%;
+  height: 88rpx;
+  border: 1rpx solid #e5e5e5;
+  border-radius: 12rpx;
+  margin: 0 36rpx;
+}
+
+/*其他选中部分*/
+
+.othervh {
+  width: 92%;
+  height: 88rpx;
+  border: 1rpx solid #12bcf8;
+  border-radius: 44rpx;
+  margin-left: 4%;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 74rpx;
+  background: #12bcf8;
+  box-sizing: content-box;
+  box-shadow: 0px 5rpx 16rpx 0px #4781f8;
+}
+
+.othervalvh {
+  width: 92%;
+  height: 68rpx;
+  margin-top: 48rpx;
+  margin-left: 4%;
+  display: flex;
+}
+
+.optbtnh {
+  width: 68rpx;
+  height: 68rpx;
+  background: #12bcf8;
+  border-radius: 34rpx;
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 68rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.othervalh {
+  width: 70%;
+  height: 88rpx;
+  border: 1rpx solid #12bcf8;
+  border-radius: 12rpx;
+  margin: 0 36rpx;
+}
+
+.othervaltxt {
+  width: 100%;
+  height: 88rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #333;
+}
+
+/*图片不符*/
+
+.imgtipv {
+  text-align: center;
+  margin-top: 94rpx;
+}
+
+.imgv {
+  width: 232rpx;
+  height: 217rpx;
+}
+
+.tiptxt {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/*充值按钮*/
+
+.chargebtn {
+  width: 66%;
+  height: 94rpx;
+  background: #12BCF8;
+  border-radius: 47rpx;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 94rpx;
+  margin: 22rpx 17%;
+  color: #fff;
+}

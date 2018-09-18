@@ -1,0 +1,13 @@
+<view class="container">
+  <image src="{{banner}}" mode="widthFix" binderror="" bindload=""></image>
+  <text class="title">开发宝宝的脑力,并不像你想象的那么复杂,你得记住关键的两点: 大脑神经发育的法则:“不用它,就失去它.” 没有受...</text>
+  <text class="context">开发宝宝的脑力,并不像你想象的那么复杂,你得记住关键的两点: 大脑神经发育的法则:“不用它,就失去它.” 没有受大脑神经发育的法则:“不用它,就失去它.” ...</text>
+  <view class="line"></view>
+  <text class="title">开发宝宝的脑力,并不像你想象的那么复杂,你得记住关键的两点: 大脑神经发育的法则:“不用它,就失去它.” 没有受...</text>
+  <text class="context">开发宝宝的脑力,并不像你想象的那么复杂,你得记住关键的两点: 大脑神经发育的法则:“不用它,就失去它.” 没有受大脑神经发育的法则:“不用它,就失去它.” ...</text>
+  <image src="../../resources/testshare/banner.png" mode="widthFix" binderror="" bindload=""></image>
+
+  <view class='btn_box'>
+    <view catchtap='goto_apply' class="apply_btn">我要报名</view>
+  </view>
+</view>

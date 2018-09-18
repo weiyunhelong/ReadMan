@@ -1,0 +1,33 @@
+page {
+  background-color: #fff; }
+
+.container {
+  width: 700rpx;
+  margin: 32rpx auto; }
+  .container .top_bar {
+    border-bottom: 1rpx solid #dcdcdc;
+    padding-bottom: 24rpx; }
+    .container .top_bar .title {
+      font-size: 30rpx;
+      margin-bottom: 40rpx; }
+    .container .top_bar .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .container .top_bar .bottom .right {
+        font-size: 24rpx;
+        color: #999; }
+      .container .top_bar .bottom .left image {
+        width: 26rpx;
+        margin-right: 16rpx; }
+      .container .top_bar .bottom .left text {
+        vertical-align: middle;
+        font-size: 24rpx;
+        color: #999; }
+  .container .content text {
+    font-size: 28rpx;
+    color: #333; }
+  .container .content image {
+    width: 100%; }
+
+/*# sourceMappingURL=dynamicdetail.wxss.map */
