@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "积分商城",
+  "navigationBarTitleText": "商城",
   "usingComponents": {
     "tabbar": "../../components/tabbar/index"
   }

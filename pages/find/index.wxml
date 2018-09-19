@@ -31,7 +31,7 @@
       <view class='hangtxt'>{{item.address}}</view>
     </view>
     <view class='hangv'>
-      <image src='/resources/find/people.png' class='hangicon'></image>
+      <image src='/resources/find/people.png' class='hangpicon'></image>
       <view class='hangtxt'>报名人数:{{item.booknum}}人</view>
     </view>
     <!--操作按钮-->

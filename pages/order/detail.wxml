@@ -50,7 +50,7 @@
   <!--价格汇总-->
   <view class='sumpricev'>
     <view class='sumleftv'>商品总价：{{order.sumprice}}</view>
-    <view class='sumrightv'>积分券：{{order.ticket}}积分</view>
+    <view class='sumrightv'>积分券：-{{order.ticket}}积分</view>
   </view>
   <!--实付款-->
   <view class='pricev'>

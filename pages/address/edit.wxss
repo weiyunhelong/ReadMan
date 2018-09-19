@@ -1,4 +1,7 @@
 /* pages/address/edit.wxss */
+page{
+  background-color: #fff;
+}
 
 .geduanv {
   width: 100%;

@@ -40,7 +40,7 @@
     </view>
     <!--价格汇总-->
     <view class='pricev'>
-      共{{item.buynum}}件商品，合计：
+      共{{item.buygoodsnum}}件商品，合计：
       <text style='color:#f33;'>{{item.sumprice}}积分</text>
     </view>
     <!--操作按钮部分-->
