@@ -7,7 +7,7 @@
       <view class="club animation{{x+1}}" animation="{{item.animation}}" bindtap="scrollLeft">
         <view class="item" catchtap='goto_testindex' data-id='{{item.id}}'>
           <view class="slide-image" style="background-color:{{item.bg_color}}">
-            <image src="../../resources/classtest/tiger_1.png" mode="aspectFit" class="" />
+            <image src="{{item.image}}" mode="aspectFit" class="" />
           </view>
           <view class="right">
             <text class="title">{{item.title}}</text>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/classtest/classtest",
     "pages/index/index",
     "pages/login/login",
     "pages/remindpwd/remindpwd",
@@ -35,8 +36,6 @@
     "pages/testlist1/testlist1",
     "pages/testtypes/testtypes",
     "pages/dynamicdetail/dynamicdetail",
-    "pages/classtest/classtest",
-    "pages/login/login",
     "pages/register/register",
     "pages/graduatefail/graduatefail",
     "pages/graduatesuccess/graduatesuccess",

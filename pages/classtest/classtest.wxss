@@ -65,7 +65,13 @@ page {
         display: block;
         width: 78%;
         white-space: normal;
-        text-align: left; }
+        text-align: left;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden; }
 
 .club image {
   height: 140rpx;
