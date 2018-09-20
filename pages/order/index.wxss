@@ -153,31 +153,69 @@ page {
 
 /*弹窗样式部分*/
 
-.drawer_screen {
-  width: 100%;
-  height: 100%;
+.service_boxs {
   position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.show_qiaodao_jifen {
+  width: 540rpx;
+  height: 504rpx;
+  position: absolute;
+  top: 348rpx;
+  left: 49%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 12rpx;
+  text-align: center;
+}
+
+.show_qiaodao_jifen .tiger {
+  width: 195rpx;
+  height: 267rpx;
+  display: inline-block;
+  position: absolute;
+  top: -142rpx;
+  left: 45%;
+  transform: translateX(-50%);
+}
+
+.show_qiaodao_jifen .tuoyuan_box {
+  width: 100%;
+  height: 180rpx;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
   top: 0;
   left: 0;
-  z-index: 10;
-  background: #000;
-  opacity: 0.5;
-  overflow: hidden;
 }
 
-/*content*/
-
-.drawer_box {
-  width: 72%;
-  overflow: hidden;
-  position: fixed;
-  top: 30%;
-  left: 14%;
-  z-index: 100;
-  background: #fff;
-  border-radius: 12rpx;
-  box-shadow: 0px 6rpx 40rpx 0px rgba(0, 102, 153, 0.3);
+.show_qiaodao_jifen .tuoyuan_box::after {
+  content: "";
+  display: inline-block;
+  width: 500px;
+  height: 160px;
+  background: #12bcf8;
+  position: absolute;
+  top: -162rpx;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  -moz-border-radius: 250px / 80px;
+  -webkit-border-radius: 250px / 80px;
+  border-radius: 250px / 80px;
 }
+
 
 /*顶部的行*/
 
@@ -197,7 +235,7 @@ page {
   font-size: 36rpx;
   color: #12bcf8;
   text-align: center;
-  margin: 22rpx auto;
+  margin: 200rpx auto 22rpx auto;
 }
 
 .confirmtxt {

@@ -21,6 +21,9 @@ page {
   white-space: nowrap;
   background-color: #fff;
   line-height: 80rpx;
+  position: sticky;
+  top: 0rpx;
+  left: 0;
 }
 
 /*菜单*/
@@ -63,7 +66,7 @@ page {
   width: 96%;
   height: auto;
   padding-bottom: 20rpx;
-  margin: 14rpx 2%;
+  margin: 40rpx 2%;
   border-radius: 20rpx;
 }
 
@@ -133,5 +136,5 @@ page {
   color: #fff;
   line-height: 40rpx;
   text-align: center;
-  font-size:24rpx; 
+  font-size: 24rpx;
 }

@@ -31,7 +31,7 @@
       <view class='hangtxt'>{{item.address}}</view>
     </view>
     <view class='hangv'>
-      <image src='/resources/find/people.png' class='hangicon'></image>
+      <image src='/resources/find/people.png' class='hangpicon'></image>
       <view class='hangtxt'>报名人数:{{item.booknum}}人</view>
     </view>
     <!--操作按钮-->
@@ -46,3 +46,21 @@
 
 <!--底部的tabbar-->
 <tabbar receiveData="1" />
+
+
+<!--弹窗部分-->
+<view class="service_boxs mask" wx:if="{{showModalStatus}}">
+  <view class="show_qiaodao_jifen">
+ 
+
+    <view class="tuoyuan_box"></view>
+    <!--提示层-->
+    <view class='confirmtip'>非机构学员不可报名</view>
+    <view class='confirmtxt'>报名机构可咨询020-928272</view>
+
+    <!--操作按钮-->
+    <view class="btnv">
+      <view class='okbtn' bindtap="okopt">确定</view>
+    </view>
+  </view>
+</view>

@@ -1,4 +1,7 @@
 /* pages/address/edit.wxss */
+page{
+  background-color: #fff;
+}
 
 .geduanv {
   width: 100%;
@@ -9,7 +12,7 @@
 .hangv {
   display: flex;
   justify-content: space-between;
-  margin: 80rpx 50rpx 0 42rpx;
+  margin: 68rpx 50rpx 0 42rpx;
 }
 
 .hangtitle {

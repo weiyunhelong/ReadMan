@@ -9,7 +9,7 @@
 
 <!--券信息-->
 <view class='ticketlistv'>
-  <block wx:for="{{quanlist}}" wx:key="item">
+  <block wx:for="{{quanlist}}" wx:key="item" wx:for-index="x">
     <!--券信息-->
     <view class="{{chktab==1?'ticketvone':chktab==2?'ticketvtwo':'ticketvthree'}}">
       <!--券基本信息-->
@@ -28,6 +28,11 @@
       <!--状态-->
       <view class='ticketrightv' wx:if="{{chktab==1}}">
         未使用
+        <!--优惠券来源-->
+        <view class='leasttimev' wx:if="{{x==0&&chktab==1}}">
+          <image src='/resources/find/filter.png' class='filtericon'></image>
+          <view class='leasttimetxth'>新进奖励</view>
+        </view>
       </view>
       <view class='ticketrightv' wx:if="{{chktab==2}}">
         已使用

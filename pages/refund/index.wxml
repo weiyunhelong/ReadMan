@@ -57,4 +57,4 @@
 </view>
 
 <!--申请退款按钮-->
-<view class='refundbtn' bindtap='refundopt'>申请退款按钮</view>
+<view class='refundbtn' bindtap='refundopt'>申请退款</view>
