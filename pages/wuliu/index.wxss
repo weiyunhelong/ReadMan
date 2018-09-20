@@ -20,14 +20,14 @@ page {
 }
 
 .wuliucompiconv {
-  width: 20%;
-  text-align: center;
+  
 }
 
 .wuliucompicon {
-  width: 88rpx;
-  height: 88rpx;
+  width: 82rpx;
+  height: 82rpx;
   margin-top: 58rpx;
+  margin-right:27rpx; 
 }
 
 .wuliucompinfov {

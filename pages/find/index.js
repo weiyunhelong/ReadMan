@@ -7,6 +7,7 @@ Page({
   data: {
     tabchk:0,//tab部分\
     actlist:[],//列表数据
+    showModalStatus:false
   },
 
   /**
@@ -100,11 +101,14 @@ Page({
       url: '../find/detail?id='+id,
     })
     */
-    wx.showModal({
-      title: '非机构学员不可报名',
-      content: '报名机构可咨询：020-928272',
-      showCancel:false,
-      confirmText:"确定"
+    this.setData({
+      showModalStatus:true
+    })
+  },
+  //点击确定按钮
+  okopt:function(){
+    this.setData({
+      showModalStatus: false
     })
   },
   //活动详情

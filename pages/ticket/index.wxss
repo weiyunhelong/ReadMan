@@ -34,7 +34,7 @@ page {
   margin: 20rpx 3% 0 3%;
   display: flex;
   background: linear-gradient(0deg, rgba(147, 225, 252, 1), rgba(35, 162, 239, 1));
-  border-radius: 12rpx;
+  border-radius: 12px;
   box-shadow: 9rpx 0px 16rpx rgba(84, 179, 240, 0.17);
 }
 
@@ -53,9 +53,9 @@ page {
   height: 183rpx;
   margin: 20rpx 3% 0 3%;
   display: flex;
-  background: rgba(255, 214, 35, 1);
   border-radius: 12rpx;
   box-shadow: 9rpx 0px 16rpx rgba(0, 102, 204, 0.17);
+  background: #9999;
 }
 
 .ticketleftv {
@@ -82,7 +82,7 @@ page {
 .tltimev {
   margin: -10rpx 54rpx 0 54rpx;
   color: #fff;
-  font-size: 24rpx;  
+  font-size: 24rpx;
 }
 
 .ticketlinev {
@@ -99,4 +99,24 @@ page {
   line-height: 183rpx;
   color: #fff;
   font-size: 24rpx;
+}
+
+/*剩余时间*/
+
+.leasttimev {
+  position: relative;
+  top: -220rpx;
+  left: -50rpx;
+}
+
+.filtericon {
+  width: 180rpx;
+  height: 48rpx;
+}
+
+.leasttimetxth {
+  margin-top: -195rpx;
+  font-size: 28rpx;
+  color: #f33;
+  margin-left: 20rpx;
 }
