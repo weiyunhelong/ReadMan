@@ -70,7 +70,7 @@ Page({
       orderid: options.id,
       orderstatus: options.status
     })
-  },
+  },  
   //申请推荐
   gorefund:function(){
     wx.navigateTo({

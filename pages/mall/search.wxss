@@ -1,5 +1,7 @@
 /* pages/mall/search.wxss */
-
+page{
+  background-color: #fff;
+}
 .searchv {
   background: #b0b0b5;
   display: flex;

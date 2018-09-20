@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/index/index",
+    "pages/login/login",
     "pages/remindpwd/remindpwd",
     "pages/register/register",
     "pages/classapply/classapply",
@@ -64,7 +64,7 @@
     "pages/feedback/index",
     "pages/payfor/index",
     "pages/address/index",
-    "pages/address/edit",
+"pages/address/edit",
     "pages/recharge/index",
     "pages/recharge/result",
     "pages/find/index",

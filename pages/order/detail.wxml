@@ -1,7 +1,7 @@
 <!--pages/order/detail.wxml-->
 
 <!--收货信息部分-->
-<view class='addressv' bindtap='goaddress'>
+<view class='addressv'>
   <view class='cheiconv'>
     <image src='/resources/mall/wuliu.png' class='cheicon'></image>
   </view>
@@ -50,7 +50,7 @@
   <!--价格汇总-->
   <view class='sumpricev'>
     <view class='sumleftv'>商品总价：{{order.sumprice}}</view>
-    <view class='sumrightv'>积分券：{{order.ticket}}积分</view>
+    <view class='sumrightv'>积分券：-{{order.ticket}}积分</view>
   </view>
   <!--实付款-->
   <view class='pricev'>
@@ -111,23 +111,22 @@
   <view class='huibtn' catchtap='cancelopt' wx:if="{{orderstatus==1||orderstatus==2||orderstatus==4}}">取消订单</view>
 </view>
 
+
 <!--弹窗部分-->
-<view class="drawer_screen" wx:if="{{showModalStatus}}"></view>
-<!--使用animation属性指定需要执行的动画-->
-<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+<view class="service_boxs mask" wx:if="{{showModalStatus}}">
+  <view class="show_qiaodao_jifen">
+    <!--图片层-->
+    <image class="tiger" src="/resources/order/confirm.png"></image>
 
-  <!--图片层-->
-  <view class='txtopv'>
-    <image src='/resources/order/confirm.png' class='confirmimg'></image>
-  </view>
+    <view class="tuoyuan_box"></view>
+    <!--提示层-->
+    <view class='confirmtip'>提示</view>
+    <view class='confirmtxt'>是否取消订单？</view>
 
-  <!--提示层-->
-  <view class='confirmtip'>提示</view>
-  <view class='confirmtxt'>是否取消订单？</view>
-
-  <!--操作按钮-->
-  <view class="btnv">
-    <view class='cancelbtn' bindtap="powerDrawer" data-statu="close">取消</view>
-    <view class='okbtn' bindtap="okopt">确定</view>
+    <!--操作按钮-->
+    <view class="btnv">
+      <view class='cancelbtn' bindtap="powerDrawer" data-statu="close">取消</view>
+      <view class='okbtn' bindtap="okopt">确定</view>
+    </view>
   </view>
 </view>

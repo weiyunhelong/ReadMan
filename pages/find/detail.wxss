@@ -1,5 +1,7 @@
 /* pages/find/detail.wxss */
-
+page{
+  background-color: #fff;
+}
 /*活动列表数据*/
 
 .activityv {
@@ -41,6 +43,13 @@
 }
 
 .hangicon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+  margin-top: 6rpx;
+}
+
+.hangiconp {
   width: 35rpx;
   height: 24rpx;
   margin-right: 16rpx;

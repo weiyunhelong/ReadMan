@@ -38,6 +38,7 @@ page {
   display: flex;
   margin-right: 20rpx;
   font-size: 30rpx;
+  line-height:120rpx;
 }
 
 .payforicon {
@@ -116,7 +117,7 @@ page {
 
 .goodsitem {
   border: 1rpx solid #e6e6e6;
-  width: 45%;
+  width: 44.5%;
   height: 325rpx;
   margin: 24rpx 16rpx 0 16rpx;
   text-align: center;
