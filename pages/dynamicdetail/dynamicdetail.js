@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       eyeimg: globalimgurl + "index/eye.png",
-      bannerimg: globalimgurl + "index/banner.png",
+      bannerimg: globalimgurl + "banner_slices/banner_trim.png",
     })
   },
 

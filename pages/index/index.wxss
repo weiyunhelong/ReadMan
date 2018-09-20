@@ -82,7 +82,7 @@ page {
     position: fixed;
     width: 154rpx;
     right: 4rpx;
-    bottom: 4rpx;
+    bottom: 110rpx;
     z-index: 999; }
   .container .qiandao {
     position: fixed;

@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/remindpwd/remindpwd",
     "pages/testshare/testshare",
     "pages/graduatetest/graduatetest",
     "pages/classapply/classapply",
     "pages/classdetail/classdetail",
     "pages/classintroduce/classintroduce",
-    "pages/index/index",
     "pages/testresult8/testresult8",
     "pages/testresult9/testresult9",
     "pages/testresult7/testresult7",
@@ -35,7 +36,6 @@
     "pages/dynamicdetail/dynamicdetail",
     "pages/classtest/classtest",
     "pages/login/login",
-    "pages/remindpwd/remindpwd",
     "pages/register/register",
     "pages/graduatefail/graduatefail",
     "pages/graduatesuccess/graduatesuccess",

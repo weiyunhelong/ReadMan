@@ -1,6 +1,5 @@
-**/*.scss
 **/*.scssc
-**/*.wxss.map
+**/*.map
 **/.sass-cache/
 **/.sass-cache/*
 **.sass-cache**
