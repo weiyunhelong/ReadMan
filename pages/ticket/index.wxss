@@ -106,7 +106,8 @@ page {
 .leasttimev {
   position: relative;
   top: -220rpx;
-  left: -50rpx;
+  left: -40rpx;
+  width: 180rpx;
 }
 
 .filtericon {
