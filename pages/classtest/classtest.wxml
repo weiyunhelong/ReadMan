@@ -1,14 +1,12 @@
 <view class="container">
-  <image class="top_img" src="{{topimg}}" mode="widthFix"></image>
+  <image class="top_img" animation='{{animationData}}' src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
 
 
   <view style="white-space: nowrap;" class="box" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend">
-
     <block wx:for="{{classlist}}" wx:key="item" wx:for-index="x">
-      
-      <view class="club" animation="animation{{x%5==0?5:x%5}}" bindtap="scrollLeft">
+      <view class="club animation{{x+1}}" animation="{{item.animation}}" bindtap="scrollLeft">
         <view class="item" catchtap='goto_testindex' data-id='{{item.id}}'>
-          <view class="slide-image">
+          <view class="slide-image" style="background-color:{{item.bg_color}}">
             <image src="../../resources/classtest/tiger_1.png" mode="aspectFit" class="" />
           </view>
           <view class="right">
@@ -18,8 +16,6 @@
           <image class='right_icon' src="../../resources/classtest/right.png" mode="widthFix"></image>
         </view>
       </view>
-
     </block>
-
   </view>
 </view>

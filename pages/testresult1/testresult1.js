@@ -88,11 +88,4 @@ Page({
       show_pay_box:false
     })
   },
-
-  // 跳转分享页面
-  gotoShare(e){
-    wx.navigateTo({
-      url: '/pages/testshare/testshare'
-    })
-  }
 })

@@ -11,7 +11,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
 
     dots_color:"#00ADEF", //  轮播图下标当前选中的指示点颜色
-    show_qiandao:false, // 是否显示签到弹窗
+    show_qiandao:true, // 是否显示签到弹窗
     show_qiandao_cotent: true, // 是否现实签到按钮content
     show_qiaodao_jifen: false, //  是否现实签到积分弹窗
     show_service: false, //  是否现实客户服务
@@ -107,6 +107,13 @@ Page({
   closeQiandao(e){
     this.setData({
       show_qiandao:false
+    })
+  },
+  // 签到获取积分
+  getJifen(e){
+    this.setData({
+      show_qiandao_cotent:false,
+      show_qiaodao_jifen:true
     })
   },
   // 跳转到动态详情

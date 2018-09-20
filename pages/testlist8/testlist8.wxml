@@ -14,21 +14,13 @@
     </view>
 
     <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>
-        <view class='radio_index'>A</view>
-        <text class='radio_context'>当然是运动</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>B</view>
-        <text class="radio_context">和朋友一起玩</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>C</view>
-        <text class="radio_context">呆在电视机和电脑前</text>
-      </label>
+      <block wx:for="{{options_list}}">
+        <label class="radio  {{item.value == selected_index? 'selected' : ''}}">
+          <radio value="{{item.value}}" checked=""/>
+          <view class='radio_index'>{{item.index}}</view>
+          <text class='radio_context'>{{item.label}}</text>
+        </label>
+      </block>
     </radio-group>
   </view>
 </view>

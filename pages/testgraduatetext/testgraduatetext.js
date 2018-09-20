@@ -72,5 +72,11 @@ Page({
     wx.navigateTo({
       url: '/pages/graduatesuccess/graduatesuccess'
     })
+  },
+
+  gotoNextSubject(e){
+    wx.navigateTo({
+      url: '/pages/graduatefail/graduatefail'
+    })
   }
 })

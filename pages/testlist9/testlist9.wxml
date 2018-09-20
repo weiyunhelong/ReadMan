@@ -14,21 +14,13 @@
     </view>
 
     <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>
-        <view class='radio_index'>A</view>
-        <text class='radio_context'>我的口试成绩一直比笔试成绩差。</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>B</view>
-        <text class="radio_context">我一直紧跟教学的进度，但我很少发言。我把机会都让给别人</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>C</view>
-        <text class="radio_context">我不认为大家期待听到我的想法。课堂上没有我参与说不定会进行得更好。</text>
-      </label>
+      <block wx:for="{{options_list}}">
+        <label class="radio  {{item.value == selected_index? 'selected' : ''}}">
+          <radio value="{{item.value}}" checked=""/>
+          <view class='radio_index'>{{item.index}}</view>
+          <text class='radio_context'>{{item.label}}</text>
+        </label>
+      </block>
     </radio-group>
   </view>
 </view>
