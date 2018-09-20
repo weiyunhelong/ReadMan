@@ -62,5 +62,19 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  // 重新考试
+  retry(e) {
+    wx.navigateTo({
+      url: '/pages/graduatetest/graduatetest'
+    })
+  },
+
+  // 下次再考
+  giveup(e) {
+    wx.navigateTo({
+      url: '/pages/index/index'
+    })
+  },
 })

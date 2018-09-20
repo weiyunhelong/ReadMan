@@ -15,7 +15,7 @@ page {
     margin: 0 auto;
     border-radius: 12rpx;
     text-align: center;
-    padding-top: 56rpx; }
+    padding-top: 30rpx; }
     .container .content .text_1 {
       color: #333;
       font-size: 32rpx;

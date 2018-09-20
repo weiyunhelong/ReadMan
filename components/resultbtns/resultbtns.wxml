@@ -1,0 +1,4 @@
+<view class="btns_lits">
+  <view catchtap='gotoTestIndex' class="retry_btn">重新测试</view>
+  <view catchtap='gotoShare' class="share_btn">分享好友，获取优惠券</view>
+</view>

@@ -24,8 +24,7 @@
 
     <text class="fenshu">分析</text>
 
-    <text class="context">
-      在回答以上问题时你一定已经发现，原来讨厌口头发言的人还分为不同类型。那么你是其中哪一种呢？
+    <text class="context">在回答以上问题时你一定已经发现，原来讨厌口头发言的人还分为不同类型。那么你是其中哪一种呢？
 。。。。展示全部 </text>
     
     <view class="bottom_line">
@@ -50,10 +49,7 @@
     </view>
   </view>
 
-  <view class="btns_lits">
-    <view class="retry_btn">重新测试</view>
-    <view catchtap='gotoShare' class="share_btn">分享好友，获取优惠券</view>
-  </view>
+  <resultbtns testIndex='9' />
 
   <!-- 缴费查看结果分析 -->
   <view class="explain_box mask" wx:if="{{show_pay_box}}">

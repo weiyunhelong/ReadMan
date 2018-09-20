@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       topimg: globalimgurl + "testclass/test_type_img_1.png",
-      infoimg: globalimgurl + "testclass/testindex1_pic.png",
+      infoimg: globalimgurl + "testclass/testindex8_pic.png",
     })
   },
   /**

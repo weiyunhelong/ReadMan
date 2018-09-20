@@ -20,7 +20,11 @@
     <text>
       图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包含视频后台编辑图文内容穿插包
     </text>
-    <image src="{{bannerimg}}" mode="widthFix" binderror="" bindload=""></image>
- 
+    <view class="video">
+      <image src="{{bannerimg}}" mode="widthFix" binderror="" bindload=""></image>
+      <view class="mask">
+        <image src="../../resources/classtest/play.png" mode="widthFix" binderror="" bindload=""></image>
+      </view>
+    </view>
   </view>
 </view>

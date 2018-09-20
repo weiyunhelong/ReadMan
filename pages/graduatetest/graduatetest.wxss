@@ -20,6 +20,8 @@
       color: #999;
       font-size: 28rpx;
       margin-top: 36rpx; }
+      .container .test_list .item .content .bottom text {
+        margin-right: 10rpx; }
   .container .test_list .item .btn {
     width: 100%;
     height: 106rpx;

@@ -39,10 +39,7 @@
     </view>
   </view>
 
-  <view class="btns_lits">
-    <view class="retry_btn">重新测试</view>
-    <view catchtap='gotoShare' class="share_btn">分享好友，获取优惠券</view>
-  </view>
+  <resultbtns testIndex='7' />
 
   <!-- 缴费查看结果分析 -->
   <view class="explain_box mask" wx:if="{{show_pay_box}}">

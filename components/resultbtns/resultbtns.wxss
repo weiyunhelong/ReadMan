@@ -1,0 +1,30 @@
+.btns_lits {
+  justify-content: space-between;
+  margin: 20rpx auto;
+  width: 702rpx;
+  align-items: center;
+  display: flex;
+}
+
+.btns_lits .retry_btn {
+  width: 200rpx;
+  background-color: #12BCF8;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btns_lits .share_btn {
+  width: 480rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #FFCC41;
+  border-radius: 40rpx;
+  font-weight: 500;
+}

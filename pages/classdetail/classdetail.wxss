@@ -7,20 +7,22 @@ page {
     width: 100%;
     margin-top: 22rpx; }
   .container .title {
-    margin-top: 30rpx;
-    font-size: 30rpx;
-    color: #333;
-    font-weight: bold; }
-  .container .context {
-    margin-top: 30rpx;
+    margin-top: 15rpx;
     font-size: 28rpx;
-    color: #333; }
+    color: #333;
+    font-weight: bold;
+    line-height: 40rpx; }
+  .container .context {
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color: #333;
+    line-height: 40rpx; }
   .container .line {
     width: 100%;
     display: block;
     height: 2rpx;
     background-color: #8c8c8c;
-    margin-top: 28rpx; }
+    margin-top: 10rpx; }
   .container .btn_box {
     position: fixed;
     left: 0;

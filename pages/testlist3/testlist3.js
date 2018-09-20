@@ -6,7 +6,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+    topimg: "",
+    selected_index: 0,
+    options_list: [{
+        value: 0,
+        label: '是'
+      },
+      {
+        value: 1,
+        label: '否'
+      }
+    ]
   },
 
   /**
@@ -65,6 +75,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 选择答案
+  radioChange(e) {
+    this.setData({
+      selected_index: e.detail.value
+    })
   },
 
   goto_result(e){
