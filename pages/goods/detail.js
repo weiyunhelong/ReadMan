@@ -1,4 +1,5 @@
 // pages/goods/detail.js
+var globalimgurl = getApp().globalData.globalimgurl;
 Page({
 
   /**
@@ -35,7 +36,7 @@ Page({
 
     //请求接口获取参数
     that.setData({
-      goodscover: "/resources/mall/goodstop.png", //商品封面
+      goodscover: globalimgurl+"mall/goodstop.png", //商品封面
       goodsbrief: "开发宝宝的脑力,并不像你想象的那么复杂,你得记住关键的两点: 大脑神经发育的法则:“不用它,就失去它.” 没有受", //商品简介
       notelist: ["便签一", "便签二", "便签三"], //标签列表
       goodsjifen: 10, //积分数

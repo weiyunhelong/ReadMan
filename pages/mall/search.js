@@ -1,4 +1,5 @@
 // pages/mall/search.js
+var globalimgurl = getApp().globalData.globalimgurl;
 Page({
 
   /**
@@ -26,13 +27,13 @@ Page({
     var goodslist = [
       {
         id: 1,
-        imgpath: "/resources/mall/goods.png",
+        imgpath: globalimgurl + "/mall/goods.png",
         name: "多功能文具盒+精美双 肩背书包",
         jifen: 10
       },
       {
         id: 2,
-        imgpath: "/resources/mall/goods.png",
+        imgpath: globalimgurl + "/mall/goods.png",
         name: "多功能文具盒+精美双 肩背书包",
         jifen: 10
       }
@@ -55,25 +56,25 @@ Page({
       var goodslist = [
         {
           id: 1,
-          imgpath: "/resources/mall/goods.png",
+          imgpath: globalimgurl + "/mall/goods.png",
           name: "多功能文具盒+精美双 肩背书包",
           jifen: 10
         },
         {
           id: 2,
-          imgpath: "/resources/mall/goods.png",
+          imgpath: globalimgurl + "/mall/goods.png",
           name: "多功能文具盒+精美双 肩背书包",
           jifen: 10
         },
         {
           id: 3,
-          imgpath: "/resources/mall/goods.png",
+          imgpath: globalimgurl + "/mall/goods.png",
           name: "多功能文具盒+精美双 肩背书包",
           jifen: 10
         },
         {
           id: 4,
-          imgpath: "/resources/mall/goods.png",
+          imgpath: globalimgurl + "/mall/goods.png",
           name: "多功能文具盒+精美双 肩背书包",
           jifen: 10
         },

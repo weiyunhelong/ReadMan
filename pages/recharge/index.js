@@ -1,4 +1,5 @@
 // pages/recharge/index.js
+var globalimgurl = getApp().globalData.globalimgurl;
 Page({
 
   /**
@@ -8,6 +9,7 @@ Page({
     chargelist: [], //充值列表
     price: 0, //充值的钱
     isother: false, //点击其他
+    imgpath:""
   },
 
   /**
@@ -16,8 +18,13 @@ Page({
   onLoad: function(options) {
     var that = this;
 
+     that.setData({
+       imgpath: globalimgurl + "mall/chargeicon.png"
+     })
     //获取充值列表
     that.initCharge();
+
+
   },
   //获取充值列表
   initCharge: function() {

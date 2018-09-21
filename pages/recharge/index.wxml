@@ -41,7 +41,7 @@
 
   <!--图片部分-->
   <view class='imgtipv'>
-    <image src='/resources/mall/chargeicon.png' class='imgv'></image>
+    <image src='{{imgpath}}' class='imgv'></image>
     <view class='tiptxt'>快去充值吧</view>
   </view>
 

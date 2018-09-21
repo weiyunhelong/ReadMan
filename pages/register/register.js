@@ -1,10 +1,12 @@
 // pages/register/register.js
+var globalimgurl = getApp().globalData.globalimgurl;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    header_img:"",
     phone: "", //手机号码
     code: "", //验证码
     pwd: "", //密码
@@ -14,7 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      header_img: globalimgurl +"login/register_img.png"
+    })
   },
   //获取手机号码
   getphone: function(e) {

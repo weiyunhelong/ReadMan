@@ -1,7 +1,6 @@
 <!--pages/login/login.wxml-->
 <view class="container">
-  <image class='header_img' src="../../resources/login/register_img.png" mode="widthFix"></image>
-
+  <image class='header_img' src="{{header_img}}" mode="widthFix"></image>
 
   <view class="input_group">
     <view class="input_item">
