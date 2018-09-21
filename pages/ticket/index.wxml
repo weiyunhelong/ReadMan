@@ -30,7 +30,7 @@
         未使用
         <!--优惠券来源-->
         <view class='leasttimev' wx:if="{{x==0&&chktab==1}}">
-          <image src='/resources/find/filter.png' class='filtericon'></image>
+          <image src='/resources/find/filterh.png' class='filtericon'></image>
           <view class='leasttimetxth'>新进奖励</view>
         </view>
       </view>
