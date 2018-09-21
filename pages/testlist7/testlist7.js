@@ -6,7 +6,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+    topimg: "",
+    selected_index_1: 0,
+    selected_index_2: 0,
+    options_list_1: [{
+        index: 'A',
+        value: 0,
+        label: '最符合'
+      },
+      {
+        index: 'B',
+        value: 1,
+        label: '比较符合'
+      },
+      {
+        index: 'C',
+        value: 2,
+        label: '一般符合'
+      },
+      {
+        index: 'D',
+        value: 3,
+        label: '不符合'
+      }
+    ],
+    options_list_2: [{
+          index: 'A',
+          value: 0,
+          label: '最符合'
+        },
+        {
+          index: 'B',
+          value: 1,
+          label: '比较符合'
+        },
+        {
+          index: 'C',
+          value: 2,
+          label: '一般符合'
+        },
+        {
+          index: 'D',
+          value: 3,
+          label: '不符合'
+        }
+    ],
   },
 
   /**
@@ -64,6 +108,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 选择答案
+  radioChange1(e) {
+    console.log(e)
+    this.setData({
+      selected_index_1: e.detail.value
+    })
+  },
+  radioChange2(e) {
+    console.log(e)
+    this.setData({
+      selected_index_2: e.detail.value
+    })
   },
 
   goto_result(e){

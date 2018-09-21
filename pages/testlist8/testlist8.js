@@ -6,7 +6,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+    topimg: "",
+    selected_index: 0,
+    options_list: [{
+        index: 'A',
+        value: 0,
+        label: '当然是运动'
+      },
+      {
+        index: 'B',
+        value: 1,
+        label: '和朋友一起玩'
+      },
+      {
+        index: 'C',
+        value: 2,
+        label: '呆在电视机和电脑前'
+      }
+    ]
   },
 
   /**
@@ -64,6 +81,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 选择答案
+  radioChange(e) {
+    this.setData({
+      selected_index: e.detail.value
+    })
   },
 
   goto_result(e){

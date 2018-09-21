@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    banner:""
+    banner:"",
+    avatar:""
   },
 
   /**
@@ -15,7 +16,8 @@ Page({
   onLoad: function (options) {
     var that=this;
     that.setData({
-      banner: globalimgurl + "banner_slices/banner@2x.png"
+      banner: globalimgurl + "banner_slices/banner_trim.png",
+      avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537248217567&di=eb450f05b118bdf89deb06d095d4f6c1&imgtype=0&src=http%3A%2F%2Fs14.sinaimg.cn%2Fmw690%2F001t9U6Czy6LCmMeEz3ed%26690",
     })
   },
 

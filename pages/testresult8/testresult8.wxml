@@ -19,11 +19,11 @@
     <text class="get_tags">获得标签</text>
     <view class="tags_list">
       <view class="item">
-        <image src="../../resources/testresult/testresult8_tag_1.png" mode="widthFix" binderror="" bindload=""></image>
+        <image src="../../resources/testresult/testresult8_tag_2.png" mode="widthFix" binderror="" bindload=""></image>
         <text>健康管理者</text>
       </view>
       <view class="item">
-        <image src="../../resources/testresult/testresult8_tag_2.png" mode="widthFix" binderror="" bindload=""></image>
+        <image src="../../resources/testresult/testresult8_tag_1.png" mode="widthFix" binderror="" bindload=""></image>
         <text>成长中的健康管理专家</text>
       </view>
       <view class="item">
@@ -33,10 +33,7 @@
     </view>
   </view>
 
-  <view class="btns_lits">
-    <view class="retry_btn">重新测试</view>
-    <view catchtap='gotoShare' class="share_btn">分享好友，获取优惠券</view>
-  </view>
+  <resultbtns testIndex='8' />
 
   <!-- 缴费查看结果分析 -->
   <view class="explain_box mask" wx:if="{{show_pay_box}}">

@@ -15,7 +15,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.setData({
-      banner: globalimgurl + "banner_slices/banner@2x.png"
+      banner: globalimgurl + "banner_slices/banner_trim.png"
     })
   },
 

@@ -1,0 +1,228 @@
+.container{
+  display: block;
+  .top_img{
+    width: 100%;
+    position: relative;
+    image{
+      width: 100%;
+    }
+    .context{
+      position: absolute;
+      top: 58rpx;
+      left: 30rpx;
+      text{
+        display: block;
+          color: #fff;
+        &:nth-of-type(1){
+          font-size: 32rpx;
+          font-weight: bold;
+        }
+        &:nth-of-type(2){
+          font-size: 30rpx;
+        }
+      }
+    }
+  }
+
+  .content{
+    width: 702rpx;
+    border-radius: 12rpx;
+    background-color: #fff;
+    margin: 24rpx auto;
+    padding-bottom: 40rpx;
+    padding-top: 40rpx;
+
+    text{
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .title{
+      font-size: 30rpx;
+      color: #333;
+      font-weight: bold;
+      // margin-top: 60rpx;
+    }
+    .fenshu{
+      color: #FF3333;
+      font-size: 36rpx;
+      font-weight: bold;
+      margin-top: 20rpx;
+    }
+    .context{
+      font-size: 28rpx;
+      color: #999;
+      width: 614rpx;
+      margin-top: 30rpx;
+    }
+    .bottom_line{
+      margin:30rpx auto;
+      display: block;
+      text-align: center;
+      .left,.right{
+        width: 220rpx;
+        height: 5rpx;
+        background-color: #e5e5e5;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      .mid{
+        height: 20rpx;
+        width: 20rpx;
+        border-radius: 50%;
+        margin: 0 10rpx;
+        display: inline-block;
+        background-color: #e5e5e5;
+        vertical-align: middle;
+      }
+    }
+    .get_tags{
+      // margin-top: 68rpx;
+      color: #333;
+      font-size: 30rpx;
+      font-weight: 600;
+    }
+    .tags_list{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 48rpx;
+      .item{
+        text-align: center;
+        image{
+          width: 110rpx;
+          margin: 6rpx auto;
+          display: inline-block;
+        }
+        text{
+          font-size: 22rpx;
+          color: 333;
+        }
+      }
+    }
+  }
+
+  .explain_box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    .content{
+      background-color: #fff;
+      width: 540rpx;
+      height: 456rpx;
+      margin:340rpx auto;
+      position: relative;
+
+      .top_bar{
+        width: 100%;
+        height: 240rpx;
+        text-align: center;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top-left-radius: 12rpx;
+        border-top-right-radius: 12rpx;
+        text{
+          position: absolute;
+          top: 78rpx;
+          left: 50%;
+          transform: translateX(-50%);
+          color: #fff;
+          font-size: 36rpx;
+          z-index: 99;
+          width: 290rpx;
+          text-align: center;
+        }
+        &::after{
+          content: "";
+          display: inline-block;
+          width: 460px; 
+          height: 180px; 
+          background: #12BCF8; 
+          position: absolute;
+          top:-162rpx;
+          left: 50%;
+          z-index: 0;
+          transform: translateX(-50%);
+  
+          -moz-border-radius: 230px / 90px; 
+          -webkit-border-radius: 230px / 90px; 
+          border-radius: 230px / 90px; 
+        }
+      }
+      .money{
+        margin-top: 200rpx;
+        color: #ff3333;
+        font-size: 48rpx;
+      }
+      .tips{
+        color: #999;
+        font-size: 28rpx;
+        text-align: center;
+        margin-top: 42rpx;
+      }
+      .pay_btn{
+        height: 88rpx;
+        width: 460rpx;
+        line-height: 88rpx;
+        border-radius: 44rpx;
+        color: #fff;
+        text-align: center;
+        margin:28rpx auto;
+        background-color: #12BCF8;
+      }
+      .close_btn{
+        position: absolute;
+        bottom: -80rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 56rpx;
+        height: 56rpx;
+      }
+    }
+
+    .pay_opera{
+      width: 100%;
+      height: 540rpx;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      
+
+      &>image{
+        width: 100%;
+      }
+      text{
+        text-align: center;
+        display: block;
+        &:nth-of-type(1){
+          font-size: 36rpx;
+          color: #333;
+          margin-top: 20rpx;
+        }
+        &:nth-of-type(2){
+          font-size: 82rpx;
+          color: #333;
+          margin-top: 18rpx;
+          font-weight: bold;
+        }
+      }
+      .pay_btn{
+        height: 94rpx;
+        line-height: 94rpx;
+        width: 504rpx;
+        border-radius: 47rpx;
+        background-color: #12BCF8;
+        color: #fff;
+        margin:30rpx auto;
+        display: block;
+        text-align: center;
+        margin-bottom: 46rpx;
+      }
+    }
+  }
+}
