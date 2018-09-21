@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/classtest/classtest",
     "pages/index/index",
+    "pages/classtest/classtest",
     "pages/login/login",
     "pages/remindpwd/remindpwd",
     "pages/testshare/testshare",
