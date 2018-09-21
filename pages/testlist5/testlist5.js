@@ -6,7 +6,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+    topimg: "",
+    selected_index: 0,
+    options_list: [{
+        index: 'A',
+        value: 0,
+        label: '我都能为自己的想法找出充分的论据，并且无论其他人之前如何举棋不定或者有其他意见，我最后都能把他们说服。'
+      },
+      {
+        index: 'B',
+        value: 1,
+        label: '我通常会参与讨论，但往往缺乏足够的论据，所以最终我的想法并没有引起关注。'
+      },
+      {
+        index: 'C',
+        value: 2,
+        label: '我往往置身事外。'
+      }
+    ]
   },
 
   /**
@@ -65,6 +82,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 选择答案
+  radioChange(e) {
+    this.setData({
+      selected_index: e.detail.value
+    })
   },
 
   goto_result(e){

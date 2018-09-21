@@ -14,21 +14,14 @@
     </view>
 
     <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>
-        <view class='radio_index'>A</view>
-        <text class='radio_context'>我都能为自己的想法找出充分的论据，并且无论其他人之前如何举棋不定或者有其他意见，我最后都能把他们说服。</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>B</view>
-        <text class="radio_context">我通常会参与讨论，但往往缺乏足够的论据，所以最终我的想法并没有引起关注。</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>C</view>
-        <text class="radio_context">我往往置身事外。</text>
-      </label>
+      <block wx:for="{{options_list}}">
+        <label class="radio  {{item.value == selected_index? 'selected' : ''}}">
+          <radio value="{{item.value}}" checked=""/>
+          <view class='radio_index'>{{item.index}}</view>
+          <text class='radio_context'>{{item.label}}</text>
+        </label>
+      </block>
+      
     </radio-group>
   </view>
 </view>

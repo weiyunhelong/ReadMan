@@ -15,36 +15,23 @@
 
     <text class="sub_title">A.我立即展开攻势，与他/她搭讪。</text>
 
-    <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>最符合
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>比较符合
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>一般符合
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>不符合
-      </label>
+    <radio-group class="radio-group" bindchange="radioChange1">
+      <block wx:for="{{options_list_1}}">
+        <label class="radio {{item.value == selected_index_1? 'selected' : ''}}">
+          <radio value="{{item.value}}" checked=""/>{{item.label}}
+        </label>
+      </block>
+      
     </radio-group>
 
     <text class="sub_title">B.我立即展开攻势，与他/她搭讪。</text>
 
-    <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>最符合
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>比较符合
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>一般符合
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>不符合
-      </label>
+    <radio-group class="radio-group" bindchange="radioChange2">
+      <block wx:for="{{options_list_2}}">
+        <label class="radio {{item.value == selected_index_2? 'selected' : ''}}">
+          <radio value="{{item.value}}" checked=""/>{{item.label}}
+        </label>
+      </block>
     </radio-group>
   </view>
 </view>

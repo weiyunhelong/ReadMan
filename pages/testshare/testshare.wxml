@@ -3,7 +3,7 @@
     <image class="top_img" src="{{banner}}" mode="scaleToFill" binderror="" bindload=""></image>
     <view class="bottom">
       <view class="left">
-        <image src="../../resources/testshare/code.png" mode="widthFix" binderror="" bindload=""></image>
+        <image src="{{avatar}}" mode="" binderror="" bindload=""></image>
         <text>姓名</text>
       </view>
       <view class="right">

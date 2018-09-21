@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "查看结果",
+  "usingComponents": {
+    "resultbtns": "../../components/resultbtns/resultbtns"
+  }
+}

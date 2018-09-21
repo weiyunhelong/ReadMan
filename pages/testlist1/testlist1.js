@@ -6,7 +6,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+    topimg: "",
+    selected_index:0,
+    options_list:[
+      {
+        value:0,
+        label: '完全符合'
+      },
+      {
+        value: 1,
+        label: '比较符合'
+      },
+      {
+        value: 2,
+        label: '基本符合'
+      },
+      {
+        value: 3,
+        label: '比较不符合'
+      },
+      {
+        value: 4,
+        label: '完全不符合'
+      },
+    ]
   },
 
   /**
@@ -64,6 +87,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 选择答案
+  radioChange(e){
+    this.setData({
+      selected_index: e.detail.value
+    })
   },
 
   // 跳转到结果

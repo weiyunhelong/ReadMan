@@ -16,7 +16,7 @@
     <textarea placeholder="请输入您的答案" name="" id="" cols="30" rows="10"></textarea>
     <view class="btn_list">
       <view class="prev_subject">上一题</view>
-      <view bindtap='gotoNextSubject' class="next_subject">上一题</view>
+      <view bindtap='gotoNextSubject' class="next_subject">下一题</view>
       <!-- <view catchtap='goto_result' class='submit_btn'>确认提交</view> -->
     </view>
   </view>

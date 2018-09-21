@@ -14,12 +14,11 @@
     </view>
 
     <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>是
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>否
-      </label>
+      <block wx:for="{{options_list}}" wx:for-item="item">
+        <label class="radio {{item.value == selected_index? 'selected' : ''}}">
+          <radio value="{{item.value}}" checked=""/>{{item.label}}
+        </label>
+      </block>
     </radio-group>
   </view>
 </view>

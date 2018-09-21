@@ -23,19 +23,20 @@
     border-radius: 12rpx;
     background-color: #fff;
     margin: 24rpx auto;
-    padding-top: 60rpx; }
+    padding-top: 40rpx; }
     .container .content text {
       display: block;
       margin: 0 auto;
       text-align: center; }
     .container .content .title {
       font-size: 30rpx;
-      color: #333; }
+      color: #333;
+      font-weight: bold; }
     .container .content .fenshu {
       color: #FF3333;
       font-size: 36rpx;
       font-weight: bold;
-      margin-top: 28rpx;
+      margin-top: 25rpx;
       margin-bottom: 30rpx; }
     .container .content .context_2 {
       width: 614rpx; }
@@ -47,12 +48,10 @@
       font-size: 28rpx;
       color: #999;
       width: 614rpx;
-      margin-top: 56rpx;
       text-align: left; }
     .container .content .context_3 {
       display: flex;
       width: 614rpx;
-      margin-top: 56rpx;
       justify-content: space-between; }
       .container .content .context_3 text {
         font-size: 28rpx;
@@ -75,7 +74,7 @@
           text-align: left;
           line-height: 42rpx; }
     .container .content .bottom_line {
-      margin: 64rpx auto;
+      margin: 32rpx auto;
       display: block;
       text-align: center; }
       .container .content .bottom_line .left, .container .content .bottom_line .right {
@@ -93,9 +92,9 @@
         background-color: #e5e5e5;
         vertical-align: middle; }
     .container .content .get_tags {
-      margin-top: 68rpx;
       color: #333;
-      font-size: 30rpx; }
+      font-size: 30rpx;
+      font-weight: 600; }
     .container .content .tags_list {
       display: flex;
       justify-content: space-around;
@@ -127,7 +126,8 @@
       text-align: center;
       font-size: 36rpx;
       border-radius: 40rpx;
-      color: #fff; }
+      color: #fff;
+      font-weight: 500; }
     .container .btns_lits .share_btn {
       width: 480rpx;
       height: 80rpx;
@@ -135,7 +135,8 @@
       text-align: center;
       color: #fff;
       background-color: #FFCC41;
-      border-radius: 40rpx; }
+      border-radius: 40rpx;
+      font-weight: 500; }
   .container .explain_box {
     position: fixed;
     top: 0;

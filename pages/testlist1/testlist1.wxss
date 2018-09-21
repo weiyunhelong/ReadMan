@@ -55,15 +55,19 @@ page {
         left: 26rpx;
         top: 50%;
         transform: translateY(-50%); }
+        .container .radio-group .radio radio .wx-radio-input.wx-radio-input-checked::before {
+          display: none; }
         .container .radio-group .radio radio .wx-radio-input {
           border: none;
-          background: #fff; }
+          background: #fff;
+          display: none; }
     .container .radio-group .selected {
       background-color: #12BCF8;
       color: #fff; }
       .container .radio-group .selected radio .wx-radio-input {
-        border: 1rpx solid #fff;
-        background: #12BCF8; }
+        display: inline-block;
+        border: 1rpx solid #fff !important;
+        background: #12BCF8 !important; }
 
 .btn_list {
   padding: 26rpx 14rpx;

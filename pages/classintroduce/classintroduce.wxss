@@ -1,6 +1,9 @@
+page {
+  background-color: #E4EDF7; }
+
 .container .class_item {
   width: 702rpx;
-  height: 540rpx;
+  min-height: 540rpx;
   background-color: #fff;
   border-radius: 12rpx;
   margin: 24rpx auto; }
@@ -17,11 +20,13 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
-      overflow: hidden; }
+      overflow: hidden;
+      line-height: 44rpx; }
     .container .class_item .context .title {
       font-size: 30rpx;
       color: #000;
-      margin-bottom: 20rpx; }
+      margin-bottom: 20rpx;
+      font-weight: 600; }
     .container .class_item .context .desc {
       font-size: 28rpx;
       color: #666; }

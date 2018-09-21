@@ -11,7 +11,7 @@
         <view class="bottom">
           <view class="left">
             <text>考试状态:</text>
-            <text>待考试</text>
+            <text class="f_red">待考试</text>
           </view>
           <view class="right">
             <text>考试分数:</text>

@@ -5,7 +5,7 @@
     <text class="text_2">70</text>
     <text class="text_3">很遗憾~  总结一下重新再来</text>
 
-    <view class="retry_test">重新考试</view>
-    <view class="quit_test">下次再考</view>
+    <view bindtap='retry' class="retry_test">重新考试</view>
+    <view bindtap='giveup' class="quit_test">下次再考</view>
   </view>
 </view>
