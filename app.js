@@ -5,11 +5,6 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
-    //显示红点
-    wx.showTabBarRedDot({
-      index: 1,
-    }) 
     
     // 登录
     wx.login({
@@ -39,8 +34,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    requesturl:"",//
-    globalimgurl:"http://dsr.majiangyun.cn/appimages/",//
+    userInfo: null,//微信用户的信息
+    requesturl:"",//请求接口的地址
+    globalimgurl:"http://dsr.majiangyun.cn/appimages/",//图片资源的地址
+    isnewuser:false,//是否是新用户
   }
 })

@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+    topimg: "",
+    options:['1','2','3'],
+    chkopt:0
   },
 
   /**
@@ -17,7 +19,12 @@ Page({
       topimg: globalimgurl + "testclass/test_type_img_1.png"
     })
   },
-
+  //选项
+  radioChange:function(e){
+    this.setData({
+      chkopt:e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

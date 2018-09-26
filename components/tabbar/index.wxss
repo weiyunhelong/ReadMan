@@ -50,11 +50,11 @@ bottom-ceng {
 .reddot {
   position: fixed;
   z-index: 999;
-  bottom: 40px;
+  bottom: 70rpx;
   width: 18rpx;
   height: 18rpx;
   background: #f33;
   border-radius: 20rpx;
-  left: 40%;
+  left: 39%;
   box-shadow: 2rpx 0px 5rpx rgba(229, 160, 172, 1);
 }

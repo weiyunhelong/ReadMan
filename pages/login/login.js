@@ -128,7 +128,7 @@ Page({
       })
     } else {
       wx.redirectTo({
-        url: '../consummateinfo/consummateinfo',
+        url: '../index/index',
       })
     }
   },

@@ -105,11 +105,12 @@ Page({
         mask: true,
         duration: 2000
       })
+      getApp().globalData.isnewuser=true;
       setTimeout(function() {
         wx.redirectTo({
-          url: '../login/login',
+          url: '../consummateinfo/consummateinfo',
         })
-      }, 2000)
+      }, 3000)
     }
   },
   /**

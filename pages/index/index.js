@@ -10,19 +10,18 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
 
-    dots_color:"#00ADEF", //  轮播图下标当前选中的指示点颜色
-    show_qiandao:true, // 是否显示签到弹窗
-    show_qiandao_cotent: true, // 是否现实签到按钮content
-    show_qiaodao_jifen: false, //  是否现实签到积分弹窗
-    show_service: false, //  是否现实客户服务
+    dots_color: "#00ADEF", //  轮播图下标当前选中的指示点颜色
+    show_qiandao: true, // 是否显示签到弹窗
+    show_qiandao_cotent: false, // 是否显示签到按钮content
+    show_qiaodao_jifen: false, //  是否显示签到积分弹窗
+    show_service: false, //  是否显示客户服务
     /**图片部分**/
-    bannerimglist: [globalimgurl + "index/banner.png", globalimgurl + "index/banner.png",globalimgurl + "index/banner.png"],//顶部的轮播图
-    trendlist:[
-      {
-        id:1,
+    bannerimglist: [globalimgurl + "index/banner.png", globalimgurl + "index/banner.png", globalimgurl + "index/banner.png"], //顶部的轮播图
+    trendlist: [{
+        id: 1,
         imgpath: globalimgurl + "index/aa.jpg",
-        title:"活动标题，最多显示两行，溢出隐藏（结尾用省略号）啊…哈哈哈…",
-        leasttime:"2小时",
+        title: "活动标题，最多显示两行，溢出隐藏（结尾用省略号）啊…哈哈哈…",
+        leasttime: "2小时",
         viewnum: 2362888
       },
       {
@@ -39,7 +38,7 @@ Page({
         leasttime: "2小时",
         viewnum: 2362888
       },
-    ],//最新动态
+    ], //最新动态
   },
   //事件处理函数
   bindViewTap: function() {
@@ -47,13 +46,13 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -90,6 +89,19 @@ Page({
       qiandaobg: globalimgurl + "index/qiandao_bg.png",
       kefuimg: globalimgurl + "index/kefu.png",
     })
+
+    //判断用户的进入方式（登录，注册的）
+    if (getApp().globalData.isnewuser){
+      this.setData({
+        show_qiandao_cotent: false, // 是否显示签到按钮content
+        show_qiaodao_jifen: true, //  是否显示签到积分弹窗
+      })
+    }else{
+      this.setData({
+        show_qiandao_cotent: true, // 是否显示签到按钮content
+        show_qiaodao_jifen: false, //  是否显示签到积分弹窗
+      })
+    }
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -104,59 +116,73 @@ Page({
   // 自定义时间
 
   // 关闭签到弹窗
-  closeQiandao(e){
+  closeQiandao(e) {
     this.setData({
-      show_qiandao:false
+      show_qiandao: false
+    })
+  },
+  closeQiandaoOpt: function() {
+    this.setData({
+      show_qiandao_cotent: true,
+      show_qiaodao_jifen: false
     })
   },
   // 签到获取积分
-  getJifen(e){
-    this.setData({
-      show_qiandao_cotent:false,
-      show_qiaodao_jifen:true
+  getJifen(e) {
+    var that = this;
+    wx.showToast({
+      title: '签到成功',
+      mask: true,
+      success: function() {
+        that.setData({
+          show_qiandao_cotent: false,
+          show_qiaodao_jifen: false,
+          show_qiandao: false
+        })
+      },
     })
   },
   // 跳转到动态详情
-  goto_dynamicdetail(e){
+  goto_dynamicdetail(e) {
     wx.navigateTo({
       url: '/pages/dynamicdetail/dynamicdetail'
     })
   },
 
   // 致电客服
-  call_service(e){
+  call_service(e) {
     var that = this;
     wx.makePhoneCall({
       phoneNumber: "020-928272",
-      complete:function(e){
+      complete: function(e) {
         console.log(e)
         that.setData({
-          show_service:false
+          show_service: false
         })
       }
     })
   },
   // 现实客户服务
-  showService(e){
+  showService(e) {
     this.setData({
-      show_service:true
+      show_service: true
     })
   },
 
   // 跳转课程测试
-  goto_classtest(e){
+  goto_classtest(e) {
     wx.navigateTo({
       url: '/pages/classtest/classtest'
     })
   },
   //  跳转课程介绍
-  goto_classintroduce(e){
+  goto_classintroduce(e) {
     wx.navigateTo({
       url: '/pages/classintroduce/classintroduce'
     })
   },
   //跳转结业考试
-  goto_graduatetest(e){
+  goto_graduatetest(e) {
     wx.navigateTo({
       url: '/pages/graduatetest/graduatetest'
     })

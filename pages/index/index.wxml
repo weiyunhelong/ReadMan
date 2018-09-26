@@ -2,7 +2,7 @@
 <view class="container">
 
   <!-- 轮播图 -->
-  <swiper class="swiper-box" indicator-dots="{{true}}" indicator-active-color="{{dots_color}}" autoplay="{{true}}" interval="{{5000}}" duration="{{2000}}">
+  <swiper class="swiper-box" indicator-dots="{{true}}" indicator-active-color="{{dots_color}}" autoplay="{{true}}" interval="{{3000}}" duration="{{2000}}">
     <block wx:for="{{bannerimglist}}" wx:key="item">
       <swiper-item>
         <image src="{{item}}" class="slide-image" width="355" height="150" />
@@ -56,39 +56,40 @@
   <tabbar receiveData="0" />
 
   <!-- 客服 -->
-  <image bindtap='showService' class="service_btn" src="{{kefuimg}}" mode="widthFix" binderror="" bindload=""></image>
+  <image bindtap='showService' class="service_btn" src="{{kefuimg}}" mode="widthFix"></image>
 
-  <!-- 签到 -->
+  <!-- 弹窗提示部分 -->
   <view class="qiandao mask" wx:if="{{show_qiandao}}">
+    <!--签到弹窗-->
     <view wx:if="{{show_qiandao_cotent}}" class="content">
-      <image src="{{qiandaobg}}" class="bg_img" mode="widthFix" binderror="" bindload=""></image>
+      <image src="{{qiandaobg}}" class="bg_img" mode="widthFix"></image>
       <view class="step_list">
         <view class="item">
-          <image src="{{flagaimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <image src="{{flagaimg}}" mode="widthFix"></image>
           <text>周一</text>
         </view>
         <view class="item left_line right_line">
-          <image src="{{flagaimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <image src="{{flagaimg}}" mode="widthFix"></image>
           <text>周二</text>
         </view>
         <view class="item vertical_line">
-          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <image src="{{flaghimg}}" mode="widthFix"></image>
           <text>周三</text>
         </view>
         <view class="item vertical_line">
-          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <image src="{{flaghimg}}" mode="widthFix"></image>
           <text>周六</text>
         </view>
         <view class="item left_line right_line">
-          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <image src="{{flaghimg}}" mode="widthFix"></image>
           <text>周五</text>
         </view>
         <view class="item">
-          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <image src="{{flaghimg}}" mode="widthFix"></image>
           <text>周四</text>
         </view>
         <view class="item left_line">
-          <image src="{{flaghimg}}" mode="widthFix" binderror="" bindload=""></image>
+          <image src="{{flaghimg}}" mode="widthFix"></image>
           <text>周日</text>
         </view>
       </view>
@@ -96,24 +97,25 @@
         签到获取积分
       </view>
 
-      <image catchtap='closeQiandao' src="{{closeimg}}" class='close_btn' mode="widthFix" binderror="" bindload=""></image>
+      <image catchtap='closeQiandao' src="{{closeimg}}" class='close_btn' mode="widthFix"></image>
     </view>
 
+    <!--新用户注册，获取积分--> 
     <view wx:if="{{show_qiaodao_jifen}}" class="show_qiaodao_jifen">
-      <image class="tiger" src="{{tigerimg}}" mode="widthFix" binderror="" bindload=""></image>
+      <image class="tiger" src="{{tigerimg}}" mode="widthFix"></image>
 
       <view class="tuoyuan_box"></view>
       <text class="title">获得500积分</text>
       <text class="contact">成为机构的新用户获得500积分 可在商城兑换物品</text>
 
-      <view class="check_btn" catchtap='closeQiandao'>确定</view>
+      <view class="check_btn" catchtap='closeQiandaoOpt'>确定</view>
     </view>
   </view>
 
   <!-- 客服 -->
   <view class="service_boxs mask" wx:if="{{show_service}}">
     <view class="show_qiaodao_jifen">
-      <image class="tiger" src="{{serviceimg}}" mode="widthFix" binderror="" bindload=""></image>
+      <image class="tiger" src="{{serviceimg}}" mode="widthFix"></image>
 
       <view class="tuoyuan_box"></view>
       <text class="title">客户服务</text>

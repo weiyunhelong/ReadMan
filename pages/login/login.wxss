@@ -29,6 +29,10 @@
   width: 45rpx;
 }
 
+.pwdicon_img {
+  width: 32rpx;
+  height: 42rpx;
+}
 .container .input_group .input_item input {
   border-left: 1rpx solid #eee;
   margin-left: 30rpx;

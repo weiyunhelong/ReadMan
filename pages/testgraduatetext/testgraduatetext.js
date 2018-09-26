@@ -67,16 +67,22 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+  //确认提交按钮
   gotoGraduateResult(e){
     wx.navigateTo({
       url: '/pages/graduatesuccess/graduatesuccess'
     })
   },
-
+  //下一道题目
   gotoNextSubject(e){
     wx.navigateTo({
       url: '/pages/graduatefail/graduatefail'
     })
-  }
+  },
+  //上一道题目
+  gotoPreSubject:function(){
+    wx.navigateTo({
+      url: '/pages/graduatefail/graduatefail'
+    })
+  },
 })

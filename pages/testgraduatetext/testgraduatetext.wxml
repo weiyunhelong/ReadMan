@@ -1,7 +1,7 @@
 <view class="container">
 
   <view class="subject_content">
-    <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
+    <image class="top_img" src="{{topimg}}" mode="widthFix"></image>
    
     <view class="subject_index">
       <text class='index_num'>2 / 12</text>
@@ -15,9 +15,8 @@
 
     <textarea placeholder="请输入您的答案" name="" id="" cols="30" rows="10"></textarea>
     <view class="btn_list">
-      <view class="prev_subject">上一题</view>
+      <view bindtap='gotoPreSubject'  class="prev_subject" >上一题</view>
       <view bindtap='gotoNextSubject' class="next_subject">下一题</view>
-      <!-- <view catchtap='goto_result' class='submit_btn'>确认提交</view> -->
     </view>
   </view>
 </view>

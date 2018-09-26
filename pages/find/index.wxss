@@ -98,7 +98,13 @@ page {
   margin-right: 16rpx;
   margin-top: 6rpx;
 }
-.hangpicon {
+.hangaicon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+  margin-top: 6rpx;
+}
+.hangpicon{  
   width: 35rpx;
   height: 24rpx;
   margin-right: 16rpx;

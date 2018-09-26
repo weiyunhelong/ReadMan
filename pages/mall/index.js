@@ -65,25 +65,25 @@ Page({
     var goodslist=[
       {
         id:1,
-        imgpath: globalimgurl+"/mall/goods.png",
+        imgpath: globalimgurl+"mall/goods.png",
         name:"多功能文具盒+精美双 肩背书包",
         jifen:10
       },
       {
         id: 2,
-        imgpath: globalimgurl + "/mall/goods.png",
+        imgpath: globalimgurl + "mall/goods.png",
         name: "多功能文具盒+精美双 肩背书包",
         jifen: 10
       },
       {
         id: 3,
-        imgpath: globalimgurl + "/mall/goods.png",
+        imgpath: globalimgurl + "mall/goods.png",
         name: "多功能文具盒+精美双 肩背书包",
         jifen: 10
       },
       {
         id: 4,
-        imgpath: globalimgurl + "/mall/goods.png",
+        imgpath: globalimgurl + "mall/goods.png",
         name: "多功能文具盒+精美双 肩背书包",
         jifen: 10
       },

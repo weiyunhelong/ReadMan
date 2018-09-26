@@ -1,5 +1,6 @@
 /* pages/userinfo/index.wxss */
-page{
+
+page {
   background-color: #fff;
 }
 
@@ -51,12 +52,14 @@ page{
   display: flex;
   width: 94%;
   margin: 0 3%;
-  justify-content:space-between;
+  justify-content: space-between;
   border-bottom: 1rpx solid #e5e5e5;
 }
-.hangleftv{
-  display:flex;
+
+.hangleftv {
+  display: flex;
 }
+
 .hangicon {
   width: 37rpx;
   height: 38rpx;
@@ -67,19 +70,36 @@ page{
   color: #999;
   font-size: 32rpx;
   margin-top: 65rpx;
+  width: 140rpx;
+  text-align: justify;
+}
+
+.hangtxt:after {
+  display: inline-block;
+  width: 140rpx;
+  content: ' ';
+}
+
+.maohaotxt {
+  margin-top: 65rpx;
+  margin-left: 10rpx;
+  color: #999;
+  font-size: 32rpx;
 }
 
 /*右侧部分*/
-.hangrightv{
+
+.hangrightv {
   display: flex;
 }
+
 .txiconcss {
   width: 70rpx;
   height: 70rpx;
   border-radius: 35rpx;
   margin-top: 35rpx;
   margin-right: 20rpx;
-  border: 1rpx solid #E5E5E5;
+  border: 1rpx solid #e5e5e5;
 }
 
 .hangricon {
@@ -88,7 +108,7 @@ page{
   margin-top: 62rpx;
 }
 
-.hangrtxt{
+.hangrtxt {
   font-size: 32rpx;
   color: #333;
   margin-top: 55rpx;

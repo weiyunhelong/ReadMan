@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/classtest/classtest",
-    "pages/login/login",
     "pages/remindpwd/remindpwd",
     "pages/testshare/testshare",
     "pages/graduatetest/graduatetest",
@@ -43,6 +43,7 @@
     "pages/testgraduate/testgraduate",
     "pages/signupcourse/signupcourse",
     "pages/consummateinfo/consummateinfo",
+    "pages/my/index",
     "pages/order/index",
     "pages/order/detail",
     "pages/tuikuan/index",
@@ -64,7 +65,7 @@
     "pages/feedback/index",
     "pages/payfor/index",
     "pages/address/index",
-"pages/address/edit",
+    "pages/address/edit",
     "pages/recharge/index",
     "pages/recharge/result",
     "pages/find/index",

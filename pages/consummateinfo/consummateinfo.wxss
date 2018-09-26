@@ -1,4 +1,4 @@
-page{
+page {
   background-color: #fff;
 }
 
@@ -86,11 +86,12 @@ page{
 }
 
 .container .info_box .item .right .radio-group .radio:nth-of-type(1) {
-  margin-right: 92rpx;
+  margin-right: 22rpx;
 }
 
-.container .info_box .item .right .radio-group .radio image {
+.radioimage {
   width: 48rpx;
+  height: 48rpx;
   vertical-align: middle;
   margin-right: 22rpx;
 }
@@ -105,8 +106,13 @@ page{
   vertical-align: middle;
 }
 
-.container .info_box .item .right picker {
+.container .info_box .item .right .picker {
   color: #333;
+  font-size: 30rpx;
+}
+
+.container .info_box .item .right .pickerh {
+  color: #999;
   font-size: 30rpx;
 }
 
@@ -134,4 +140,20 @@ page{
   text-align: center;
   color: #fff;
   border-radius: 44rpx;
+}
+
+/*标题文字*/
+
+.hangtitle {
+  text-align: justify;
+  width: 140rpx;
+  height: 40rpx;
+  color: #999;
+  font-size: 32rpx;
+}
+
+.hangtitle:after {
+  display: inline-block;
+  width: 140rpx;
+  content: ' ';
 }

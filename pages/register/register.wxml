@@ -15,7 +15,7 @@
     </view>
 
     <view class="input_item">
-      <image class="icon_img" src="../../resources/login/pwd.png" mode="widthFix"></image>
+      <image class="pwdicon_img" src="../../resources/login/pwd.png" mode="widthFix"></image>
       <input type="password" placeholder="请输入6-16位密码" maxlength='16' bindinput='getpwd' value='{{pwd}}'/>
     </view>
   </view>

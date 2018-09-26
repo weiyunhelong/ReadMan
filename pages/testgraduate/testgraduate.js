@@ -6,7 +6,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+    topimg: "",
+    options:[
+      {
+        id:1,
+        optionval:'A',
+        optiontxt: '当然是运动', 
+      },
+      {
+        id: 2,
+        optionval: 'B',
+        optiontxt: '和朋友一起玩',
+      },
+      {
+        id: 3,
+        optionval: 'C',
+        optiontxt: '呆在电视机和电脑前',
+      },
+    ],
+    chkoption:0
   },
 
   /**
@@ -17,7 +35,12 @@ Page({
       topimg: globalimgurl + "testing/testlist1_img.png"
     })
   },
-
+   //选项的勾选
+  radioChange:function(e){
+    this.setData({
+      chkoption:e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

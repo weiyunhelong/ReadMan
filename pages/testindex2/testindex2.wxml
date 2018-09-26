@@ -14,15 +14,12 @@
     <text class="tips">这3个问题都是测试你对压力的反应。哪个问题你觉得最容易回答？你觉得最容易回答的问题代表了你所属的压力类型，现在就来看看你属于哪种类型吧？</text>
 
     <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>1
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>2
-      </label>
-      <label class="radio">
-        <radio value="2" checked=""/>3
-      </label>
+      <block wx:for="{{options}}" wx:key="item" wx:for-index="x">
+        <label class="radio {{chkopt==item?'selected':''}}">
+          <radio value="{{x+1}}" checked="" />{{item}}
+        </label>
+      </block>
+
     </radio-group>
 
     <view class="submit_btn">确认提交</view>

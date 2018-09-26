@@ -27,7 +27,7 @@
       <view class='hangtxt'>{{item.datetime}}</view>
     </view>
     <view class='hangv'>
-      <image src='/resources/find/address.png' class='hangicon'></image>
+      <image src='/resources/find/address.png' class='hangaicon'></image>
       <view class='hangtxt'>{{item.address}}</view>
     </view>
     <view class='hangv'>

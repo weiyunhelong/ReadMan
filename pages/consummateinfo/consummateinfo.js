@@ -6,19 +6,20 @@ Page({
    */
   data: {
     show_nav: 0,
-    region: ['广东省', '广州市', '海珠区'],
-    stu_name:"",    // 学生姓名
+    region: ['', '', ''],
+    stu_name:"",   // 学生姓名
     stu_gender:1,  // 学生性别
-    stu_birth:"2018年09月15日",  // 学生出生年月
-    stu_area:['广东省', '广州市', '海珠区'],   // 学生所在地区
+    ischksex:-1,   //是否选择性别
+    stu_birth:"",  // 学生出生年月
+    stu_area:['','',''],   // 学生所在地区
     stu_group:"",  // 学生培训机构
 
     parent_name: '', // 家长姓名
     parent_tel:'', //  家长电话
-    apply_date: '2018年09月15日', //  报名日期
+    apply_date: '', //  报名日期
     apply_course: '' ,//  报名课程
     course_cost: 0, //  课程费用
-    course_array: ['课程一','课程二','课程三'], 
+    course_num: 23, //报名课程数
     index:0
   },
 
@@ -92,18 +93,15 @@ Page({
   radioChange(e){
     console.log(e.detail.value);
     this.setData({
-      stu_gender:e.detail.value
+      stu_gender:e.detail.value,
+      ischksex: e.detail.value
     })
   },
   //  选择学生出生年月
   bindDateChange(e){
     var date = e.detail.value;
-    date.replace('-','年');
-    date.replace('-','月');
-    date = date + '日';
-    console.log(date)
     this.setData({
-      stu_birth:date
+      stu_birth: date.split('-')[0] + "年" + date.split('-')[1] + "月" + date.split('-')[2] + "日"
     })
   },
   // 选择学生地区
@@ -132,11 +130,25 @@ Page({
       show_nav: 1
     })
   },
-
+   
+  //家长报名日期
+  bindBookDateChange:function(e){
+    var date = e.detail.value;
+    this.setData({
+      apply_date: date.split('-')[0] + "年" + date.split('-')[1] + "月" + date.split('-')[2]+"日"
+    })
+  },
   // 跳转报名课程
   goBookClass(e){
     wx.navigateTo({
       url: '/pages/signupcourse/signupcourse'
     })
-  }
+  },
+
+  //跳转到首页
+  goHomeopt:function(){
+    wx.redirectTo({
+      url: '/pages/index/index'
+    })
+  },
 })

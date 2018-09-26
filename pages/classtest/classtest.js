@@ -78,8 +78,8 @@ Page({
       {
         id: 6,
         image: globalimgurl + "classtest/tiger_3.png",
-        title: "666",
-        context: "66666，你已经成为一名“具有说服 力的专家”了吗？",
+        title: "6、成为说服他人得专家",
+        context: "66666，你已经成为一名“具有说服力的专家”了吗？",
       },
       {
         id: 7,
@@ -151,7 +151,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.stopPullDownRefresh();
   },
 
   /**
@@ -170,9 +170,16 @@ Page({
 
   // 跳转到测试题
   goto_testindex(e) {
-    wx.navigateTo({
-      url: '/pages/testindex' + e.currentTarget.dataset.id + '/testindex' + e.currentTarget.dataset.id
-    })
+    var id = parseInt(e.currentTarget.dataset.id);
+    if(id!=4){
+      wx.navigateTo({
+        url: '/pages/testindex' + e.currentTarget.dataset.id + '/testindex' + e.currentTarget.dataset.id
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/testresult' + e.currentTarget.dataset.id + '/testresult' + e.currentTarget.dataset.id
+      })
+    }    
   },
 
   //触摸开始事件

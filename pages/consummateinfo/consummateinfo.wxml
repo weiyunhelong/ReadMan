@@ -19,7 +19,7 @@
     <view class="item ">
       <view class="left ">
         <image src="../../resources/userinfo/name.png" mode="widthFix"></image>
-        <text>姓名</text>
+        <view class='hangtitle'>姓名</view>
       </view>
       <view class="right">
         <input type="text" bindinput="editStuName" value="{{stu_name}}" placeholder="请输入姓名" />
@@ -30,18 +30,20 @@
     <view class="item">
       <view class="left">
         <image src="../../resources/userinfo/sex.png" mode="widthFix"></image>
-        <text>性别</text>
+        <view class='hangtitle'>性别</view>
       </view>
       <view class="right ">
         <radio-group class="radio-group" bindchange="radioChange">
-          <label class="radio ">
-            <image src="../../resources/userinfo/male.png" mode="widthFix"></image>
-            <radio value="1" checked="{{true}}" />
+          <label class="radio">
+            <image src="../../resources/userinfo/maleh.png" class='radioimage' wx:if="{{ischksex==-1||ischksex==0}}"></image>
+            <image src="../../resources/userinfo/male.png" class='radioimage' wx:if="{{ischksex==1}}"></image>
+            <radio value="1" />
             <text>男</text>
           </label>
           <label class="radio">
-            <image src="../../resources/userinfo/female.png" mode="widthFix"></image>
-            <radio value="0 " checked="{{false}} " />
+            <image src="../../resources/userinfo/femaleh.png" class='radioimage' wx:if="{{ischksex==-1||ischksex==1}}"></image>
+            <image src="../../resources/userinfo/female.png" class='radioimage' wx:if="{{ischksex==0}}"></image>
+            <radio value="0" />
             <text>女</text>
           </label>
         </radio-group>
@@ -52,12 +54,15 @@
     <view class="item">
       <view class="left">
         <image src="../../resources/userinfo/date.png" mode="widthFix"></image>
-        <text>出生年月</text>
+        <view class='hangtitle'>出生年月</view>
       </view>
       <view class="right right_arrow">
-        <picker mode="date " value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-          <view class="picker ">
-            {{stu_birth}}
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker" wx:if="{{stu_birth!=''}}">
+            {{stu_birth}} >
+          </view>
+          <view class='pickerh' wx:if="{{stu_birth ==''}}">
+            请选择出生年月 >
           </view>
         </picker>
       </view>
@@ -67,12 +72,15 @@
     <view class="item">
       <view class="left">
         <image src="../../resources/userinfo/area.png" mode="widthFix"></image>
-        <text>地区</text>
+        <view class='hangtitle'>地区</view>
       </view>
       <view class="right right_arrow">
         <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-          <view class="picker">
-            {{stu_area[0]}}，{{stu_area[1]}}，{{stu_area[2]}}
+          <view class="picker" wx:if="{{stu_area[0] !=''}}">
+            {{stu_area[0]}} {{stu_area[1]}} {{stu_area[2]}} >
+          </view>
+          <view class='pickerh' wx:if="{{stu_area[0] ==''}}">
+            请选择地区 >
           </view>
         </picker>
       </view>
@@ -82,10 +90,10 @@
     <view class="item">
       <view class="left">
         <image src="../../resources/userinfo/group.png" mode="widthFix"></image>
-        <text>培训机构</text>
+        <view class='hangtitle'>培训机构</view>
       </view>
       <view class="right">
-        <input value="{{stu_group}} " bindinput="editStuGroup " type="text" placeholder="天河区培训机构 " />
+        <input value="{{stu_group}}" bindinput="editStuGroup" type="text" placeholder="请输入培训机构" />
       </view>
     </view>
   </view>
@@ -96,7 +104,7 @@
     <view class="item">
       <view class="left ">
         <image src="../../resources/userinfo/name.png" mode="widthFix"></image>
-        <text>姓名</text>
+        <view class='hangtitle'>姓名</view>
       </view>
       <view class="right">
         <input type="text" bindinput="editParentName" value="{{parent_name}}" placeholder="请输入姓名" />
@@ -107,7 +115,7 @@
     <view class="item">
       <view class="left ">
         <image src="../../resources/userinfo/phone.png" mode="widthFix"></image>
-        <text>手机号</text>
+        <view class='hangtitle'>手机号</view>
       </view>
       <view class="right">
         <input type="number" bindinput="editParentTel" value="{{parent_tel}}" placeholder="请输入电话号码" />
@@ -118,12 +126,15 @@
     <view class="item">
       <view class="left">
         <image src="../../resources/userinfo/date.png" mode="widthFix"></image>
-        <text>报名日期</text>
+         <view class='hangtitle'>报名日期</view>
       </view>
       <view class="right right_arrow">
-        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-          <view class="picker">
-            {{apply_date}}
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindBookDateChange">
+          <view class="picker" wx:if="{{apply_date!=''}}">
+            {{apply_date}} >
+          </view>
+          <view class="pickerh" wx:if="{{apply_date==''}}">
+            请选择日期 >
           </view>
         </picker>
       </view>
@@ -133,15 +144,13 @@
     <view class="item">
       <view class="left">
         <image src="../../resources/userinfo/class.png" mode="widthFix"></image>
-        <text>报名课程</text>
+        <view class='hangtitle'>报名课程</view>
       </view>
       <view class="right right_arrow">
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{course_array}}">
-          <view class="picker ">
-            {{course_array[index]}}
-            <text style='color:#ccc;font-size:40rpx;'>></text>
-          </view>
-        </picker>
+        <view class="picker" bindtap="goBookClass">
+          {{course_num}}门课程
+          <text style='color:#ccc;font-size:40rpx;'>></text>
+        </view>
       </view>
     </view>
 
@@ -149,7 +158,7 @@
     <view class="item">
       <view class="left">
         <image src="../../resources/userinfo/money.png" mode="widthFix"></image>
-        <text>报名费用</text>
+        <view class='hangtitle'>报名费用</view>
       </view>
       <view class="right ">
         <input value="{{stu_group}}" bindinput="editStuGroup" type="text" placeholder="0" />
@@ -161,7 +170,7 @@
     下一步
   </view>
 
-  <view wx:else bindtap="goBookClass" class="next_step_btn">
+  <view wx:else bindtap="goHomeopt" class="next_step_btn">
     下一步
   </view>
 </view>

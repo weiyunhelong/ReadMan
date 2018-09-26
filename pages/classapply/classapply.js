@@ -79,7 +79,6 @@ Page({
   // 致电客服
   call_service(e) {
     var that = this;
-    /*
     wx.makePhoneCall({
       phoneNumber: "020-928272",
       complete: function (e) {
@@ -88,10 +87,6 @@ Page({
           show_service: false
         })
       }
-    })
-    */
-    wx.redirectTo({
-      url: '../index/index',
     })
   },
 })

@@ -23,7 +23,7 @@ Page({
   //预约课程
   gobookopt:function(e){
     wx.navigateTo({
-      url: '../classapply/classapply?id='+e.currentTarget.dataset.id,
+      url: '../graduatetest/graduatetest?id='+e.currentTarget.dataset.id,
     })
   },
   /**

@@ -1,8 +1,8 @@
 <view class="container">
 
   <view class="subject_content">
-    <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
-   
+    <image class="top_img" src="{{topimg}}" mode="widthFix"></image>
+
     <view class="subject_index">
       <text class='index_num'>2 / 12</text>
       <text class="subject_title">你的休闲时间大部分是如何度过的？</text>
@@ -14,21 +14,13 @@
     </view>
 
     <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio selected">
-        <radio value="0" checked=""/>
-        <view class='radio_index'>A</view>
-        <text class='radio_context'>当然是运动</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>B</view>
-        <text class="radio_context">和朋友一起玩</text>
-      </label>
-      <label class="radio">
-        <radio value="1" checked=""/>
-        <view class='radio_index'>C</view>
-        <text class="radio_context">呆在电视机和电脑前</text>
-      </label>
+      <block wx:for="{{options}}" wx:key='item' wx:for-index="x">
+        <label class="radio {{chkoption==x?'selected':''}}">
+          <radio value="{{x}}" checked="" />
+          <view class='radio_index'>{{item.optionval}}</view>
+          <text class='radio_context'>{{item.optiontxt}}</text>
+        </label>
+      </block>
     </radio-group>
   </view>
 </view>
