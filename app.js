@@ -35,8 +35,10 @@ App({
   },
   globalData: {
     userInfo: null,//微信用户的信息
-    requesturl:"",//请求接口的地址
-    globalimgurl:"http://dsr.majiangyun.cn/appimages/",//图片资源的地址
+    requesturl:"https://dsr.majiangyun.cn/guns/gunsApi/",//请求接口的地址
+    globalimgurl:"https://dsr.majiangyun.cn/appimages/",//图片资源的地址
     isnewuser:false,//是否是新用户
+    isnewhome:false,//第一次进入首页
+    Token: "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMyIsImV4cCI6MTUzOTQ5NzE1NSwiaWF0IjoxNTM4ODkyMzU1fQ.bYxvYjSUBVbCNRWM4TmjhDT5fWlS-kyhrCOXIHSonM-Texh4_3YLFeFyDfpJ9AkBs7Jys49Pl2Dj4lY1i0p1Fw",//TOKEN值
   }
 })

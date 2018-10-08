@@ -12,15 +12,15 @@
 
 <!--便签行-->
 <view class='notelist'>
-  <view class='notev'>便签一</view>
-  <view class='notev'>便签二</view>
-  <view class='notev'>便签三</view>
+  <block wx:for="{{notelist}}" wx:key="item">
+    <view class='notev'>{{item}}</view>
+  </block>
 </view>
 
 <!--积分销量行-->
 <view class='goodsprice'>
-  <view class='jifenv'>10积分</view>
-  <view class='salenumv'>销量：78987</view>
+  <view class='jifenv'>{{goodsjifen}}积分</view>
+  <view class='salenumv'>销量：{{salenum}}</view>
 </view>
 
 <view class='xianv'></view>
@@ -39,12 +39,15 @@
     <view class='shopcartnum' wx:if="{{cartnum>0}}">{{cartnum}}</view>
   </view>
 
-  <button open-type="contact" class='kefuv'>
+  <view class='kefuv' bindtap='showService'>
     <image src='/resources/mall/kefu.png' class='kefuicon'></image>
-    <view class='bottomtxt' style='margin-top:-32rpx;'>咨询</view>
-  </button>
-
+    <view class='bottomtxt' style='margin-top:2rpx;'>咨询</view>
+  </view>
+ 
   <!--购买和购买-->
   <view class='addcart' bindtap='addcartopt'>加入购物车</view>
   <view class='buyopt' bindtap='buyopt'>立即购买</view>
 </view>
+
+ <!-- 客服 -->
+  <service receiveData='{{showphonev}}' bindshowChange="showChange"/>

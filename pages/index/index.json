@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText":"读书人" ,
   "usingComponents": {
-    "tabbar": "../../components/tabbar/index"
+    "tabbar": "../../components/tabbar/index",
+    "service": "../../components/service/index"
   }
 }

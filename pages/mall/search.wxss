@@ -57,13 +57,15 @@ page{
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 20rpx;
 }
 
 .goodsitem {
   border: 1rpx solid #e6e6e6;
   width: 45%;
-  height: 325rpx;
+  height: auto;
   margin: 24rpx 16rpx 0 16rpx;
+  padding-bottom: 20rpx;
   text-align: center;
 }
 

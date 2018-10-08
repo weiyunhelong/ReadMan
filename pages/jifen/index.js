@@ -1,12 +1,13 @@
 // pages/jifen/index.js
+var requesturl = getApp().globalData.requesturl;//请求接口的地址
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    chktab: 0,//tab选中
     jifen:332,//积分
-    chktab:0,//tab选中
     intro: "<div style='font-size:15px;color#333;'>图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插</div><div style='text-align:center;'><img src='http://pic.58pic.com/58pic/13/32/23/75H58PICKmx_1024.jpg' style='width:351px;height:132px;'/></div>", //富文本
     contenth:0,//规格的高度
     recordlsit:[
@@ -78,9 +79,38 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that=this;
+    //获取积分的信息
+    that.initData();
   },
+  //获取积分的信息
+  initData:function(){
+   var that=this;
+   //请求接口获取值
+   wx.request({
+     url: requesturl +'getMyPointsHome',
+     data: {
+       "Authorization":getApp().globalData.Token
+     },
+     header: {
+       "Content-Type":"application/x-www-form-urlencoded",
+       "Authorization": getApp().globalData.Token
+     },
+     method: 'POST',
+     success: function(res) {
+       console.log("获取积分的值:");
+       console.log(res);
 
+       if(res.data.code==0){
+         that.setData({
+           jifen: res.data.resultObject.points,//积分
+           intro: res.data.resultObject.pointsrule, //富文本
+           recordlsit: res.data.resultObject.pointsList,//积分明细
+         })
+       }
+     }
+   })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

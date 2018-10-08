@@ -104,6 +104,7 @@ page{
   bottom: 0;
   left: 0;
   display: flex;
+  justify-content:space-between;
   width: 100%;
   background-color: #fff;
 }

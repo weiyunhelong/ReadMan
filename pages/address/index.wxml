@@ -1,20 +1,20 @@
 <!--pages/address/index.wxml-->
 <block wx:for="{{addresslist}}" wx:key="item">
-  <view class='addressv' bindtap='chkaddress' data-id='{{item.id}}'>
+  <view class='addressv' bindtap='chkaddress' data-id='{{item.addressid}}'>
     <view class='userinfo'>
-      <view class='username'>收货人：{{item.username}}</view>
+      <view class='username'>收货人：{{item.name}}</view>
       <view class='userphone'>{{item.phone}}</view>
     </view>
-    <view class='addresstxt'>收货地址：{{item.address}}</view>
+    <view class='addresstxt'>收货地址：{{item.provice}}{{item.city}}{{item.area}}{{item.address}}</view>
     <view class='addressoptv'>
-      <view class='defaultv' catchtap='chkdefault' data-id='{{item.id}}'>
-        <icon type='success' size='20' color='#0A7EC8' class='iconcss' wx:if="{{item.isdefault}}"></icon>
-        <icon type='circle' size='20' color='#E5E5E5' class='iconcss' wx:if="{{!item.isdefault}}"></icon>
+      <view class='defaultv' catchtap='chkdefault' data-id='{{item.addressid}}'>
+        <icon type='success' size='20' color='#0A7EC8' class='iconcss' wx:if="{{item.defaultflag=='1'}}"></icon>
+        <icon type='circle' size='20' color='#E5E5E5' class='iconcss' wx:else></icon>
         <view class='defaulttxt'>设为默认</view>
       </view>
       <view class='btnoptv'>
-        <view class='editv' catchtap='editopt' data-id='{{item.id}}'>编辑</view>
-        <view class='delv' catchtap='delopt' data-id='{{item.id}}'>删除</view>
+        <view class='editv' catchtap='editopt' data-id='{{item.addressid}}' data-phone='{{item.phone}}' data-name='{{item.name}}' data-provice='{{item.provice}}' data-city='{{item.city}}' data-area='{{item.area}}' data-address='{{item.address}}' data-isdefault='{{item.defaultflag}}'>编辑</view>
+        <view class='delv' catchtap='delopt' data-id='{{item.addressid}}'>删除</view>
       </view>
     </view>
   </view>

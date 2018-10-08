@@ -1,4 +1,6 @@
 // pages/find/detail.js
+var requesturl = getApp().globalData.requesturl;//接口地址
+
 Page({
 
   /**
@@ -14,7 +16,8 @@ Page({
     address: "",
     booknum: 0,
     filter:"",
-    intro:""
+    intro:"",
+    showphonev: false//弹窗提示
   },
 
   /**
@@ -24,7 +27,7 @@ Page({
     var that=this;
     //接受参数
     that.setData({
-      id: options.id,//id值
+      id: parseInt(options.id),//id值
       status: options.status,//状态值
     })
 
@@ -35,22 +38,83 @@ Page({
     var that=this;
     //参数部分
     var id=that.data.id;
-
-    that.setData({
-      cover: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537024251811&di=86b603f33f97fccec43326b2c055b7cd&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F5f7db49atx6CX6vz6WY38%26690",
-      leasttime: "2小时",
-      title: "活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-      datetime: "2018.12.12 12:00-14:00",
-      address: "广东-广州  珠江新城补习班珠江新城补习班 ",
-      booknum: 81528,
-      filter:"该机构学院报名或3星级以上用户可报名",
-      intro: "<div style='font-size:15px;color#333;'>图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插后台编辑图文内容穿插</div><div style='text-align:center;'><img src='http://pic.58pic.com/58pic/13/32/23/75H58PICKmx_1024.jpg' style='width:351px;height:132px;'/></div>", //富文本
+    
+    //获取详情数据
+    wx.request({
+      url: requesturl +'getActivityDetail',
+      data: {
+        activityid:id
+      },
+      header: {
+        "Content-Type":"application/x-www-form-urlencoded"
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("活动详情数据:");
+        console.log(res);
+        
+        if(res.data.code==0){
+          that.setData({
+            cover: res.data.resultObject.image,
+            leasttime: "2小时",
+            title: res.data.resultObject.title,
+            datetime: res.data.resultObject.activitytime,
+            address: res.data.resultObject.address,
+            booknum: res.data.resultObject.enrollnum,
+            filter: res.data.resultObject.conditions,
+            intro: res.data.resultObject.content, //富文本
+          })
+        }else{
+          console.log("获取详情数据失败!"+res.data.message);
+        }
+        //结束标识符 
+      }
     })
+   
   },
   //报名操作
   bookopt:function(){
-    wx.navigateTo({
-      url: '../find/book?id='+this.data.id,
+    var that=this;
+    //判断是否满足报名的条件
+    wx.request({
+      url: requesturl +'canActivitySignup',
+      data: {
+        activityid: that.data.id
+      },
+      header: {
+        "Content-Type":"application/x-www-form-urlencoded",
+        "Authorization":getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("报名的条件:");
+        console.log(res);
+        if(res.data.code==0){
+          wx.navigateTo({
+            url: '../find/book?id=' + that.data.id,
+          })
+        }else{
+          wx.showModal({
+            title: '提示',
+            content: res.data.message,
+            showCancel:false
+          })
+        }
+      }
+    })
+    //结束标识符 
+  },
+  //咨询操作
+  zixunopt:function(){
+    this.setData({
+      showphonev: true
+    })
+  },  
+  //隐藏弹窗
+  showChange: function () {
+    var that = this;
+    that.setData({
+      showphonev: false
     })
   },
   /**

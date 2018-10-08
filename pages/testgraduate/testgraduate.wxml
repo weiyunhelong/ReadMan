@@ -4,29 +4,33 @@
     <image class="top_img" src="{{topimg}}" mode="widthFix"></image>
 
     <view class="subject_index">
-      <text class='index_num'>2 / 12</text>
-      <text class="subject_title">你的休闲时间大部分是如何度过的？</text>
+      <text class='index_num'>{{currnum}} / {{sumtimu}}</text>
+      <text class="subject_title">{{title}}</text>
       <view class="bottom_line">
         <view class="left"></view>
         <view class="mid"></view>
         <view class="right"></view>
       </view>
     </view>
-
-    <radio-group class="radio-group" bindchange="radioChange">
-      <block wx:for="{{options}}" wx:key='item' wx:for-index="x">
-        <label class="radio {{chkoption==x?'selected':''}}">
-          <radio value="{{x}}" checked="" />
+    <!--单选题部分-->
+    <radio-group class="radio-group"  wx:if="{{showtype==1}}">
+      <block wx:for="{{options}}" wx:key='item'>
+        <label class="radio {{chkoption==item.index?'selected':''}}" wx:if="{{item.optiontxt!=''}}"  bindtap="radioChange" data-id='{{item.index}}'>
+          <radio value="{{item.index}}"/>
           <view class='radio_index'>{{item.optionval}}</view>
           <text class='radio_context'>{{item.optiontxt}}</text>
         </label>
       </block>
     </radio-group>
+
+    <!--回答文字题目-->
+    <textarea placeholder="请输入您的答案" value='{{txtval}}'  bindinput='gettxtval' wx:if="{{showtype==2}}"></textarea>
   </view>
+
 </view>
 
 <view class="btn_list">
-  <view class="prev_subject">上一题</view>
-  <view bindtap='gotoNextSubject' class="next_subject">下一题</view>
-  <!-- <view catchtap='goto_result' class='submit_btn'>确认提交</view> -->
+  <view bindtap='gotoPreSubject' class="prev_subject" wx:if="{{currnum!=1}}">上一题</view>
+  <view bindtap='gotoNextSubject' class="next_subject" wx:if="{{currnum<sumtimu}}">下一题</view>
+  <view bindtap='goto_result' class='submit_btn' wx:if="{{currnum==sumtimu}}">确认提交</view>
 </view>

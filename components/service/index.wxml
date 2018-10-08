@@ -1,0 +1,14 @@
+<!--components/service/index.wxml-->
+
+<!-- 客服 -->
+<view class="service_boxs mask" wx:if="{{show_service}}">
+  <view class="show_qiaodao_jifen">
+    <image class="tiger" src="{{serviceimg}}" mode="widthFix"></image>
+
+    <view class="tuoyuan_box"></view>
+    <text class="title">客户服务</text>
+    <text class="contact">服务时间：{{starttime}}-{{endtime}}</text>
+
+    <view catchtap='call_service' class="check_btn">拨打：{{phonenum}}</view>
+  </view>
+</view>

@@ -1,49 +1,13 @@
 // pages/classtest/classtest.js
-var globalimgurl = getApp().globalData.globalimgurl;
+var globalimgurl = getApp().globalData.globalimgurl;//图片地址
+var requesturl = getApp().globalData.requesturl;//接口地址
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    current_item_id: 4,
-    clubs: [{
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-      {
-        image: globalimgurl + 'classtest/classtest_img.png',
-        name: "aa"
-      },
-    ],
+    current_item_id: 4,    
     topimg: globalimgurl + "classtest/classtest_img.png",
     classlist: [{
         id: 1,
@@ -106,17 +70,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(this.data.classlist)
-    var list = this.data.classlist;
-    var color_list = ['#8957A1', '#12BCF8', '#FFE933', '#FF4747', '#B3D465'];
-    //  遍历加入图片背景色
-    list.forEach(function (el, index) {
-      el.bg_color = color_list[index % 5];
-    })
-    console.log(list)
-    this.setData({
-      classlist: list
-    })
+    
   },
 
   /**
@@ -130,9 +84,55 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that=this;   
 
+    //获取考试的列表
+    that.initTestData();
   },
+  //获取考试的列表
+  initTestData:function(){
+    var that=this;
+    //获取考试的列表
+    wx.request({
+      url: requesturl +'getMeasureList',
+      data: '',
+      header: {
+        "Content-Type":"application/x-www-form-urlencoded",
+        "Authorization":getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("获取考试的列表:");
+        console.log(res);
 
+        if(res.data.code==0){
+          that.setData({
+            classlist: res.data.resultObject
+          })
+          that.DealData();
+        }else{
+          console.log("获取考试的列表失败!"+res.data.message);
+        }
+      }
+    })
+  },
+  //数据的处理
+  DealData:function(){
+    var that=this;
+    console.log(that.data.classlist)
+    var list = that.data.classlist;
+    var color_list = ['#8957A1', '#12BCF8', '#FFE933', '#FF4747', '#B3D465'];
+    var backimglist = [globalimgurl + "classtest/tiger_1.png", globalimgurl + "classtest/tiger_2.png", globalimgurl + "classtest/tiger_3.png"];
+    //  遍历加入图片背景色
+    list.forEach(function (el, index) {
+      el.bg_color = color_list[index % 5];
+      el.image = backimglist[index % 3];
+    })
+    console.log(list)
+    that.setData({
+      classlist: list
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

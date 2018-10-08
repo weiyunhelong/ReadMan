@@ -1,5 +1,6 @@
 // pages/mall/search.js
-var globalimgurl = getApp().globalData.globalimgurl;
+var globalimgurl = getApp().globalData.globalimgurl;//图片地址
+var requesturl = getApp().globalData.requesturl;//接口地址
 Page({
 
   /**
@@ -23,24 +24,33 @@ Page({
     var that = this;
     //参数部分
     var searchval = that.data.searchval;//搜索的值
-
-    var goodslist = [
-      {
-        id: 1,
-        imgpath: globalimgurl + "/mall/goods.png",
-        name: "多功能文具盒+精美双 肩背书包",
-        jifen: 10
+    
+    //请求接口获取数据
+    wx.request({
+      url: requesturl +'getGoodsList',
+      data: {
+        goodsname: searchval,
+        goodsclass:""
       },
-      {
-        id: 2,
-        imgpath: globalimgurl + "/mall/goods.png",
-        name: "多功能文具盒+精美双 肩背书包",
-        jifen: 10
+      header: {
+        "Content-Type":"application/x-www-form-urlencoded",
+        "Authorization":getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("搜索的结果:");
+        console.log(res);
+
+        if(res.data.code==0){
+          that.setData({
+            goodslist: res.data.resultObject
+          })
+        }else{
+          console.log("搜索的失败!"+res.data.message);
+        }
       }
-    ];
-    that.setData({
-      goodslist: goodslist
     })
+    //结束标识符
   },
   //获取搜索的值
   getsearchval:function(e){
@@ -51,37 +61,7 @@ Page({
       that.setData({
         searchval: txtval
       })
-      //that.initGoods();
-
-      var goodslist = [
-        {
-          id: 1,
-          imgpath: globalimgurl + "/mall/goods.png",
-          name: "多功能文具盒+精美双 肩背书包",
-          jifen: 10
-        },
-        {
-          id: 2,
-          imgpath: globalimgurl + "/mall/goods.png",
-          name: "多功能文具盒+精美双 肩背书包",
-          jifen: 10
-        },
-        {
-          id: 3,
-          imgpath: globalimgurl + "/mall/goods.png",
-          name: "多功能文具盒+精美双 肩背书包",
-          jifen: 10
-        },
-        {
-          id: 4,
-          imgpath: globalimgurl + "/mall/goods.png",
-          name: "多功能文具盒+精美双 肩背书包",
-          jifen: 10
-        },
-      ];
-      that.setData({
-        goodslist: goodslist
-      })
+      that.initGoods();
     }else{
       wx.showToast({
         title: '输入商品名称',
@@ -90,12 +70,12 @@ Page({
         icon:"none"
       })
     }
-    
+    //结束标识符
   },
   //取消的点击
   goback:function(){
-    wx.redirectTo({
-      url: '../mall/index',
+    wx.navigateBack({
+      delta:1
     })
   },
   //点击商品，进入详情页面

@@ -1,23 +1,19 @@
-// pages/testgraduatetext/testgraduatetext.js
-var globalimgurl = getApp().globalData.globalimgurl;
+// pages/classtest/result.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    topimg: ""
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      topimg: globalimgurl + "testing/graduatetext_img.png"
-    })
-  },
 
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -66,23 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  //确认提交按钮
-  gotoGraduateResult(e){
-    wx.navigateTo({
-      url: '/pages/graduatesuccess/graduatesuccess'
-    })
-  },
-  //下一道题目
-  gotoNextSubject(e){
-    wx.navigateTo({
-      url: '/pages/graduatefail/graduatefail'
-    })
-  },
-  //上一道题目
-  gotoPreSubject:function(){
-    wx.navigateTo({
-      url: '/pages/graduatefail/graduatefail'
-    })
-  },
+  }
 })

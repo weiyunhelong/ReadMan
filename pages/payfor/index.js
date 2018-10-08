@@ -1,4 +1,6 @@
 // pages/payfor/index.js
+var requesturl = getApp().globalData.requesturl;
+
 Page({
 
   /**
@@ -94,7 +96,22 @@ Page({
   //确定订单
   powerDrawer: function(e) {
     var currentStatu = e.currentTarget.dataset.statu;
-    this.util(currentStatu)
+    this.util(currentStatu);
+    //确认支付
+    if (currentStatu =="close"){
+      //请求购买
+      wx.request({
+        url: requesturl+'',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function(res) {},
+        fail: function(res) {},
+        complete: function(res) {},
+      })
+    }
   },
   util: function(currentStatu) {
     /* 动画部分 */

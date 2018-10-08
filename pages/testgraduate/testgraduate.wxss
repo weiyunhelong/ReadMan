@@ -11,7 +11,7 @@ page {
   background-color: #fff;
   border-bottom-left-radius: 12rpx;
   border-bottom-right-radius: 12rpx;
-  height: 1062rpx;
+  height: auto;
 }
 
 .container .top_img {
@@ -63,13 +63,13 @@ page {
 .container .radio-group {
   text-align: center;
   width: 100%;
-  padding-bottom: 80rpx;
+  padding-bottom: 40rpx;
 }
 
 .container .radio-group .radio {
   width: 608rpx;
   display: block;
-  margin: 15rpx auto 80rpx;
+  margin: 15rpx auto 40rpx;
   position: relative;
 }
 
@@ -129,6 +129,18 @@ page {
 .container .radio-group .selected radio .wx-radio-input {
   border: 1rpx solid #fff;
   background: #12bcf8;
+}
+
+.container textarea {
+  width: 702rpx;
+  height: 334rpx;
+  padding: 36rpx 32rpx;
+  border: 1rpx solid #e5e5e5;
+  border-radius: 12rpx;
+  margin: 0rpx auto;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #333;
 }
 
 .btn_list {

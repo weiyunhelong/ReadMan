@@ -1,5 +1,6 @@
 // pages/login/login.js
-var globalimgurl = getApp().globalData.globalimgurl;
+var globalimgurl = getApp().globalData.globalimgurl; //图片的地址
+var requesturl = getApp().globalData.requesturl; //请求接口的地址
 Page({
 
   /**
@@ -112,29 +113,66 @@ Page({
         duration: 2000,
         icon: "none"
       })
-    } else if (pwd.lenght < 6) {
+    } else if (pwd.length < 6) {
       wx.showToast({
-        title: '密码长度不足6位',
+        title: '请输入6-16位密码',
         mask: true,
         duration: 2000,
         icon: "none"
       })
-    } else if (pwd.lenght > 16) {
+    } else if (pwd.length > 16) {
       wx.showToast({
-        title: '密码长度小于16位',
+        title: '请输入6-16位密码',
         mask: true,
         duration: 2000,
         icon: "none"
       })
     } else {
-      wx.redirectTo({
-        url: '../index/index',
+      //提交请求
+      wx.request({
+        url: requesturl + 'auth',
+        data: {
+          username: phone,
+          password: pwd
+        },
+        header: {
+          "Content-Type":"application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function(res) {
+          console.log("登录的结果:");
+          console.log(res);
+
+          if(res.data.code==0)
+          {
+            getApp().globalData.Token = res.data.token;
+            //注册用户
+            if (getApp().globalData.isnewuser){
+              wx.redirectTo({
+                url: '../consummateinfo/consummateinfo',
+              })
+            }else{//老用户
+              getApp().globalData.isnewhome=true;//第一次进入首页
+              wx.redirectTo({
+                url: '../index/index',
+              })
+            }            
+          }else{
+            wx.showToast({
+              title: res.data.message,
+              mask:true,
+              duration:2000,
+              icon:"none"
+            })
+          }
+        }
       })
+      //结束标识符    
     }
   },
   //忘记密码
   goRemindPwd: function(e) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../remindpwd/remindpwd',
     })
   },

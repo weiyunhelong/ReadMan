@@ -1,0 +1,3 @@
+<!--pages/test/index.wxml-->
+<button bindtap='showphone'>弹窗</button>
+<service receiveData='{{showphonev}}' bindshowChange="showChange"/>

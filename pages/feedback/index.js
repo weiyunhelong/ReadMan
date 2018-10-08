@@ -1,4 +1,5 @@
 // pages/feedback/index.js
+var requesturl = getApp().globalData.requesturl;
 Page({
 
   /**
@@ -43,16 +44,43 @@ Page({
         mask: true
       })
     } else {
-      wx.showToast({
-        title: '提交成功',
-        duration: 2000,
-        mask: true
+      //提交数据
+      wx.request({
+        url: requesturl + 'addFeedback',
+        data: {
+          Authorization: getApp().globalData.Token,
+          content: that.data.feedback
+        },
+        header: {
+          "Content-Type":"application/x-www-form-urlencoded",
+          "Authorization": getApp().globalData.Token,
+        },
+        method: 'POST',
+        success: function(res) {
+          console.log("提交反馈的结果:");
+          console.log(res);
+          if(res.data.code==0){
+            wx.showToast({
+              title: '提交成功',
+              duration: 2000,
+              mask: true
+            })
+            setTimeout(function () {
+              wx.navigateBack({
+                delta: 1
+              })
+            }, 2000)
+          }else{
+            wx.showToast({
+              title: res.data.message,
+              icon:'none',
+              duration:2000,
+              mask:true
+            })
+          }
+        }
       })
-      setTimeout(function(){
-        wx.navigateBack({
-          delta:1
-        })
-      },2000)
+      
     }
   },
   /**

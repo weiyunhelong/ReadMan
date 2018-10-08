@@ -1,37 +1,35 @@
 // pages/shopcart/index.js
+var requesturl = getApp().globalData.requesturl; //接口地址
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   shopcartlist:[],//购物车列表
-   chkgoods:"",//选中的订单
+    shopcartlist: [], //购物车列表
+    chkgoods: "", //选中的订单
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    var that=this;
-    //获取购物车列表
-    that.initShopCart();
+  onLoad: function(options) {
+
   },
   //获取购物车列表
-  initShopCart:function () {
-    var that=this;
+  initShopCart: function() {
+    var that = this;
 
     //请求接口，获取数据
-    var shopcartlist=[
-      {
-       id:1,
-        isTouchMove:false,
-        imgpath:"http://pic.58pic.com/58pic/13/32/23/75H58PICKmx_1024.jpg",
-        title:"高级文具盒标题名称不超过两排+女生最爱文具系列高级文具盒标题名称不超过两排+女生最爱文具系列",
-        color:"粉红色",
-        jifen:10,
-        buynum:1,
-        ischk:false
+    var shopcartlist = [{
+        id: 1,
+        isTouchMove: false,
+        imgpath: "http://pic.58pic.com/58pic/13/32/23/75H58PICKmx_1024.jpg",
+        title: "高级文具盒标题名称不超过两排+女生最爱文具系列高级文具盒标题名称不超过两排+女生最爱文具系列",
+        color: "粉红色",
+        jifen: 10,
+        buynum: 1,
+        ischk: false
       },
       {
         id: 2,
@@ -47,18 +45,41 @@ Page({
     that.setData({
       shopcartlist: shopcartlist
     })
+    /******正式数据*****/
+    /*
+    wx.request({
+      url: requesturl +'getCartList',
+      data: '',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("获取购物车列表数据:");
+        console.log(res);
+        if(res.data.code==0){
+          that.setData({
+            shopcartlist:res.data.resultObject
+          })
+        }else{
+          console.log("获取购物车列表数据失败!"+res.data.message);
+        }
+      }
+    })
+    */
   },
   //单个项目的选中
-  chkiconopt:function(e){
-    var that=this;
+  chkiconopt: function(e) {
+    var that = this;
     //参数部分
-    var id=e.currentTarget.dataset.id;
+    var id = e.currentTarget.dataset.id;
     var shopcartlist = that.data.shopcartlist;
-    var txtarry=[];
+    var txtarry = [];
     //循环遍历
-    for (var i = 0; i < shopcartlist.length;i++){
-      if (id == shopcartlist[i].id){
-        txtarry[i]={
+    for (var i = 0; i < shopcartlist.length; i++) {
+      if (id == shopcartlist[i].id) {
+        txtarry[i] = {
           id: shopcartlist[i].id,
           isTouchMove: false,
           imgpath: shopcartlist[i].imgpath,
@@ -68,7 +89,7 @@ Page({
           buynum: shopcartlist[i].buynum,
           ischk: !shopcartlist[i].ischk
         };
-      }else{
+      } else {
         txtarry[i] = shopcartlist[i];
       }
     }
@@ -79,67 +100,114 @@ Page({
     that.getChkGoods();
   },
   //减少操作
-  reduceopt:function(e){
-    var that=this;
-    //参数部分
-    var id = e.currentTarget.dataset.id;
-    var shopcartlist = that.data.shopcartlist;
-    var txtarry = [];
-
-    //循环遍历
-    for (var i = 0; i < shopcartlist.length; i++) {
-      if (id == shopcartlist[i].id) {
-        txtarry[i] = {
-          id: shopcartlist[i].id,
-          isTouchMove: false,
-          imgpath: shopcartlist[i].imgpath,
-          title: shopcartlist[i].title,
-          color: shopcartlist[i].color,
-          jifen: shopcartlist[i].jifen,
-          buynum: shopcartlist[i].buynum - 1 > 0 ? shopcartlist[i].buynum - 1:1,
-          ischk: shopcartlist[i].ischk
-        };
-      } else {
-        txtarry[i] = shopcartlist[i];
-      }
-    }
-    that.setData({
-      shopcartlist: txtarry
-    })
-  },
-  //新增操作
-  addopt: function (e) {
+  reduceopt: function(e) {
     var that = this;
     //参数部分
     var id = e.currentTarget.dataset.id;
+    var numval = e.currentTarget.dataset.numval;
     var shopcartlist = that.data.shopcartlist;
     var txtarry = [];
 
-    //循环遍历
-    for (var i = 0; i < shopcartlist.length; i++) {
-      if (id == shopcartlist[i].id) {
-        txtarry[i] = {
-          id: shopcartlist[i].id,
-          isTouchMove: false,
-          imgpath: shopcartlist[i].imgpath,
-          title: shopcartlist[i].title,
-          color: shopcartlist[i].color,
-          jifen: shopcartlist[i].jifen,
-          buynum: shopcartlist[i].buynum +1,
-          ischk:  shopcartlist[i].ischk
-        };
-      } else {
-        txtarry[i] = shopcartlist[i];
+    //请求修改购物车
+    wx.request({
+      url: requesturl + 'updateCart',
+      data: {
+        cartid: id,
+        quantity: numval - 1 > 0 ? numval - 1 : 1
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("修改购物车结果:");
+        console.log(res);
+
+        if (res.data.code == 0) {
+          //循环遍历
+          for (var i = 0; i < shopcartlist.length; i++) {
+            if (id == shopcartlist[i].id) {
+              txtarry[i] = {
+                id: shopcartlist[i].id,
+                isTouchMove: false,
+                imgpath: shopcartlist[i].imgpath,
+                title: shopcartlist[i].title,
+                color: shopcartlist[i].color,
+                jifen: shopcartlist[i].jifen,
+                buynum: shopcartlist[i].buynum - 1 > 0 ? shopcartlist[i].buynum - 1 : 1,
+                ischk: shopcartlist[i].ischk
+              };
+            } else {
+              txtarry[i] = shopcartlist[i];
+            }
+          }
+          that.setData({
+            shopcartlist: txtarry
+          })
+        } else {
+          console.log("修改购物车失败!" + res.data.message);
+        }
       }
-    }
-    that.setData({
-      shopcartlist: txtarry
+    })
+    //结束标识符
+  },
+  //新增操作
+  addopt: function(e) {
+    var that = this;
+    //参数部分
+    var id = e.currentTarget.dataset.id;
+    var numval = e.currentTarget.dataset.numval;
+    var shopcartlist = that.data.shopcartlist;
+    var txtarry = [];
+
+    //请求修改购物车
+    wx.request({
+      url: requesturl + 'updateCart',
+      data: {
+        cartid: id,
+        quantity: ++numval
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("修改购物车结果:");
+        console.log(res);
+
+        if (res.data.code == 0) {
+          //循环遍历
+          for (var i = 0; i < shopcartlist.length; i++) {
+            if (id == shopcartlist[i].id) {
+              txtarry[i] = {
+                id: shopcartlist[i].id,
+                isTouchMove: false,
+                imgpath: shopcartlist[i].imgpath,
+                title: shopcartlist[i].title,
+                color: shopcartlist[i].color,
+                jifen: shopcartlist[i].jifen,
+                buynum: shopcartlist[i].buynum + 1,
+                ischk: shopcartlist[i].ischk
+              };
+            } else {
+              txtarry[i] = shopcartlist[i];
+            }
+          }
+          that.setData({
+            shopcartlist: txtarry
+          })
+        } else {
+          console.log("修改购物车失败!" + res.data.message);
+        }
+      }
     })
   },
   //手指触摸动作开始 记录起点X坐标
-  ntouchstart: function (e) {
+  ntouchstart: function(e) {
     //开始触摸时 重置所有删除
-    this.data.shopcartlist.forEach(function (v, i) {
+    this.data.shopcartlist.forEach(function(v, i) {
       if (v.isTouchMove) //只操作为true的
         v.isTouchMove = false;
     })
@@ -150,7 +218,7 @@ Page({
     })
   },
   //滑动事件处理
-  ntouchmove: function (e) {
+  ntouchmove: function(e) {
     var that = this,
       index = e.currentTarget.dataset.index, //当前索引
       startX = that.data.nstartX, //开始X坐标
@@ -162,12 +230,12 @@ Page({
         X: startX,
         Y: startY
       }, {
-          X: touchMoveX,
-          Y: touchMoveY
-        });
+        X: touchMoveX,
+        Y: touchMoveY
+      });
     console.log("滑动的距离:" + angle)
     var shopcartlist = that.data.shopcartlist;
-    shopcartlist.forEach(function (v, i) {
+    shopcartlist.forEach(function(v, i) {
       v.isTouchMove = false;
       //滑动距离度角 return
       if (i == index) {
@@ -189,34 +257,64 @@ Page({
    * @param {Object} start 起点坐标
    * @param {Object} end 终点坐标
    */
-  angle: function (start, end) {
+  angle: function(start, end) {
     var _X = end.X - start.X;
     var _Y = end.Y - start.Y;
 
     return _X;
   },
   //删除事件
-  ndel: function (e) {
-    this.data.shopcartlist.splice(e.currentTarget.dataset.index, 1)
-    this.setData({
-      shopcartlist: this.data.shopcartlist
-    })
-
+  ndelopt: function(e) {
+    var that = this;
     //参数部分
     var id = e.currentTarget.dataset.id;
-    wx.showToast({
-      title: '删除成功',
-      mask: true
+    console.log("AAA"+id);
+    //请求删除操作
+    wx.request({
+      url: requesturl + 'deleteCart',
+      data: {
+        cartids: id + ","
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("删除操作的结果:");
+        console.log(res);
+
+        if (res.data.code == 0) {
+          wx.showToast({
+            title: '删除成功',
+            mask: true
+          })
+          that.data.shopcartlist.splice(e.currentTarget.dataset.index, 1)
+          that.setData({
+            shopcartlist: that.data.shopcartlist
+          })
+
+        } else {
+          wx.showToast({
+            title: '删除失败!',
+            mask: true,
+            duration:2000,
+            icon:"none"
+          })
+          console.log("删除操作的失败!" + res.data.message);
+        }
+      }
     })
+    //结束标示符号
   },
   //全选
-  allchkopt:function(){
-    var that=this;
-    var txtarry=[];
+  allchkopt: function() {
+    var that = this;
+    var txtarry = [];
     //循环遍历，重置选中
     var shopcartlist = that.data.shopcartlist;
-    for (var i = 0; i < shopcartlist.length;i++){
-      txtarry[i]={
+    for (var i = 0; i < shopcartlist.length; i++) {
+      txtarry[i] = {
         id: shopcartlist[i].id,
         isTouchMove: false,
         imgpath: shopcartlist[i].imgpath,
@@ -234,13 +332,13 @@ Page({
     that.getChkGoods();
   },
   //获取兑换的商品的值
-  getChkGoods:function(){
-    var that=this;
-    var chkgoods="";
+  getChkGoods: function() {
+    var that = this;
+    var chkgoods = "";
     var shopcartlist = that.data.shopcartlist;
     for (var i = 0; i < shopcartlist.length; i++) {
-      if (shopcartlist[i].ischk){
-        chkgoods += shopcartlist[i].id+",";
+      if (shopcartlist[i].ischk) {
+        chkgoods += shopcartlist[i].id + ",";
       }
     }
     that.setData({
@@ -248,7 +346,7 @@ Page({
     })
   },
   //去兑换
-  chargeopt:function(){
+  chargeopt: function() {
     wx.navigateTo({
       url: '../payfor/index',
     })
@@ -256,49 +354,51 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: function() {
+    var that = this;
+    //获取购物车列表
+    that.initShopCart();
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

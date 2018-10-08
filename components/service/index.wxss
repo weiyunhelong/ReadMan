@@ -1,0 +1,135 @@
+/* components/service/index.wxss */
+
+.service_boxs {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-box {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.service_boxs .show_qiaodao_jifen {
+  width: 540rpx;
+  height: 504rpx;
+  position: absolute;
+  top: 348rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 12rpx;
+  text-align: center;
+}
+
+.service_boxs .show_qiaodao_jifen .tiger {
+  width: 404rpx;
+  display: inline-block;
+  position: absolute;
+  top: -70rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.service_boxs .show_qiaodao_jifen .tuoyuan_box {
+  width: 100%;
+  height: 180rpx;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+  top: 0;
+  left: 0;
+}
+
+.service_boxs .show_qiaodao_jifen .tuoyuan_box::after {
+  content: "";
+  display: inline-block;
+  width: 500px;
+  height: 160px;
+  background: #12bcf8;
+  position: absolute;
+  top: -162rpx;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  -moz-border-radius: 250px / 80px;
+  -webkit-border-radius: 250px / 80px;
+  border-radius: 250px / 80px;
+}
+
+.service_boxs .show_qiaodao_jifen .title {
+  color: #12bcf8;
+  font-size: 36rpx;
+  display: block;
+  margin: 190rpx auto 0;
+}
+
+.service_boxs .show_qiaodao_jifen .contact {
+  color: #333;
+  font-size: 28rpx;
+  display: block;
+  width: 384rpx;
+  white-space: wrap;
+  margin: 24rpx auto 0;
+}
+
+.service_boxs .show_qiaodao_jifen .check_btn {
+  font-size: 36rpx;
+  color: #fff;
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 460rpx;
+  background-color: #12bcf8;
+  margin: 24rpx auto;
+  border-radius: 44rpx;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.swiper-box {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 2rpx;
+}
+
+.swiper-box .wx-swiper-dot {
+  width: 12rpx;
+  display: inline-flex;
+  height: 12rpx;
+  margin-left: 6rpx;
+  justify-content: space-between;
+}
+
+.swiper-box .wx-swiper-dot-active {
+  width: 28rpx;
+}
+
+.swiper-box .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: #c7c7c7;
+  border-radius: 8rpx;
+}
+
+.swiper-box .wx-swiper-dot-active::before {
+  background: #00adef;
+}

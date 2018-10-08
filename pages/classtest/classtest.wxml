@@ -1,21 +1,25 @@
 <view class="container">
   <image class="top_img" animation='{{animationData}}' src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
 
-
   <view style="white-space: nowrap;" class="box" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend">
+    
     <block wx:for="{{classlist}}" wx:key="item" wx:for-index="x">
       <view class="club animation{{x+1}}" animation="{{item.animation}}" bindtap="scrollLeft">
-        <view class="item" catchtap='goto_testindex' data-id='{{item.id}}'>
+        <view class="item" catchtap='goto_testindex' data-id='{{item.measureid}}'>
+          <!--图片部分-->
           <view class="slide-image" style="background-color:{{item.bg_color}}">
             <image src="{{item.image}}" mode="aspectFit" class="" />
           </view>
+          <!--文字部分-->
           <view class="right">
-            <text class="title">{{item.title}}</text>
-            <text class="context">{{item.context}}</text>
+            <text class="title">{{item.measurename}}</text>
+            <text class="context">{{item.subtitle}}</text>
           </view>
+          <!--箭头-->
           <image class='right_icon' src="../../resources/classtest/right.png" mode="widthFix"></image>
         </view>
-      </view>
+      </view>   
     </block>
+
   </view>
 </view>

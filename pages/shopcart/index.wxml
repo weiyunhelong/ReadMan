@@ -18,15 +18,15 @@
         <view class='numv'>
           <view class='jifennum'>{{item.jifen}}积分</view>
           <view class='buynumv'>
-            <view class='reducev' data-id='{{item.id}}' bindtap='reduceopt'>-</view>
+            <view class='reducev' data-id='{{item.id}}' data-numval='{{item.buynum}}' bindtap='reduceopt'>-</view>
             <view class='buynumtxt'>{{item.buynum}}</view>
-            <view class='addv' data-id='{{item.id}}' bindtap='addopt'>+</view>
+            <view class='addv' data-id='{{item.id}}' data-numval='{{item.buynum}}' bindtap='addopt'>+</view>
           </view>
         </view>
       </view>
     </view>
     <!--删除按钮-->
-    <view class="ndel" catchtap="ndel" data-index="{{index}}" data-id="{{id}}" wx:if="{{item.isTouchMove}}">删除</view>
+    <view class="ndel" bindtap="ndelopt" data-index="{{index}}" data-id="{{id}}" wx:if="{{item.isTouchMove}}">删除</view>
   </view>
 </block>
 

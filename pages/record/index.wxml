@@ -7,7 +7,7 @@
           <image src='/resources/userinfo/left.png' class='lefticon'></image>
         </view>
       </view>
-      <view bindtap="chooseYearAndMonth" class="date-area box box-lr box-align-center box-pack-center">{{curYear || "--"}} 年 {{curMonth || "--"}} 月</view>
+      <view class="date-area box box-lr box-align-center box-pack-center">{{curYear || "--"}} 年 {{curMonth || "--"}} 月</view>
       <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
         <view class="next-handle box box-lr box-align-center box-pack-center">
           <image src='/resources/userinfo/right.png' class='lefticon'></image>
@@ -23,8 +23,7 @@
       <view class="days box box-lr box-wrap">
         <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
         </view>
-        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
-        <!--<view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}">-->
+        <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}">
           <view class="day {{item.choosed ? 'pink-bg' : ''}} box box-align-center box-pack-center">
             <view class="{{item.day==Today&&curMonth==Month&&curYear==Year?'daytxt':''}}">{{item.day}}</view>
 
@@ -53,6 +52,6 @@
   </view>
 </view>
 
-<view class='sumdaystxt'>已经连续签到2天</view>
+<view class='sumdaystxt'>已经连续签到{{signnum}}天</view>
 <view class='signbtn' bindtap='signbtn'>立即签到</view>
 

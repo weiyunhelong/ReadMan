@@ -3,24 +3,25 @@
   <view class="input_group">
     <view class="input_item">
       <image class="icon_img" src="../../resources/login/phone.png" mode="widthFix"></image>
-      <input type="number" placeholder="请输入手机号码" maxlength='11' bindinput='getphone' value='{{phone}}'/>
+      <input type="number" placeholder="请输入手机号码" maxlength='11' bindinput='getphone' value='{{phone}}' />
       <image class="close_btn" src="../../resources/login/close.png" mode="widthFix"></image>
     </view>
 
     <view class="input_item">
       <image class="codeicon_img" src="../../resources/login/key.png" mode="widthFix"></image>
-      <input type="number" placeholder="请输入验证码" maxlength='6' bindinput='getcode' value='{{code}}'/>
-      <view class="get_vertify_btn">获取验证码</view>
+      <input type="number" placeholder="请输入验证码" maxlength='6' bindblur='getcode' bindconfirm='getcode' value='{{code}}' />
+      <view class="get_vertify_btn" bindtap='getvalidcode' wx:if="{{clock==60}}">{{tips}}</view>
+      <view class="get_vertify_btn" wx:if="{{clock!=60}}">{{tips}}</view>
     </view>
 
     <view class="input_item">
       <image class="pwdicon_img" src="../../resources/login/pwd.png" mode="widthFix"></image>
-      <input type="password" placeholder="请输入6-16位密码" maxlength='16' bindinput='getpwd' value='{{pwd}}'/>
+      <input type="password" placeholder="请输入6-16位密码" maxlength='16' bindinput='getpwd' value='{{pwd}}' />
     </view>
   </view>
 
   <view class="submit_btn" bindtap='goLogin'>
     重置，并立即登陆
   </view>
-   <text bindtap='goLoginopt' class="go_login">已有账号，立即登录</text>
+  <text bindtap='goLoginopt' class="go_login">已有账号，立即登录</text>
 </view>

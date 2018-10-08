@@ -1,12 +1,16 @@
 <view class="container">
+  <!--得分情况-->
   <view class="top_image">
     <image src="../../resources/graduate/top_img.png" mode="widthFix"></image>
     <view class="score_box">
       <view class='top'>你的得分</view>
-      <view class="content">80<text>分</text></view>
+      <view class="content">{{score}}
+        <text>分</text>
+      </view>
       <view class='bottom'>获得积分:100</view>
     </view>
   </view>
+  <!--开启宝箱-->
   <view class="sub_top" bindtap='gozhengshu'>
     <view class="left">
       <image src="../../resources/graduate/prize.png" mode="widthFix"></image>
@@ -16,32 +20,25 @@
       GO>>
     </view>
   </view>
+  <!--题目列表-->
   <view class="subject_list">
-    <view class="item">
-      <text class="title">1.你周末喜欢做什么</text>
-      <view class="options_list">
-        <text class="options right_choice">A.休息</text>
-        <text class="options wrong_choice">B.看书</text>
-        <text class="options">C.休息</text>
+    <block wx:for="{{testlist}}" wx:key="item" wx:for-index="x">
+      <view class="item">
+        <text class="title">{{x+1}}.{{item.question}}</text>
+        <view class="options_list">
+          <text class="options {{item.correct=='1'?'right_choice':('1'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option1!=''}}">A {{item.option1}}</text>
+          <text class="options {{item.correct=='2'?'right_choice':('2'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option2!=''}}">B {{item.option2}}</text>
+         <text class="options  {{item.correct=='3'?'right_choice':('3'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option3!=''}}">C {{item.option3}}</text>
+          <text class="options {{item.correct=='4'?'right_choice':('4'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option4!=''}}">D {{item.option4}}</text>
+          <text class="options {{item.correct=='5'?'right_choice':('5'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option5!=''}}">E {{item.option5}}</text>
+         <text class="options  {{item.correct=='6'?'right_choice':('6'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option6!=''}}">F {{item.option6}}</text>
+          <text class="options {{item.correct=='7'?'right_choice':('7'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option7!=''}}">G {{item.option7}}</text>
+          <text class="options {{item.correct=='8'?'right_choice':('8'==item.selectoption?'wrong_choice':'')}}" wx:if="{{item.option8!=''}}">H {{item.option8}}</text>
+        </view>
+        <image class="status_img" src="../../resources/graduate/wrong.png" mode="widthFix" wx:if="{{item.correct!=item.selectoption}}"></image>
+        <image class="status_img" src="../../resources/graduate/check.png" mode="widthFix" wx:else></image>
       </view>
-      <image class="status_img" src="../../resources/graduate/wrong.png" mode="widthFix"></image>
-    </view>
+    </block>
 
-    <view class="item">
-      <text class="title">1.你周末喜欢做什么</text>
-      <view class="options_list">
-        <text class="options right_choice">A.休息</text>
-        <text class="options">B.看书</text>
-        <text class="options">C.休息</text>
-      </view>
-      <image class="status_img" src="../../resources/graduate/check.png" mode="widthFix"></image>
-    </view>
-
-    <view class="item">
-      <text class="title">1.你周末喜欢做什么</text>
-      <text class="your_answer">你的答案【打游戏】</text>
-      <text class="right_answer">【正确答案：游戏】</text>
-      <image class="status_img" src="../../resources/graduate/wrong.png" mode="widthFix"></image>
-    </view>
   </view>
 </view>

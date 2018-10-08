@@ -32,16 +32,16 @@
 </view>
 
 <!--积分明细部分-->
-<view class='recordv' wx:if="{{chktab==1}}" style='height:{{recordh}}px;'>
+<view class='recordv' wx:if="{{chktab==1}}" style='min-height:{{recordh}}px;'>
   <block wx:for="{{recordlsit}}" wx:key="item">
     <view class='recorditem'>
       <view class='recordleftv'>
-        <view class='recordname'>{{item.name}}</view>
-        <view class='recordtime'>{{item.time}}</view>
+        <view class='recordname'>{{item.remark}}</view>
+        <view class='recordtime'>{{item.createtime}}</view>
       </view>
       <view class='recordrightv'>
-        <view class='rnumtxth' wx:if="{{item.jifen>0}}">+{{item.jifen}}</view>
-        <view class='rnumtxt' wx:else>{{item.jifen}}</view>
+        <view class='rnumtxth' wx:if="{{item.jifen>0}}">+{{item.points}}</view>
+        <view class='rnumtxt' wx:else>{{item.points}}</view>
       </view>
     </view>
   </block>

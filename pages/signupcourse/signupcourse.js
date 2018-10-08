@@ -1,4 +1,5 @@
 // pages/signupcourse/signupcourse.js
+var requesturl = getApp().globalData.requesturl; //请求接口的地址
 Page({
 
   /**
@@ -22,15 +23,19 @@ Page({
   },
   //预约课程
   gobookopt:function(e){
-    wx.navigateTo({
-      url: '../graduatetest/graduatetest?id='+e.currentTarget.dataset.id,
+    wx.setStorage({
+      key: 'bookclassobj',
+      data: e.currentTarget.dataset.id,
+    })
+    wx.navigateBack({
+      delta:1
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     
   },
 
   /**
@@ -44,9 +49,27 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that=this;
+    //初始化数据
+    that.initData(); 
   },
-
+  //初始化数据
+  initData:function(){
+    var that=this;
+    //请求接口获取数据
+    wx.getStorage({
+      key: 'bookclasslist',
+      success: function(res) {
+        console.log("报名的课程列表:");
+        console.log(res);
+        
+        that.setData({
+          classlist:res.data
+        })
+      },
+    })
+    //结束
+  }, 
   /**
    * 生命周期函数--监听页面隐藏
    */

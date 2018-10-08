@@ -9,6 +9,8 @@ Page({
     zhengshulist:[],//证书数据
     zhengshuobj:{},//证书的详情
     chkindex:0,
+    backimg:"",//背景图
+    zhengshuno:"124",//证书编号
   },
 
   /**
@@ -60,7 +62,8 @@ Page({
 
     that.setData({
       zhengshulist: zhengshulist,//证书数据
-      zhengshuobj: zhengshulist[0]
+      zhengshuobj: zhengshulist[0],
+      backimg: globalimgurl +"zhengshuqiang/zheng@2x.png",//证书
     }) 
   }, 
   //点击切换证书

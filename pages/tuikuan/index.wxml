@@ -1,13 +1,13 @@
 <!--pages/refund/list.wxml-->
 <!--列表部分-->
 <block wx:for="{{orderlist}}" wx:key="item" wx:for-item="item">
-  <view class='orderv' bindtap='godetail' data-id='{{item.orderid}}' data-status='{{item.orderstatus}}'>
+  <view class='orderv' bindtap='godetail' data-id='{{item.orderid}}' data-status='{{item.state}}'>
     <!--订单号和状态-->
     <view class='ordertopv'>
-      <view class='orderno'>订单号：{{item.orderno}}</view>
-      <view class='orderstatusr' wx:if="{{item.orderstatus==1}}">{{item.orderstatustxt}}</view>
-      <view class='orderstatush' wx:if="{{item.orderstatus==2}}">{{item.orderstatustxt}}</view>
-      <view class='orderstatusb' wx:if="{{item.orderstatus==3}}">{{item.orderstatustxt}}</view>
+      <view class='orderno'>订单号：{{item.ordercode}}</view>      
+      <view class='orderstatusb' wx:if="{{item.state=='0'}}">退款审核中</view>
+      <view class='orderstatusr' wx:if="{{item.state=='1'}}">退款成功</view>
+      <view class='orderstatush' wx:if="{{item.state=='2'}}">退款失败</view>
     </view>
     <!--购买的东西-->
     <view class='ordergoodsv'>

@@ -145,15 +145,6 @@ page{
   width: 15%;
   height: 130rpx;
   text-align: center;
-  background: none !important;
-  color: #fff !important;
-}
-
-.kefuv::after {
-  border: 0;
-  opacity: 0;
-  background: none !important;
-  color: #fff !important;
 }
 
 .kefuicon {

@@ -1,4 +1,6 @@
 // pages/find/index.js
+var requesturl=getApp().globalData.requesturl;//接口地址
+
 Page({
 
   /**
@@ -35,63 +37,33 @@ Page({
     var that=this;
     //参数
     var tabchk = that.data.tabchk;
+    var apiurl="";
+    if(tabchk==0){
+      apiurl = "getNearActivityList";
+    }else{
+      apiurl ="getOtherActivityList";
+    }
     //获取列表数据
-    var actlist=[
-     { 
-       id:1,
-        cover:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537024251811&di=86b603f33f97fccec43326b2c055b7cd&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F5f7db49atx6CX6vz6WY38%26690",
-       leasttime:"2小时",
-        title:"活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-        datetime:"2018.12.12 12:00-14:00",
-        address:"广东-广州  珠江新城补习班珠江新城补习班 ",
-        booknum: 81528,
-        status:1
-     },
-      {
-        id: 2,
-        cover: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537024251811&di=86b603f33f97fccec43326b2c055b7cd&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F5f7db49atx6CX6vz6WY38%26690",
-        leasttime: "2小时",
-        title: "活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-        datetime: "2018.12.12 12:00-14:00",
-        address: "广东-广州  珠江新城补习班珠江新城补习班 ",
-        booknum: 81528,
-        status: 2
-      }, 
-      {
-        id: 3,
-        cover: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537024251811&di=86b603f33f97fccec43326b2c055b7cd&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F5f7db49atx6CX6vz6WY38%26690",
-        leasttime: "2小时",
-        title: "活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-        datetime: "2018.12.12 12:00-14:00",
-        address: "广东-广州  珠江新城补习班珠江新城补习班 ",
-        booknum: 81528,
-        status: 3
+    wx.request({
+      url: requesturl + apiurl,
+      data: '',
+      header: {
+        "Content-Type":"application/x-www-form-urlencoded"
       },
-      {
-        id: 4,
-        cover: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537024251811&di=86b603f33f97fccec43326b2c055b7cd&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F5f7db49atx6CX6vz6WY38%26690",
-        leasttime: "已结束",
-        title: "活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-        datetime: "2018.12.12 12:00-14:00",
-        address: "广东-广州  珠江新城补习班珠江新城补习班 ",
-        booknum: 81528,
-        status: 4
-      },
-      {
-        id: 5,
-        cover: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537024251811&di=86b603f33f97fccec43326b2c055b7cd&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F5f7db49atx6CX6vz6WY38%26690",
-        leasttime: "进行中",
-        title: "活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈活动标题，做多显示两行，溢出隐藏（结尾用省略号）啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-        datetime: "2018.12.12 12:00-14:00",
-        address: "广东-广州  珠江新城补习班珠江新城补习班 ",
-        booknum: 81528,
-        status: 5
-      },
-    ];
-
-    that.setData({
-      actlist: actlist
+      method: 'POST',
+      success: function(res) {
+        console.log("活动列表的数据:");
+        console.log(res);
+        if(res.data.code==0){
+          that.setData({
+            actlist: res.data.resultObject
+          })
+        }else{
+          console.log("获取活动列表失败!"+res.data.message);
+        }       
+      }
     })
+    //结束标识符
   },
   //活动报名
   gobookact:function(e){

@@ -1,44 +1,30 @@
 <view class="container">
   <image class="top_img" src="{{topimg}}" mode="widthFix" binderror="" bindload=""></image>
 
-
   <view class="test_list">
-    <view class="item">
-      <view class="content">
-        <view class="top">
-          《课程标题xxx》结业考试
-        </view>
-        <view class="bottom">
-          <view class="left">
-            <text>考试状态:</text>
-            <text class="f_red">待考试</text>
-          </view>
-          <view class="right">
-            <text>考试分数:</text>
-            <text>----</text>
-          </view>
-        </view>
-      </view>
-      <view bindtap='goto_graduatetest' class="btn">开始考试</view>
-    </view>
+    <block wx:for="{{datalist}}" wx:key='item'>
 
-    <view class="item">
-      <view class="content">
-        <view class="top">
-          《课程标题xxx》结业考试
-        </view>
-        <view class="bottom">
-          <view class="left">
-            <text>考试状态:</text>
-            <text class="f_green">已完成</text>
+      <view class="item">
+        <view class="content">
+          <view class="top">
+            《{{item.testname}}》结业考试
           </view>
-          <view class="right">
-            <text>考试分数:</text>
-            <text class="f_red">88</text>
+          <view class="bottom">
+            <view class="left">
+              <text>考试状态:</text>
+              <text wx:if="{{item.teststate==0}}" class="f_red">待考试</text>
+              <text wx:else class="f_green">已完成</text>
+            </view>
+            <view class="right">
+              <text>考试分数:</text>
+              <text wx:if="{{item.teststate==0}}">----</text>
+              <text wx:else class="f_red">{{item.score}}</text>
+            </view>
           </view>
         </view>
+        <view wx:if="{{item.teststate==0}}" bindtap='goto_graduatetest' data-id='{{item.testid}}' class="btn">开始考试</view>
+        <view wx:else class="btn yellow_btn" bindtap='goto_graduateresult' data-id='{{item.testid}}' data-score='{{item.score}}'>查看结果</view>
       </view>
-      <view class="btn yellow_btn">查看结果</view>
-    </view>
+    </block>
   </view>
 </view>

@@ -16,11 +16,11 @@
 <view class='goodsv'>
 
   <block wx:for="{{goodslist}}" wx:key="item">
-    <view class='goodsitem' bindtap='gogoodsopt' data-id='{{item.id}}'>
+    <view class='goodsitem' bindtap='gogoodsopt' data-id='{{item.goodsid}}'>
       <view class='goodsimgv'>
-        <image src='{{item.imgpath}}' class='goodsimg'></image>
-        <view class='goodsnamev'>{{item.name}}</view>
-        <view class='goodsfenv'>{{item.jifen}}积分</view>
+        <image src='{{item.image}}' class='goodsimg' lazy-load='true'></image>
+        <view class='goodsnamev'>{{item.goodsname}}</view>
+        <view class='goodsfenv'>{{item.points}}积分</view>
       </view>
     </view>
   </block>

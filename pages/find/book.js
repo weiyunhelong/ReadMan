@@ -1,41 +1,42 @@
 // pages/find/book.js
-var globalimgurl = getApp().globalData.globalimgurl;
+var globalimgurl = getApp().globalData.globalimgurl; //图片的地址
+var requesturl = getApp().globalData.requesturl; //接口地址
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    id: 0,//活动id
-    contactnum:"020-1029288",
-    name:"",//姓名
-    phone:"",//手机号
-    backimg:""
+    id: 0, //活动id
+    contactnum: "020-1029288",
+    name: "", //姓名
+    phone: "", //手机号
+    backimg: ""
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    var that=this;
+  onLoad: function(options) {
+    var that = this;
     //接受参数
     that.setData({
-      id:options.id
+      id: parseInt(options.id)
     })
     that.setData({
-      backimg: globalimgurl +"lijibaoming_chatu/lijibaoming_chatu@2x.png"
+      backimg: globalimgurl + "lijibaoming_chatu/lijibaoming_chatu@2x.png"
     })
   },
   //得到姓名
-  getname:function(e){
-    var that=this;
+  getname: function(e) {
+    var that = this;
 
     that.setData({
-      name:e.detail.value
+      name: e.detail.value
     })
   },
   //得到手机号
-  getphone: function (e) {
+  getphone: function(e) {
     var that = this;
 
     that.setData({
@@ -43,41 +44,40 @@ Page({
     })
   },
   //打电话
-  makephone:function(){
-    var that=this;
+  makephone: function() {
+    var that = this;
     wx.showModal({
       title: '咨询客服',
       content: '拨打电话' + that.data.phone,
-      showCancel:false,
-      confirmText:"立即咨询",
-      success:function(e){
-        if(e.confirm){
+      showCancel: false,
+      confirmText: "立即咨询",
+      success: function(e) {
+        if (e.confirm) {
           wx.makePhoneCall({
             phoneNumber: that.data.phone,
           })
         }
       },
     })
-    
   },
   //立即报名
-  bookopt:function(){
-    var that=this;
+  bookopt: function() {
+    var that = this;
 
     //参数部分
-    var name=that.data.name;
-    var phone=that.data.phone;
+    var name = that.data.name;
+    var phone = that.data.phone;
     var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
-   
+
     //验证必填项
-    if(name==""){
+    if (name == "") {
       wx.showToast({
         title: '请输入真实姓名',
-        icon:"none",
-        duration:2000,
-        mask:true
+        icon: "none",
+        duration: 2000,
+        mask: true
       })
-    }else if(phone==""){
+    } else if (phone == "") {
       wx.showToast({
         title: '请输入手机号码',
         icon: "none",
@@ -91,68 +91,95 @@ Page({
         duration: 2000,
         mask: true
       })
-    }else{
-
-      //报名成功
-      wx.showToast({
-        title: '报名成功',
-        duration: 2000,
-        mask: true
+    } else {
+      //提交报名信息
+      wx.request({
+        url: requesturl + 'activitySignup',
+        data: {
+          activityid: that.data.id,
+          name: name,
+          password: phone
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": getApp().globalData.Token
+        },
+        method: 'POST',
+        success: function(res) {
+          console.log("报名的结果:");
+          console.log(res);
+          if(res.data.code==0){
+            //报名成功
+            wx.showToast({
+              title: '报名成功',
+              duration: 2000,
+              mask: true
+            })
+            setTimeout(function () {
+              wx.navigateTo({
+                url: '../find/result',
+              })
+            }, 2000)
+          }else{
+            wx.showToast({
+              title: '报名失败!',
+              duration: 2000,
+              mask: true,
+              icon:"none"
+            })
+            console.log("报名失败的原因:"+res.data.message);
+          }
+        }
       })
-
-      setTimeout(function(){
-        wx.navigateTo({
-          url: '../find/result',
-        })
-      },2000)
+      //结束标识符
     }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

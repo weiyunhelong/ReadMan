@@ -9,36 +9,32 @@
 
 <!--券信息-->
 <view class='ticketlistv'>
-  <block wx:for="{{quanlist}}" wx:key="item" wx:for-index="x">
+  <block wx:for="{{quanlist}}" wx:key="item" wx:for-index="x" wx:if="{{chktab==1}}">
     <!--券信息-->
-    <view class="{{chktab==1?'ticketvone':chktab==2?'ticketvtwo':'ticketvthree'}}">
+    <view class="ticketvone">
       <!--券基本信息-->
       <view class='ticketleftv'>
         <view class='tlnamev'>
-          <view class='tlnametxt'>{{item.jifen}}</view>
+          <view class='tlnametxt'>{{item.points}}</view>
           <view class='tltypev'>
             <view class='tltypetxt'>积分</view>
             <view class='tltypetxt'>抵扣券</view>
           </view>
         </view>
-        <view class='tltimev'>有效期：{{item.startdate}} 至{{item.enddate}}</view>
+        <view class='tltimev'>有效期：{{item.starttime}} 至{{item.endtime}}</view>
       </view>
       <!--分割线-->
       <view class='ticketlinev'></view>
       <!--状态-->
-      <view class='ticketrightv' wx:if="{{chktab==1}}">
-        未使用
+      <view class='ticketrightv'>
+        <text wx:if="{{chktab==1}}">未使用</text> 
+        <text wx:if="{{chktab==2}}">已使用</text> 
+        <text wx:if="{{chktab==3}}">已过期</text> 
         <!--优惠券来源-->
-        <view class='leasttimev' wx:if="{{x==0&&chktab==1}}">
+        <view class='leasttimev' wx:if="{{item.couponlabel!=''}}">
           <image src='/resources/find/filterh.png' class='filtericon'></image>
-          <view class='leasttimetxth'>新进奖励</view>
+          <view class='leasttimetxth'>{{item.couponlabel}}</view>
         </view>
-      </view>
-      <view class='ticketrightv' wx:if="{{chktab==2}}">
-        已使用
-      </view>
-      <view class='ticketrightv' wx:if="{{chktab==3}}">
-        已过期
       </view>
     </view>
   </block>

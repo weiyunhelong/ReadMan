@@ -1,5 +1,5 @@
 <!--pages/zhengshu/detail.wxml-->
-
+<!--
 <view class='bodyv'>
   <image src='{{zhengshuobj.logopath}}' mode='widthFix' class='topimg'></image>
 
@@ -16,10 +16,14 @@
   </view>
 </view>
 
-<!--底部的按钮部分-->
 <view class='bottomv'>
   <block wx:for="{{zhengshulist}}" wx:key="item"  wx:for-index="x">
     <view class='greydot' wx:if="{{chkindex!=x}}" bindtap='gochkidnex' data-index='{{x}}'></view>
     <view class='bluedot' wx:if="{{chkindex==x}}" ></view>
   </block>
+</view>
+-->
+
+<view class='vbodyv' style='background-image:url({{backimg}});'>
+  <view class='inputv'>{{zhengshuno}}</view>
 </view>

@@ -326,11 +326,11 @@ page {
   position: relative;
   z-index: 222;
   top: 50rpx;
-  left: -30rpx;
+  left: -24rpx;
 }
 
 .daytxt {
-  padding-left: 20rpx;
+  padding-left: 30rpx;
 }
 
 /*标签备注部分*/

@@ -1,5 +1,6 @@
 // pages/my/index.js
 var globalimgurl = getApp().globalData.globalimgurl;
+var requesturl = getApp().globalData.requesturl;//获取接口的值
 Page({
 
   /**
@@ -132,9 +133,37 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that=this;
+    //获取用户信息
+    that.initData();
   },
+  //获取用户信息
+  initData:function(){
+    var that=this;
+    //获取用户信息
+    wx.request({
+      url: requesturl +'getPersonHome',
+      data: {
+        "Authorization": getApp().globalData.Token
+      },
+      header: {
+        "Content-Type":"application/x-www-form-urlencoded",
+        "Authorization": getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("获取用户信息:");
+        console.log(res);
 
+        that.setData({
+          zhengnum: res.data.resultObject.certificateCount,//证书数量
+          jifennum: res.data.resultObject.points,//积分数量
+          payfornum: res.data.resultObject.noPayCount,//待付款数量
+          signnum: res.data.resultObject.noPayCount,//待收货数量
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

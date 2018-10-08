@@ -1,5 +1,6 @@
 // pages/mall/index.js
-var globalimgurl = getApp().globalData.globalimgurl;
+var globalimgurl = getApp().globalData.globalimgurl;//图片地址
+var requesturl = getApp().globalData.requesturl;//接口地址
 Page({
 
   /**
@@ -144,12 +145,65 @@ Page({
    */
   onShow: function () {
     var that = this;
+    //获取用户积分
+    that.initJifen();
     //初始化菜单
     that.initMenu();
     //初始化商品数据
     that.initGoods();
+    //初始化购物车数据
+    that.initShopcarts();
   },
-
+  //获取用户积分
+  initJifen:function(){
+    var that=this;
+    //获取用户的积分
+    wx.request({
+      url: requesturl +'getMyPoints',
+      data: '',
+      header: {
+        "Content-Type":"application/x-www-form-urlencoded",
+        "Authorization":getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function(res) {
+        console.log("获取用户的积分:");
+        console.log(res);
+        if(res.data.code==0){
+          that.setData({
+            jifen: res.data.resultObject
+          })
+        }else{
+          console.log("积分失败的原因:"+res.data.message);
+        }
+      }
+    })
+  },
+  //初始化购物车数据
+  initShopcarts:function(){
+    var that = this;
+    //获取用户的积分
+    wx.request({
+      url: requesturl + 'getMyCartCount',
+      data: '',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": getApp().globalData.Token
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log("获取购物车的数量:");
+        console.log(res);
+        if (res.data.code == 0) {
+          that.setData({
+            chkgoodsnum: res.data.resultObject
+          })
+        } else {
+          console.log("购物车失败的原因:" + res.data.message);
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

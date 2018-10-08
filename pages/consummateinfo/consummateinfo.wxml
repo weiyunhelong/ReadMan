@@ -118,7 +118,7 @@
         <view class='hangtitle'>手机号</view>
       </view>
       <view class="right">
-        <input type="number" bindinput="editParentTel" value="{{parent_tel}}" placeholder="请输入电话号码" />
+        <input type="number" bindinput="editParentTel" value="{{parent_tel}}" placeholder="请输入手机号码" />
       </view>
     </view>
 
@@ -161,7 +161,7 @@
         <view class='hangtitle'>报名费用</view>
       </view>
       <view class="right ">
-        <input value="{{stu_group}}" bindinput="editStuGroup" type="text" placeholder="0" />
+        <input value="{{course_cost}}" bindinput="coursecostopt" type="digit" placeholder="请输入报名费用" />
       </view>
     </view>
   </view>

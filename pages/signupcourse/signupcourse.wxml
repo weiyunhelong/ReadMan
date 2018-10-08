@@ -4,8 +4,8 @@
   <view class="class_list">
 
     <block wx:for="{{classlist}}" wx:key="item" wx:for-index="x">
-      <view class="item" bindtap='gobookopt' data-id='{{item.id}}'>
-        {{x+1}}.{{item.name}}
+      <view class="item" bindtap='gobookopt' data-id='{{item.courseid}}'>
+        {{x+1}}.《{{item.coursename}}》
       </view>
     </block>
   </view>

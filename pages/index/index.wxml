@@ -49,7 +49,7 @@
         </view>
       </view>
     </block>
-    
+
   </view>
   <view style='width:100%;height:80rpx;'></view>
   <!--底部的菜单部分-->
@@ -64,32 +64,40 @@
     <view wx:if="{{show_qiandao_cotent}}" class="content">
       <image src="{{qiandaobg}}" class="bg_img" mode="widthFix"></image>
       <view class="step_list">
+
         <view class="item">
-          <image src="{{flagaimg}}" mode="widthFix"></image>
+          <image src="{{flagaimg}}" mode="widthFix" wx:if="{{weekone}}"></image>
+          <image src="{{flaghimg}}" mode="widthFix" wx:if="{{!weekone}}"></image>
           <text>周一</text>
         </view>
         <view class="item left_line right_line">
-          <image src="{{flagaimg}}" mode="widthFix"></image>
+          <image src="{{flagaimg}}" mode="widthFix" wx:if="{{weektwo}}"></image>
+          <image src="{{flaghimg}}" mode="widthFix" wx:if="{{!weektwo}}"></image>
           <text>周二</text>
         </view>
         <view class="item vertical_line">
-          <image src="{{flaghimg}}" mode="widthFix"></image>
+          <image src="{{flagaimg}}" mode="widthFix" wx:if="{{weekthree}}"></image>
+          <image src="{{flaghimg}}" mode="widthFix" wx:if="{{!weekthree}}"></image>
           <text>周三</text>
         </view>
         <view class="item vertical_line">
-          <image src="{{flaghimg}}" mode="widthFix"></image>
+          <image src="{{flagaimg}}" mode="widthFix" wx:if="{{weekfour}}"></image>
+          <image src="{{flaghimg}}" mode="widthFix" wx:if="{{!weekfour}}"></image>
           <text>周六</text>
         </view>
         <view class="item left_line right_line">
-          <image src="{{flaghimg}}" mode="widthFix"></image>
+          <image src="{{flagaimg}}" mode="widthFix" wx:if="{{weekfive}}"></image>
+          <image src="{{flaghimg}}" mode="widthFix" wx:if="{{!weekfive}}"></image>
           <text>周五</text>
         </view>
         <view class="item">
-          <image src="{{flaghimg}}" mode="widthFix"></image>
+          <image src="{{flagaimg}}" mode="widthFix" wx:if="{{weeksix}}"></image>
+          <image src="{{flaghimg}}" mode="widthFix" wx:if="{{!weeksix}}"></image>
           <text>周四</text>
         </view>
         <view class="item left_line">
-          <image src="{{flaghimg}}" mode="widthFix"></image>
+          <image src="{{flagaimg}}" mode="widthFix" wx:if="{{weekseven}}"></image>
+          <image src="{{flaghimg}}" mode="widthFix" wx:if="{{!weekseven}}"></image>
           <text>周日</text>
         </view>
       </view>
@@ -100,7 +108,7 @@
       <image catchtap='closeQiandao' src="{{closeimg}}" class='close_btn' mode="widthFix"></image>
     </view>
 
-    <!--新用户注册，获取积分--> 
+    <!--新用户注册，获取积分-->
     <view wx:if="{{show_qiaodao_jifen}}" class="show_qiaodao_jifen">
       <image class="tiger" src="{{tigerimg}}" mode="widthFix"></image>
 
@@ -113,15 +121,5 @@
   </view>
 
   <!-- 客服 -->
-  <view class="service_boxs mask" wx:if="{{show_service}}">
-    <view class="show_qiaodao_jifen">
-      <image class="tiger" src="{{serviceimg}}" mode="widthFix"></image>
-
-      <view class="tuoyuan_box"></view>
-      <text class="title">客户服务</text>
-      <text class="contact">服务时间：08:00-17:00</text>
-
-      <view catchtap='call_service' class="check_btn">拨打：020-928272</view>
-    </view>
-  </view>
+  <service receiveData='{{showphonev}}' bindshowChange="showChange"/>
 </view>

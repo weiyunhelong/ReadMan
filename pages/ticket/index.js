@@ -1,4 +1,5 @@
 // pages/ticket/index.js
+var requesturl = getApp().globalData.requesturl;//接口地址
 Page({
 
   /**
@@ -6,7 +7,7 @@ Page({
    */
   data: {
     chktab:1,//选中的菜单
-    quanlist:[],//券列表
+    quanlist:[],//积分券列表
   },
 
   /**
@@ -20,26 +21,30 @@ Page({
   //获取券列表
  initTicket:function(){
    var that=this;
-   //参数部分
-   var chktab = that.data.chktab;
 
-   var quanlist=[
-     {
-       id:1,
-       jifen:100,
-       startdate:"2018-03-23",
-       enddate:"2018-12-12"
+   //获取优惠券列表的值
+   wx.request({
+     url: requesturl +'getCouponListByFlag',
+     data: {
+       flag: that.data.chktab-1
      },
-     {
-       id: 2,
-       jifen: 200,
-       startdate: "2018-03-23",
-       enddate: "2018-12-12"
+     header: {
+       "Content-Type":"application/x-www-form-urlencoded",
+       "Authorization": getApp().globalData.Token
      },
-   ];
+     method: 'POST',
+     success: function(res) {
+       console.log("获取列表的数据:");
+       console.log(res);
 
-   that.setData({
-     quanlist: quanlist
+       if(res.data.code==0){
+         that.setData({
+           quanlist: res.data.resultObject,//未使用券列表
+         })
+       }else{
+         console.log("获取列表数据失败!");
+       }
+     }
    })
  },
  //菜单的切换
